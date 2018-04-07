@@ -217,3 +217,5 @@ C:\Users\HieuUit\Desktop\doAn\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.csproj.C
 C:\Users\HieuUit\Desktop\doAn\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.csproj.CopyComplete
 C:\Users\HieuUit\Desktop\doAn\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.exe
 C:\Users\HieuUit\Desktop\doAn\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.pdb
+D:\hit\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.exe
+D:\hit\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.pdb
