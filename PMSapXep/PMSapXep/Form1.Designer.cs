@@ -67,8 +67,6 @@
             this.trb_Tocdo = new System.Windows.Forms.TrackBar();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
-            this.performanceCounter2 = new System.Diagnostics.PerformanceCounter();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -76,13 +74,12 @@
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trb_Tocdo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter2)).BeginInit();
             this.SuspendLayout();
             // 
             // rad_InterchangeSort
             // 
             this.rad_InterchangeSort.AutoSize = true;
+            this.rad_InterchangeSort.Checked = true;
             this.rad_InterchangeSort.Location = new System.Drawing.Point(6, 19);
             this.rad_InterchangeSort.Name = "rad_InterchangeSort";
             this.rad_InterchangeSort.Size = new System.Drawing.Size(104, 17);
@@ -152,12 +149,13 @@
             this.groupBox1.Controls.Add(this.rad_BubbleSort);
             this.groupBox1.Controls.Add(this.rad_ShakerSort);
             this.groupBox1.Controls.Add(this.rad_InsertionSort);
-            this.groupBox1.Location = new System.Drawing.Point(297, 44);
+            this.groupBox1.Location = new System.Drawing.Point(283, 44);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(251, 135);
+            this.groupBox1.Size = new System.Drawing.Size(265, 134);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thuật toán";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter_1);
             // 
             // rad_MergeSort
             // 
@@ -317,10 +315,14 @@
             // 
             // pnNut
             // 
-            this.pnNut.Location = new System.Drawing.Point(9, 294);
+            this.pnNut.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnNut.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnNut.Location = new System.Drawing.Point(31, 274);
             this.pnNut.Margin = new System.Windows.Forms.Padding(2);
             this.pnNut.Name = "pnNut";
-            this.pnNut.Size = new System.Drawing.Size(1104, 204);
+            this.pnNut.Size = new System.Drawing.Size(1095, 224);
             this.pnNut.TabIndex = 5;
             this.pnNut.Click += new System.EventHandler(this.pnNut_Click);
             // 
@@ -371,12 +373,13 @@
             // 
             this.groupBox3.Controls.Add(this.rad_Giam);
             this.groupBox3.Controls.Add(this.rad_Tang);
-            this.groupBox3.Location = new System.Drawing.Point(31, 186);
+            this.groupBox3.Location = new System.Drawing.Point(31, 185);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(100, 83);
+            this.groupBox3.Size = new System.Drawing.Size(105, 84);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "hướng sắp xếp";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // rad_Giam
             // 
@@ -393,6 +396,7 @@
             // rad_Tang
             // 
             this.rad_Tang.AutoSize = true;
+            this.rad_Tang.Checked = true;
             this.rad_Tang.Location = new System.Drawing.Point(10, 25);
             this.rad_Tang.Name = "rad_Tang";
             this.rad_Tang.Size = new System.Drawing.Size(50, 17);
@@ -404,12 +408,14 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.btn_Batdau);
             this.groupBox4.Controls.Add(this.btn_xuatgip);
             this.groupBox4.Controls.Add(this.btnPause);
-            this.groupBox4.Location = new System.Drawing.Point(142, 186);
+            this.groupBox4.Location = new System.Drawing.Point(142, 184);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(186, 83);
+            this.groupBox4.Size = new System.Drawing.Size(186, 85);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Điều khiển";
@@ -453,9 +459,9 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.trb_Tocdo);
-            this.groupBox5.Location = new System.Drawing.Point(334, 186);
+            this.groupBox5.Location = new System.Drawing.Point(334, 184);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(214, 83);
+            this.groupBox5.Size = new System.Drawing.Size(214, 85);
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Tốc độ";
@@ -471,18 +477,21 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.Location = new System.Drawing.Point(554, 44);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(230, 224);
+            this.groupBox6.Size = new System.Drawing.Size(230, 225);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "CodeC/C++";
             // 
             // groupBox7
             // 
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.Location = new System.Drawing.Point(790, 44);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(306, 225);
+            this.groupBox7.Size = new System.Drawing.Size(336, 225);
             this.groupBox7.TabIndex = 14;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Ý tưởng";
@@ -516,8 +525,6 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trb_Tocdo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -562,8 +569,7 @@
         private System.Windows.Forms.TrackBar trb_Tocdo;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Diagnostics.PerformanceCounter performanceCounter1;
-        private System.Diagnostics.PerformanceCounter performanceCounter2;
+        
     }
 }
 

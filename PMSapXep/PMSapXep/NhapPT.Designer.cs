@@ -44,6 +44,7 @@ namespace PMSapXep
             this.txt_Vitri.Name = "txt_Vitri";
             this.txt_Vitri.Size = new System.Drawing.Size(61, 20);
             this.txt_Vitri.TabIndex = 0;
+            this.txt_Vitri.Text = "0";
             this.txt_Vitri.TextChanged += new System.EventHandler(this.txt_Vitri_TextChanged);
             this.txt_Vitri.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Vitri_KeyPress);
             // 

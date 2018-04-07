@@ -18,8 +18,8 @@ namespace PMSapXep
         #region KHAI BÁO BIẾN TOÀN CỤC
         public static int SoPT = 0;
        
-        public static int[] M; // mang chua m so nguyen
-        Button[] Bn; //tao ra mang 
+        public static int[] Array; // mang chua m so nguyen
+        public static Button[] Bn; //tao ra mang 
         int HEIGHT = 100; //chieu cao luc di chuyen button
         int SiZE = 60; // kich thươc NUt
         int KhoangCachNut = 25;//  
@@ -33,7 +33,7 @@ namespace PMSapXep
 
             if (1 < SoPT && SoPT < 16)
             {
-                M = new int[SoPT]; //khoi tao mang M gom n phan tu
+                Array = new int[SoPT]; //khoi tao mang M gom n phan tu
                 Bn = new Button[SoPT]; //khoi tao Button Bn gom n Button
                 pnNut.Controls.Clear(); //xong trong PnNut cac thanh trong
                 for (int i = 0; i < SoPT; i++)
@@ -43,6 +43,7 @@ namespace PMSapXep
                     btn.Text = "0";
 
                     TinhKhoangCach(SiZE, SoPT, KhoangCachNut, Canh_le);
+                    btn.Width = btn.Height = SiZE;
                     //tim hieu them
                     btn.Location = new Point(KhoangCachNut + pnNut.Controls.Count * (btn.Width + KhoangCachNut),
                         pnNut.Height / 2 - btn.Height / 2);
@@ -50,7 +51,7 @@ namespace PMSapXep
 
                
                     pnNut.Controls.Add(btn);
-                    M[i] = 0;
+                    Array[i] = 0;
                     Bn[i] = btn;
                     Bn[i].ForeColor = Color.White;
                     Bn[i].BackColor = Color.OrangeRed;
@@ -76,35 +77,19 @@ namespace PMSapXep
                 case 15:
                     KichThuoc = 40;
                     KC = 25;
-                    Canh_le = (1024 - KichThuoc * KTMang - KC * (KTMang - 1)) / 2;
+                    Canh_le = (1095 - KichThuoc * KTMang - KC * (KTMang - 1)) / 2;
                     break;
                 default:
                     KichThuoc = 60;
                     KC = 30;
+                    Canh_le = (1095 - KichThuoc * KTMang - KC * (KTMang - 1)) / 2;
                     break;
             }
 
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            /*try
-            {
-                int n = Int16.Parse(txtNhapPT.Text);
-                if ((n < 2) || (n > 15))
-                    MessageBox.Show("Nhap Gia Tri Sai tu 2->15");
-
-            }
-            catch
-            {
-                //int n = Int16.Parse(txtNhapPT.Text);
-                //if ((n < 2) && (n > 15))
-                //MessageBox.Show("Nhap Gia Tri Sai tu 2->15");
-                txtNhapPT.Focus();
-            }*/
-           // int n = Int16.Parse(txtNhapPT.Text);
-            //if((n < 2) && (n>15)) 
-               // MessageBox.Show ("Nhap Gia Tri Sai tu 2->15");  
-
+           
         }
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
@@ -251,8 +236,8 @@ namespace PMSapXep
             Random rd = new Random();
             for (int i = 0; i < SoPT; i++)
             {
-                M[i] = rd.Next(100);
-                Bn[i].Text = M[i].ToString();
+                Array[i] = rd.Next(100);
+                Bn[i].Text = Array[i].ToString();
             }
         }
 
@@ -292,6 +277,16 @@ namespace PMSapXep
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+            rad_Tang.Checked = true;
+        }
+
+        private void groupBox1_Enter_1(object sender, EventArgs e)
         {
 
         }

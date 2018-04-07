@@ -34,16 +34,28 @@ namespace PMSapXep
 
         private void btn_Nhap_Click(object sender, EventArgs e)
         {
-            int ViTri, Size;
-            try
+            int ViTri, GiaTri;
+            ViTri = Convert.ToInt32(txt_Vitri.Text);
+            GiaTri = Convert.ToInt32(txt_Giatri.Text);
+
+            #region KIỂM TRA GIÁ TRỊ NHÂP VÀO
+            if (ViTri > Form1.SoPT - 1)
             {
-                ViTri = Convert.ToInt32(txt_Vitri);
-            }
-            catch
-            {
-                MessageBox.Show("chỉ số phần tử không hợp lệ");
+                MessageBox.Show("không tồn tại vị trí phần tử");
                 return;
             }
+
+
+            if (GiaTri >= 100)
+            {
+                MessageBox.Show("0 <= giá trị nhập vào <= 100");
+                this.txt_Giatri.Clear();
+                return;
+            }
+            #endregion
+
+            Form1.Array[ViTri] = GiaTri;
+            Form1.Bn[ViTri].Text = GiaTri.ToString();
         }
 
         private void btn_exits_Click(object sender, EventArgs e)
@@ -58,7 +70,6 @@ namespace PMSapXep
 
         private void txt_Vitri_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void txt_Vitri_KeyPress(object sender, KeyPressEventArgs e)
