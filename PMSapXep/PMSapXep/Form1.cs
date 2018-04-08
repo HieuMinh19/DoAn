@@ -21,16 +21,52 @@ namespace PMSapXep
         public static int[] Array; // mang chua m so nguyen
         public static Button[] Bn; //tao ra mang 
         int HEIGHT = 100; //chieu cao luc di chuyen button
-        int SiZE = 60; // kich thươc NUt
-        int KhoangCachNut = 25;//  
-        int Canh_le = 0;
+
+        // siZE luc đầu là 60, t sửa thành 47 
+
+        int Size ; // kich thươc NUt
+        int KhoangCachNut;//  
+        int Canh_le;
         #endregion KHAI BÁO BIẾN TOÀN CỤC
 
         private void btnTaoMang_Click(object sender, EventArgs e)
-        { 
+        {
+            #region thiet lap kich thuoc node
             //khoi tao kich thuoc mang
             SoPT = int.Parse(txtNhapPT.Text.Trim());
-
+            //them
+            switch(SoPT)
+            {
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                    Size = 60;
+                    KhoangCachNut = 25;
+                    Canh_le = (1460 - Size * SoPT - KhoangCachNut * (SoPT - 1)) / 2;
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                    Size = 55;
+                    KhoangCachNut = 25;
+                    Canh_le = (1460 - Size * SoPT - KhoangCachNut * (SoPT - 1)) / 2;
+                    break;
+                case 11:
+                case 12:
+                case 13:
+                case 14:
+                case 15:
+                    Size = 47;
+                    KhoangCachNut = 25;
+                    Canh_le = (1460 - Size * SoPT - KhoangCachNut * (SoPT - 1)) / 2;
+                    break;
+            }
+            //het them
+            #endregion
+            #region tao mang
             if (1 < SoPT && SoPT < 16)
             {
                 Array = new int[SoPT]; //khoi tao mang M gom n phan tu
@@ -38,18 +74,11 @@ namespace PMSapXep
                 pnNut.Controls.Clear(); //xong trong PnNut cac thanh trong
                 for (int i = 0; i < SoPT; i++)
                 {
-                    Button btn = new Button();
-                   
+                    Button btn = new Button();           
                     btn.Text = "0";
-
-                    TinhKhoangCach(SiZE, SoPT, KhoangCachNut, Canh_le);
-                    btn.Width = btn.Height = SiZE;
-                    //tim hieu them
-                    btn.Location = new Point(KhoangCachNut + pnNut.Controls.Count * (btn.Width + KhoangCachNut),
-                        pnNut.Height / 2 - btn.Height / 2);
-
-
-               
+                    btn.Width = btn.Height = Size;         
+                    btn.Location = new Point(Canh_le + i * (btn.Width + KhoangCachNut),
+                        pnNut.Height / 2 - btn.Height / 2);                             
                     pnNut.Controls.Add(btn);
                     Array[i] = 0;
                     Bn[i] = btn;
@@ -64,28 +93,7 @@ namespace PMSapXep
                 MessageBox.Show("Mảng từ 2 -> 15 phần tử");
                 txtNhapPT.Focus();
             }
-           
-        }
-
-        public void TinhKhoangCach(int KichThuoc, int KTMang, int KC, int Canh_le)
-        {
-            switch (KTMang)
-            {
-                case 12:
-                case 13:
-                case 14:
-                case 15:
-                    KichThuoc = 40;
-                    KC = 25;
-                    Canh_le = (1095 - KichThuoc * KTMang - KC * (KTMang - 1)) / 2;
-                    break;
-                default:
-                    KichThuoc = 60;
-                    KC = 30;
-                    Canh_le = (1095 - KichThuoc * KTMang - KC * (KTMang - 1)) / 2;
-                    break;
-            }
-
+            #endregion 
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -287,6 +295,16 @@ namespace PMSapXep
         }
 
         private void groupBox1_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox7_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnNut_Paint(object sender, PaintEventArgs e)
         {
 
         }

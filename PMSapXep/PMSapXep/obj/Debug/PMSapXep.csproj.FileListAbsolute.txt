@@ -219,3 +219,43 @@ C:\Users\HieuUit\Desktop\doAn\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.exe
 C:\Users\HieuUit\Desktop\doAn\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.pdb
 D:\hit\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.exe
 D:\hit\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.pdb
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.exe
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.pdb
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\PMSapXep.exe
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\PMSapXep.pdb
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\DevExpress.Pdf.v17.2.Core.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\DevExpress.Data.v17.2.xml
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\DevExpress.Printing.v17.2.Core.xml
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\DevExpress.Sparkline.v17.2.Core.xml
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\DevExpress.Utils.v17.2.xml
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\DevExpress.XtraEditors.v17.2.xml
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\DevExpress.Pdf.v17.2.Core.xml
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\de\DevExpress.Data.v17.2.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\es\DevExpress.Data.v17.2.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\ja\DevExpress.Data.v17.2.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\ru\DevExpress.Data.v17.2.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\de\DevExpress.Printing.v17.2.Core.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\es\DevExpress.Printing.v17.2.Core.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\ja\DevExpress.Printing.v17.2.Core.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\ru\DevExpress.Printing.v17.2.Core.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\de\DevExpress.Sparkline.v17.2.Core.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\es\DevExpress.Sparkline.v17.2.Core.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\ja\DevExpress.Sparkline.v17.2.Core.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\ru\DevExpress.Sparkline.v17.2.Core.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\de\DevExpress.Utils.v17.2.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\es\DevExpress.Utils.v17.2.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\ja\DevExpress.Utils.v17.2.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\ru\DevExpress.Utils.v17.2.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\de\DevExpress.XtraEditors.v17.2.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\es\DevExpress.XtraEditors.v17.2.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\ja\DevExpress.XtraEditors.v17.2.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\ru\DevExpress.XtraEditors.v17.2.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\de\DevExpress.Pdf.v17.2.Core.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\es\DevExpress.Pdf.v17.2.Core.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\ja\DevExpress.Pdf.v17.2.Core.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\bin\Debug\ru\DevExpress.Pdf.v17.2.Core.resources.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.csprojResolveAssemblyReference.cache
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.Form1.resources
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.NhapPT.resources
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.Properties.Resources.resources
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DOAN_LTTQ\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.csproj.GenerateResource.Cache
