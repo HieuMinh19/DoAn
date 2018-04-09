@@ -81,7 +81,7 @@
             this.rad_InterchangeSort.AutoSize = true;
             this.rad_InterchangeSort.Checked = true;
             this.rad_InterchangeSort.Location = new System.Drawing.Point(8, 23);
-            this.rad_InterchangeSort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rad_InterchangeSort.Margin = new System.Windows.Forms.Padding(4);
             this.rad_InterchangeSort.Name = "rad_InterchangeSort";
             this.rad_InterchangeSort.Size = new System.Drawing.Size(134, 21);
             this.rad_InterchangeSort.TabIndex = 0;
@@ -94,7 +94,7 @@
             // 
             this.rad_SelectionSort.AutoSize = true;
             this.rad_SelectionSort.Location = new System.Drawing.Point(8, 52);
-            this.rad_SelectionSort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rad_SelectionSort.Margin = new System.Windows.Forms.Padding(4);
             this.rad_SelectionSort.Name = "rad_SelectionSort";
             this.rad_SelectionSort.Size = new System.Drawing.Size(117, 21);
             this.rad_SelectionSort.TabIndex = 10;
@@ -107,7 +107,7 @@
             // 
             this.rad_BubbleSort.AutoSize = true;
             this.rad_BubbleSort.Location = new System.Drawing.Point(8, 80);
-            this.rad_BubbleSort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rad_BubbleSort.Margin = new System.Windows.Forms.Padding(4);
             this.rad_BubbleSort.Name = "rad_BubbleSort";
             this.rad_BubbleSort.Size = new System.Drawing.Size(103, 21);
             this.rad_BubbleSort.TabIndex = 11;
@@ -120,7 +120,7 @@
             // 
             this.rad_ShakerSort.AutoSize = true;
             this.rad_ShakerSort.Location = new System.Drawing.Point(8, 108);
-            this.rad_ShakerSort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rad_ShakerSort.Margin = new System.Windows.Forms.Padding(4);
             this.rad_ShakerSort.Name = "rad_ShakerSort";
             this.rad_ShakerSort.Size = new System.Drawing.Size(104, 21);
             this.rad_ShakerSort.TabIndex = 12;
@@ -133,7 +133,7 @@
             // 
             this.rad_InsertionSort.AutoSize = true;
             this.rad_InsertionSort.Location = new System.Drawing.Point(8, 137);
-            this.rad_InsertionSort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rad_InsertionSort.Margin = new System.Windows.Forms.Padding(4);
             this.rad_InsertionSort.Name = "rad_InsertionSort";
             this.rad_InsertionSort.Size = new System.Drawing.Size(113, 21);
             this.rad_InsertionSort.TabIndex = 13;
@@ -155,9 +155,9 @@
             this.groupBox1.Controls.Add(this.rad_ShakerSort);
             this.groupBox1.Controls.Add(this.rad_InsertionSort);
             this.groupBox1.Location = new System.Drawing.Point(377, 54);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(353, 165);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -168,7 +168,7 @@
             // 
             this.rad_MergeSort.AutoSize = true;
             this.rad_MergeSort.Location = new System.Drawing.Point(149, 137);
-            this.rad_MergeSort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rad_MergeSort.Margin = new System.Windows.Forms.Padding(4);
             this.rad_MergeSort.Name = "rad_MergeSort";
             this.rad_MergeSort.Size = new System.Drawing.Size(99, 21);
             this.rad_MergeSort.TabIndex = 28;
@@ -181,7 +181,7 @@
             // 
             this.rad_QuickSort.AutoSize = true;
             this.rad_QuickSort.Location = new System.Drawing.Point(149, 108);
-            this.rad_QuickSort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rad_QuickSort.Margin = new System.Windows.Forms.Padding(4);
             this.rad_QuickSort.Name = "rad_QuickSort";
             this.rad_QuickSort.Size = new System.Drawing.Size(95, 21);
             this.rad_QuickSort.TabIndex = 27;
@@ -194,7 +194,7 @@
             // 
             this.rad_HeapSort.AutoSize = true;
             this.rad_HeapSort.Location = new System.Drawing.Point(149, 79);
-            this.rad_HeapSort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rad_HeapSort.Margin = new System.Windows.Forms.Padding(4);
             this.rad_HeapSort.Name = "rad_HeapSort";
             this.rad_HeapSort.Size = new System.Drawing.Size(93, 21);
             this.rad_HeapSort.TabIndex = 26;
@@ -207,7 +207,7 @@
             // 
             this.radioButton7.AutoSize = true;
             this.radioButton7.Location = new System.Drawing.Point(149, 50);
-            this.radioButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton7.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton7.Name = "radioButton7";
             this.radioButton7.Size = new System.Drawing.Size(90, 21);
             this.radioButton7.TabIndex = 25;
@@ -220,7 +220,7 @@
             // 
             this.rad_BinaryInsertionSort.AutoSize = true;
             this.rad_BinaryInsertionSort.Location = new System.Drawing.Point(149, 23);
-            this.rad_BinaryInsertionSort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rad_BinaryInsertionSort.Margin = new System.Windows.Forms.Padding(4);
             this.rad_BinaryInsertionSort.Name = "rad_BinaryInsertionSort";
             this.rad_BinaryInsertionSort.Size = new System.Drawing.Size(161, 21);
             this.rad_BinaryInsertionSort.TabIndex = 24;
@@ -330,6 +330,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnNut.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnNut.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnNut.Location = new System.Drawing.Point(41, 337);
             this.pnNut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnNut.Name = "pnNut";
@@ -386,9 +387,9 @@
             this.groupBox3.Controls.Add(this.rad_Giam);
             this.groupBox3.Controls.Add(this.rad_Tang);
             this.groupBox3.Location = new System.Drawing.Point(41, 228);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(140, 103);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
@@ -399,7 +400,7 @@
             // 
             this.rad_Giam.AutoSize = true;
             this.rad_Giam.Location = new System.Drawing.Point(15, 64);
-            this.rad_Giam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rad_Giam.Margin = new System.Windows.Forms.Padding(4);
             this.rad_Giam.Name = "rad_Giam";
             this.rad_Giam.Size = new System.Drawing.Size(62, 21);
             this.rad_Giam.TabIndex = 1;
@@ -413,7 +414,7 @@
             this.rad_Tang.AutoSize = true;
             this.rad_Tang.Checked = true;
             this.rad_Tang.Location = new System.Drawing.Point(13, 31);
-            this.rad_Tang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rad_Tang.Margin = new System.Windows.Forms.Padding(4);
             this.rad_Tang.Name = "rad_Tang";
             this.rad_Tang.Size = new System.Drawing.Size(62, 21);
             this.rad_Tang.TabIndex = 0;
@@ -430,9 +431,9 @@
             this.groupBox4.Controls.Add(this.btn_xuatgip);
             this.groupBox4.Controls.Add(this.btnPause);
             this.groupBox4.Location = new System.Drawing.Point(189, 226);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(248, 105);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
@@ -442,7 +443,7 @@
             // btn_Batdau
             // 
             this.btn_Batdau.Location = new System.Drawing.Point(140, 23);
-            this.btn_Batdau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Batdau.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Batdau.Name = "btn_Batdau";
             this.btn_Batdau.Size = new System.Drawing.Size(100, 28);
             this.btn_Batdau.TabIndex = 2;
@@ -453,7 +454,7 @@
             // btn_xuatgip
             // 
             this.btn_xuatgip.Location = new System.Drawing.Point(63, 66);
-            this.btn_xuatgip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_xuatgip.Margin = new System.Windows.Forms.Padding(4);
             this.btn_xuatgip.Name = "btn_xuatgip";
             this.btn_xuatgip.Size = new System.Drawing.Size(136, 28);
             this.btn_xuatgip.TabIndex = 1;
@@ -463,7 +464,7 @@
             // btnPause
             // 
             this.btnPause.Location = new System.Drawing.Point(21, 23);
-            this.btnPause.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPause.Margin = new System.Windows.Forms.Padding(4);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(100, 28);
             this.btnPause.TabIndex = 0;
@@ -481,9 +482,9 @@
             // 
             this.groupBox5.Controls.Add(this.trb_Tocdo);
             this.groupBox5.Location = new System.Drawing.Point(445, 226);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox5.Size = new System.Drawing.Size(285, 105);
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
@@ -492,7 +493,7 @@
             // trb_Tocdo
             // 
             this.trb_Tocdo.Location = new System.Drawing.Point(21, 30);
-            this.trb_Tocdo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trb_Tocdo.Margin = new System.Windows.Forms.Padding(4);
             this.trb_Tocdo.Name = "trb_Tocdo";
             this.trb_Tocdo.Size = new System.Drawing.Size(213, 56);
             this.trb_Tocdo.TabIndex = 0;
@@ -504,9 +505,9 @@
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.Location = new System.Drawing.Point(739, 54);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox6.Size = new System.Drawing.Size(413, 277);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
@@ -514,11 +515,12 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.Location = new System.Drawing.Point(1160, 54);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox7.Size = new System.Drawing.Size(341, 277);
             this.groupBox7.TabIndex = 14;
             this.groupBox7.TabStop = false;
@@ -539,7 +541,7 @@
             this.Controls.Add(this.pnNut);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "mô phỏng giải thuật sắp xếp";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -41,7 +41,7 @@ namespace PMSapXep
                 case 3:
                 case 4:
                 case 5:
-                    Size = 60;
+                    Size = 70;
                     KhoangCachNut = 25;
                     Canh_le = (1460 - Size * SoPT - KhoangCachNut * (SoPT - 1)) / 2;
                     break;
@@ -50,7 +50,7 @@ namespace PMSapXep
                 case 8:
                 case 9:
                 case 10:
-                    Size = 55;
+                    Size = 60;
                     KhoangCachNut = 25;
                     Canh_le = (1460 - Size * SoPT - KhoangCachNut * (SoPT - 1)) / 2;
                     break;
@@ -59,7 +59,7 @@ namespace PMSapXep
                 case 13:
                 case 14:
                 case 15:
-                    Size = 47;
+                    Size = 50;
                     KhoangCachNut = 25;
                     Canh_le = (1460 - Size * SoPT - KhoangCachNut * (SoPT - 1)) / 2;
                     break;
