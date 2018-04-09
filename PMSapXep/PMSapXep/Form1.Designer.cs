@@ -69,6 +69,7 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -77,6 +78,7 @@
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trb_Tocdo)).BeginInit();
             this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // rad_InterchangeSort
@@ -523,6 +525,7 @@
             // 
             this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox7.Controls.Add(this.listBox3);
             this.groupBox7.Location = new System.Drawing.Point(1160, 54);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
@@ -550,6 +553,15 @@
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(320, 84);
             this.listBox2.TabIndex = 1;
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 16;
+            this.listBox3.Location = new System.Drawing.Point(45, 50);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(159, 116);
+            this.listBox3.TabIndex = 0;
             // 
             // Form1
             // 
@@ -582,6 +594,7 @@
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trb_Tocdo)).EndInit();
             this.groupBox6.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -628,6 +641,7 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBox3;
     }
 }
 
