@@ -43,7 +43,7 @@ namespace PMSapXep
                 case 5:
                     Size = 70;
                     KhoangCachNut = 25;
-                    Canh_le = (1460 - Size * SoPT - KhoangCachNut * (SoPT - 1)) / 2;
+                    Canh_le = (pnNut.Width - Size * SoPT - KhoangCachNut * (SoPT - 1)) / 2;
                     break;
                 case 6:
                 case 7:
@@ -52,7 +52,7 @@ namespace PMSapXep
                 case 10:
                     Size = 60;
                     KhoangCachNut = 25;
-                    Canh_le = (1460 - Size * SoPT - KhoangCachNut * (SoPT - 1)) / 2;
+                    Canh_le = (pnNut.Width - Size * SoPT - KhoangCachNut * (SoPT - 1)) / 2;
                     break;
                 case 11:
                 case 12:
@@ -61,7 +61,7 @@ namespace PMSapXep
                 case 15:
                     Size = 50;
                     KhoangCachNut = 25;
-                    Canh_le = (1460 - Size * SoPT - KhoangCachNut * (SoPT - 1)) / 2;
+                    Canh_le = (pnNut.Width - Size * SoPT - KhoangCachNut * (SoPT - 1)) / 2;
                     break;
             }
             //het them
