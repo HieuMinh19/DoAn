@@ -67,6 +67,8 @@
             this.trb_Tocdo = new System.Windows.Forms.TrackBar();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -74,6 +76,7 @@
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trb_Tocdo)).BeginInit();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // rad_InterchangeSort
@@ -504,6 +507,8 @@
             // 
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox6.Controls.Add(this.listBox2);
+            this.groupBox6.Controls.Add(this.listBox1);
             this.groupBox6.Location = new System.Drawing.Point(739, 54);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
@@ -512,6 +517,7 @@
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "CodeC/C++";
+            this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
             // 
             // groupBox7
             // 
@@ -526,6 +532,24 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Ý tưởng";
             this.groupBox7.Enter += new System.EventHandler(this.groupBox7_Enter);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(58, 220);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(8, 4);
+            this.listBox1.TabIndex = 0;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 16;
+            this.listBox2.Location = new System.Drawing.Point(33, 41);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(320, 84);
+            this.listBox2.TabIndex = 1;
             // 
             // Form1
             // 
@@ -557,6 +581,7 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trb_Tocdo)).EndInit();
+            this.groupBox6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -601,7 +626,8 @@
         private System.Windows.Forms.TrackBar trb_Tocdo;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox7;
-        
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }
 

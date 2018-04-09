@@ -100,6 +100,8 @@ namespace PMSapXep
            
         }
 
+
+
         /* csdfgfdgujsndfad
          dgndjsbnj 
          alngdanga
@@ -316,6 +318,11 @@ namespace PMSapXep
         }
 
         private void pnNut_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void groupBox6_Enter(object sender, EventArgs e)
         {
 
         }
