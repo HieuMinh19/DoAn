@@ -322,10 +322,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnNut.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnNut.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnNut.Location = new System.Drawing.Point(31, 274);
+            this.pnNut.Location = new System.Drawing.Point(31, 268);
             this.pnNut.Margin = new System.Windows.Forms.Padding(2);
             this.pnNut.Name = "pnNut";
-            this.pnNut.Size = new System.Drawing.Size(1327, 223);
+            this.pnNut.Size = new System.Drawing.Size(1310, 229);
             this.pnNut.TabIndex = 5;
             this.pnNut.Click += new System.EventHandler(this.pnNut_Click);
             this.pnNut.Paint += new System.Windows.Forms.PaintEventHandler(this.pnNut_Paint);
@@ -340,11 +340,11 @@
             this.groupBox2.Controls.Add(this.btnTaoMang);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.btn_Ngaunhien);
-            this.groupBox2.Location = new System.Drawing.Point(31, 44);
+            this.groupBox2.Location = new System.Drawing.Point(31, 42);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(247, 135);
+            this.groupBox2.Size = new System.Drawing.Size(247, 137);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Khởi Tạo";
@@ -391,7 +391,7 @@
             // 
             this.groupBox3.Controls.Add(this.rad_Giam);
             this.groupBox3.Controls.Add(this.rad_Tang);
-            this.groupBox3.Location = new System.Drawing.Point(31, 185);
+            this.groupBox3.Location = new System.Drawing.Point(31, 182);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(105, 84);
             this.groupBox3.TabIndex = 10;
@@ -432,9 +432,9 @@
             this.groupBox4.Controls.Add(this.btn_Batdau);
             this.groupBox4.Controls.Add(this.btn_xuatgip);
             this.groupBox4.Controls.Add(this.btnPause);
-            this.groupBox4.Location = new System.Drawing.Point(142, 184);
+            this.groupBox4.Location = new System.Drawing.Point(142, 181);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(668, 85);
+            this.groupBox4.Size = new System.Drawing.Size(198, 85);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Điều khiển";
@@ -488,9 +488,9 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.trb_Tocdo);
-            this.groupBox5.Location = new System.Drawing.Point(334, 184);
+            this.groupBox5.Location = new System.Drawing.Point(346, 184);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(214, 85);
+            this.groupBox5.Size = new System.Drawing.Size(202, 79);
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Tốc độ";
@@ -510,7 +510,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.Location = new System.Drawing.Point(554, 44);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(362, 225);
+            this.groupBox6.Size = new System.Drawing.Size(362, 219);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "CodeC/C++";
@@ -521,7 +521,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.Location = new System.Drawing.Point(922, 44);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(436, 225);
+            this.groupBox7.Size = new System.Drawing.Size(419, 216);
             this.groupBox7.TabIndex = 14;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Ý tưởng";
@@ -532,9 +532,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 508);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
-            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
