@@ -82,12 +82,13 @@ namespace PMSapXep
             // 
             // btn_Nhap
             // 
+            this.btn_Nhap.BackColor = System.Drawing.SystemColors.Control;
             this.btn_Nhap.Location = new System.Drawing.Point(49, 109);
             this.btn_Nhap.Name = "btn_Nhap";
             this.btn_Nhap.Size = new System.Drawing.Size(80, 24);
             this.btn_Nhap.TabIndex = 4;
             this.btn_Nhap.Text = "Nhập";
-            this.btn_Nhap.UseVisualStyleBackColor = true;
+            this.btn_Nhap.UseVisualStyleBackColor = false;
             this.btn_Nhap.Click += new System.EventHandler(this.btn_Nhap_Click);
             // 
             // btn_exits

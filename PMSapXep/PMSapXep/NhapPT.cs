@@ -53,9 +53,16 @@ namespace PMSapXep
                 return;
             }
             #endregion
-
+          
             Form1.Array[ViTri] = GiaTri;
             Form1.Bn[ViTri].Text = GiaTri.ToString();
+            //tu dong tang gia tri cua vi tri phan tu
+            this.txt_Vitri.Text = (ViTri + 1).ToString();
+
+            Form1.Bn[ViTri].BackColor = Color.Green;
+            
+
+            
         }
 
         private void btn_exits_Click(object sender, EventArgs e)
