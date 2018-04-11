@@ -222,7 +222,7 @@
             this.button4.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button4.Location = new System.Drawing.Point(125, 76);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(89, 25);
             this.button4.TabIndex = 8;
@@ -234,7 +234,7 @@
             this.button3.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button3.Location = new System.Drawing.Point(8, 76);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(89, 25);
             this.button3.TabIndex = 7;
@@ -247,7 +247,7 @@
             this.btn_Ngaunhien.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Ngaunhien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btn_Ngaunhien.Location = new System.Drawing.Point(8, 46);
-            this.btn_Ngaunhien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Ngaunhien.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Ngaunhien.Name = "btn_Ngaunhien";
             this.btn_Ngaunhien.Size = new System.Drawing.Size(89, 25);
             this.btn_Ngaunhien.TabIndex = 6;
@@ -260,7 +260,7 @@
             this.btnTaoMang.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaoMang.ForeColor = System.Drawing.Color.Blue;
             this.btnTaoMang.Location = new System.Drawing.Point(63, 105);
-            this.btnTaoMang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTaoMang.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaoMang.Name = "btnTaoMang";
             this.btnTaoMang.Size = new System.Drawing.Size(95, 25);
             this.btnTaoMang.TabIndex = 5;
@@ -283,7 +283,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(60, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(721, 28);
             this.panel1.TabIndex = 4;
@@ -321,7 +321,7 @@
             this.pnNut.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnNut.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnNut.Location = new System.Drawing.Point(31, 274);
-            this.pnNut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnNut.Margin = new System.Windows.Forms.Padding(2);
             this.pnNut.Name = "pnNut";
             this.pnNut.Size = new System.Drawing.Size(1125, 225);
             this.pnNut.TabIndex = 5;
@@ -338,9 +338,9 @@
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.btn_Ngaunhien);
             this.groupBox2.Location = new System.Drawing.Point(31, 44);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(247, 135);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
@@ -351,7 +351,7 @@
             this.button5.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Blue;
             this.button5.Location = new System.Drawing.Point(126, 46);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(89, 25);
             this.button5.TabIndex = 11;
@@ -362,7 +362,7 @@
             // txtNhapPT
             // 
             this.txtNhapPT.Location = new System.Drawing.Point(125, 18);
-            this.txtNhapPT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNhapPT.Margin = new System.Windows.Forms.Padding(2);
             this.txtNhapPT.Name = "txtNhapPT";
             this.txtNhapPT.Size = new System.Drawing.Size(90, 20);
             this.txtNhapPT.TabIndex = 9;
