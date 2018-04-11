@@ -325,5 +325,10 @@ namespace PMSapXep
         {
 
         }
+
+        private void btnxoamang_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
