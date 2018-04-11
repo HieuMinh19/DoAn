@@ -224,7 +224,7 @@
             this.button4.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button4.Location = new System.Drawing.Point(125, 76);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(89, 25);
             this.button4.TabIndex = 8;
@@ -236,7 +236,7 @@
             this.button3.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button3.Location = new System.Drawing.Point(8, 76);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(89, 25);
             this.button3.TabIndex = 7;
@@ -249,7 +249,7 @@
             this.btn_Ngaunhien.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Ngaunhien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btn_Ngaunhien.Location = new System.Drawing.Point(8, 46);
-            this.btn_Ngaunhien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Ngaunhien.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Ngaunhien.Name = "btn_Ngaunhien";
             this.btn_Ngaunhien.Size = new System.Drawing.Size(89, 25);
             this.btn_Ngaunhien.TabIndex = 6;
@@ -262,7 +262,7 @@
             this.btnTaoMang.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaoMang.ForeColor = System.Drawing.Color.Blue;
             this.btnTaoMang.Location = new System.Drawing.Point(125, 107);
-            this.btnTaoMang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTaoMang.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaoMang.Name = "btnTaoMang";
             this.btnTaoMang.Size = new System.Drawing.Size(89, 25);
             this.btnTaoMang.TabIndex = 5;
@@ -285,7 +285,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(60, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(721, 28);
             this.panel1.TabIndex = 4;
@@ -323,9 +323,9 @@
             this.pnNut.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnNut.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnNut.Location = new System.Drawing.Point(31, 274);
-            this.pnNut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnNut.Margin = new System.Windows.Forms.Padding(2);
             this.pnNut.Name = "pnNut";
-            this.pnNut.Size = new System.Drawing.Size(1125, 225);
+            this.pnNut.Size = new System.Drawing.Size(1327, 223);
             this.pnNut.TabIndex = 5;
             this.pnNut.Click += new System.EventHandler(this.pnNut_Click);
             this.pnNut.Paint += new System.Windows.Forms.PaintEventHandler(this.pnNut_Paint);
@@ -341,9 +341,9 @@
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.btn_Ngaunhien);
             this.groupBox2.Location = new System.Drawing.Point(31, 44);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(247, 135);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
@@ -354,7 +354,7 @@
             this.btnxoamang.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnxoamang.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnxoamang.Location = new System.Drawing.Point(8, 107);
-            this.btnxoamang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnxoamang.Margin = new System.Windows.Forms.Padding(2);
             this.btnxoamang.Name = "btnxoamang";
             this.btnxoamang.Size = new System.Drawing.Size(89, 24);
             this.btnxoamang.TabIndex = 12;
@@ -367,7 +367,7 @@
             this.button5.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Blue;
             this.button5.Location = new System.Drawing.Point(126, 46);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(89, 25);
             this.button5.TabIndex = 11;
@@ -378,7 +378,7 @@
             // txtNhapPT
             // 
             this.txtNhapPT.Location = new System.Drawing.Point(125, 18);
-            this.txtNhapPT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNhapPT.Margin = new System.Windows.Forms.Padding(2);
             this.txtNhapPT.Name = "txtNhapPT";
             this.txtNhapPT.Size = new System.Drawing.Size(90, 20);
             this.txtNhapPT.TabIndex = 9;
@@ -434,7 +434,7 @@
             this.groupBox4.Controls.Add(this.btnPause);
             this.groupBox4.Location = new System.Drawing.Point(142, 184);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(326, 85);
+            this.groupBox4.Size = new System.Drawing.Size(668, 85);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Điều khiển";
@@ -443,7 +443,7 @@
             // btnhuy
             // 
             this.btnhuy.Location = new System.Drawing.Point(16, 56);
-            this.btnhuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnhuy.Margin = new System.Windows.Forms.Padding(2);
             this.btnhuy.Name = "btnhuy";
             this.btnhuy.Size = new System.Drawing.Size(75, 23);
             this.btnhuy.TabIndex = 3;
@@ -510,7 +510,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.Location = new System.Drawing.Point(554, 44);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(287, 225);
+            this.groupBox6.Size = new System.Drawing.Size(362, 225);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "CodeC/C++";
@@ -519,9 +519,9 @@
             // 
             this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox7.Location = new System.Drawing.Point(847, 44);
+            this.groupBox7.Location = new System.Drawing.Point(922, 44);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(309, 225);
+            this.groupBox7.Size = new System.Drawing.Size(436, 225);
             this.groupBox7.TabIndex = 14;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Ý tưởng";
@@ -531,7 +531,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 508);
+            this.ClientSize = new System.Drawing.Size(1370, 508);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
