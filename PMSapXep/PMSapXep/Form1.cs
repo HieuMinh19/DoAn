@@ -110,6 +110,65 @@ namespace PMSapXep
 
         }
 
+        #region di chuyển Node
+        public void DiLen(Control btn)
+        {
+            //di len do cao 50
+            for (int i = 0; i < 100; i++)
+            {
+                btn.Top = btn.Top - 1;
+                System.Threading.Thread.Sleep(trb_Tocdo.Value);
+
+            }
+        }
+
+        public void DiXuong(Control btn)
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                btn.Top = btn.Top + 1;
+                System.Threading.Thread.Sleep(trb_Tocdo.Value);
+            }
+        }
+
+
+        public void HoanVi(Control btn1, Control btn2)
+        {
+            Point p1 = btn1.Location;
+            Point p2 = btn2.Location;
+
+            if (p1 != p2)
+            {
+                for (int i = p1.X; i < p2.X; i++)
+                {
+                    btn2.Left = btn2.Left - 1;
+                    System.Threading.Thread.Sleep(trb_Tocdo.Value);
+                    btn1.Left = btn1.Left + 1;
+                    System.Threading.Thread.Sleep(trb_Tocdo.Value);
+                }
+            }
+
+
+        }
+
+        public void Hoan_vi(Control btn1, Control btn2)
+        {
+
+
+            DiLen(btn1);
+            DiXuong(btn2);
+
+            HoanVi(btn1, btn2);
+
+            DiXuong(btn1);
+            DiLen(btn2);
+
+            btn1.Refresh();
+            btn2.Refresh();
+
+
+        }
+        #endregion
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -315,7 +374,8 @@ namespace PMSapXep
 
         private void btn_Batdau_Click(object sender, EventArgs e)
         {
-
+            Hoan_vi(Bn[0], Bn[2]);
+            Hoan_vi(Bn[2], Bn[4]);
         }
 
         private void trb_Tocdo_Scroll(object sender, EventArgs e)
@@ -349,6 +409,11 @@ namespace PMSapXep
         }
 
         private void btnxoamang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_code_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
