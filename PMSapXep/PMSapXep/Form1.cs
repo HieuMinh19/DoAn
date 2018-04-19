@@ -113,77 +113,14 @@ namespace PMSapXep
 
         }
 
-        #region di chuyển Node
-        public void DiLen(Control btn)
-        {
-            //di len do cao 50
-            for (int i = 0; i < 100; i++)
-            {
-                btn.Top = btn.Top - 1;
-                System.Threading.Thread.Sleep(trb_Tocdo.Value);
-
-            }
-        }
-
-        public void DiXuong(Control btn)
-        {
-            for (int i = 0; i < 100; i++)
-            {
-                btn.Top = btn.Top + 1;
-                System.Threading.Thread.Sleep(trb_Tocdo.Value);
-            }
-        }
-
-
-        public void HoanVi(Control btn1, Control btn2)
-        {
-            Point p1 = btn1.Location;
-            Point p2 = btn2.Location;
-
-            if (p1 != p2)
-            {
-                for (int i = p1.X; i < p2.X; i++)
-                {
-                    btn2.Left = btn2.Left - 1;
-                    System.Threading.Thread.Sleep(trb_Tocdo.Value);
-                    btn1.Left = btn1.Left + 1;
-                    System.Threading.Thread.Sleep(trb_Tocdo.Value);
-                }
-            }
-
-
-        }
-
-        public void Hoan_vi(Button[] arrBT, int Pos1, int Pos2)
-        {
-
-
-            DiLen(arrBT[Pos1]);
-            DiXuong(arrBT[Pos2]);
-
-            HoanVi(arrBT[Pos1], arrBT[Pos2]);
-
-            DiXuong(arrBT[Pos1]);
-            DiLen(arrBT[Pos2]);
-
-            int posTemp = Pos1;
-            Pos1 = Pos2;
-            Pos2 = posTemp;
-
-
-        }
-        #endregion
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-           
+                       
         }
-
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-
         private void txt_SoPT_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
@@ -378,11 +315,83 @@ namespace PMSapXep
 
         private void btn_Batdau_Click(object sender, EventArgs e)
         {
-            InterchangeSort(Bn);
+            if(rad_InterchangeSort.Checked == true)
+                InterchangeSort(Bn);
+            if (rad_SelectionSort.Checked == true)
+                SelectionSort(Bn);
+            if (rad_BubbleSort.Checked == true)
+                BubbleSort(Bn);
+            if (rad_ShakerSort.Checked == true)
+                ShakerSort(Bn);
+        }
+
+        
+
+
+
+
+
+
+
+
+        #region Di Chuyển Node
+
+        public void SwapInts(int[] arr, int Pos1, int Pos2)
+        {
+            int Temp = arr[Pos1];
+            arr[Pos1] = arr[Pos2];
+            arr[Pos2] = Temp;
+
+        }
+        public void DiLen(Control btn)
+        {
+            //di len do cao 50
+            for (int i = 0; i < 100; i++)
+            {
+                btn.Top = btn.Top - 1;
+                System.Threading.Thread.Sleep(trb_Tocdo.Value);
+
+            }
+        }
+
+        public void DiXuong(Control btn)
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                btn.Top = btn.Top + 1;
+                System.Threading.Thread.Sleep(trb_Tocdo.Value);
+            }
         }
 
 
+        public void HoanVi(Control btn1, Control btn2)
+        {
+            Point p1 = btn1.Location;
+            Point p2 = btn2.Location;
+
+            if (p1 != p2)
+            {
+                for (int i = p1.X; i < p2.X; i++)
+                {
+                    btn2.Left = btn2.Left - 1;
+                    System.Threading.Thread.Sleep(trb_Tocdo.Value);
+                    btn1.Left = btn1.Left + 1;
+                    System.Threading.Thread.Sleep(trb_Tocdo.Value);
+                }
+            }
+        }
+        public void Hoan_vi(Button[] arrBT, int Pos1, int Pos2)
+        {
+            DiLen(arrBT[Pos1]);
+            DiXuong(arrBT[Pos2]);
+            HoanVi(arrBT[Pos1], arrBT[Pos2]);
+            DiXuong(arrBT[Pos1]);
+            DiLen(arrBT[Pos2]);
+        }
+        #endregion
+
         #region THUẬT TOÁN
+
         #region InterchangeSort
         private void InterchangeSort(Button[] M)
         {
@@ -392,28 +401,118 @@ namespace PMSapXep
                 {
                     //Array[i] = int.Parse(M[i].Text.Trim());
                     //Array[j] = int.Parse(M[j].Text.Trim());
-                    if (Array[i] > Array[j])
+                    if (Array[i] > Array[j] && rad_Tang.Checked == true)
                     {
                         SwapInts(Array, i, j);
-
+                        Hoan_vi(Bn, Pos[i], Pos[j]);
+                        SwapInts(Pos, i, j);
+                    }
+                    else if (Array[i] < Array[j] && rad_Giam.Checked == true)
+                    {
+                        SwapInts(Array, i, j);
                         Hoan_vi(Bn, Pos[i], Pos[j]);
                         SwapInts(Pos, i, j);
                     }
                 }
             }
+            MessageBox.Show("sap xep xong");
+        }
+
+
+        #endregion
+
+        #region SelectionSort        
+        private void SelectionSort(Button[] M)
+        {
+            int min;
+            for (int i = 0; i < M.Length - 1; i++)
+            {
+                min = i;
+                for (int j = i + 1; j < M.Length; j++)
+                {
+                    if (Array[j] < Array[min] && rad_Tang.Checked == true)
+                        min = j;
+                    if (Array[j] > Array[min] && rad_Giam.Checked == true)
+                        min = j;
+                }
+                SwapInts(Array, i, min);
+                Hoan_vi(Bn, Pos[i], Pos[min]);
+                SwapInts(Pos, i, min);
+            }
+        }
+
+        #endregion
+
+        #region BubbleSort
+        private void BubbleSort(Button[] M)
+        {
+            for (int i = 1; i < M.Length; i++)
+            {
+                for (int j = M.Length - 1; j >= i; j--)
+                {
+                    if (Array[j - 1] > Array[j] && rad_Tang.Checked == true)
+                    {
+                        SwapInts(Array, j - 1, j);
+                        Hoan_vi(Bn, Pos[j - 1], Pos[j]);
+                        SwapInts(Pos, j - 1, j);
+                    }
+                    if (Array[j - 1] < Array[j] && rad_Giam.Checked == true)
+                    {
+                        SwapInts(Array, j - 1, j);
+                        Hoan_vi(Bn, Pos[j - 1], Pos[j]);
+                        SwapInts(Pos, j - 1, j);
+                    }
+                }
+            }
         }
         #endregion
+
+        #region ShakerSort
+        private void ShakerSort(Button[] M)
+        {
+            int Left = 0;
+            int Right = M.Length - 1;
+            int k = 0;
+            while (Left < Right)
+            {
+                for (int i = Left; i < Right; i++)
+                {
+                    if (Array[i] > Array[i + 1] )
+                    {
+                        //swap(a[i], a[i + 1]);
+                        SwapInts(Array, i, i + 1);
+                        Hoan_vi(Bn, Pos[i], Pos[i + 1]);
+                        SwapInts(Pos, i, i + 1);
+                        k = i;
+                    }
+                }
+                Right = k;
+                for (int i = Right; i > Left; i--)
+                {
+                    if (Array[i] < Array[i - 1])
+                    {
+                        //swap(a[i], a[i - 1]);
+                        SwapInts(Array, i, i - 1);
+                        Hoan_vi(Bn, Pos[i], Pos[i - 1]);
+                        SwapInts(Pos, i, i - 1);
+                        k = i;
+                    }
+                }
+                Left = k;
+            }
+        }
         #endregion
+
+        #endregion
+
+
+
+       
+
+
+
 
         //hoan doi vi tri 2 phan tu trong mang
-        public void SwapInts(int[] arr, int Pos1, int Pos2)
-        {
-            int Temp = arr[Pos1];
-            arr[Pos1] = arr[Pos2];
-            arr[Pos2] = Temp;
-
-        }
-
         private void trb_Tocdo_Scroll(object sender, EventArgs e)
         {
 
