@@ -21,6 +21,7 @@ namespace PMSapXep
         public static int[] Array; // mang chua m so nguyen
         public static Button[] Bn; //tao ra mang 
         public static Label[] Chi_so;
+        public static int[] Pos; //vi tri cua button trong mang
         int HEIGHT = 100; //chieu cao luc di chuyen button
 
         // siZE luc đầu là 60, t sửa thành 47 
@@ -73,7 +74,8 @@ namespace PMSapXep
             {
 
                 Array = new int[SoPT]; //khoi tao mang M gom n phan tu
-                Bn = new Button[SoPT]; //khoi tao Button Bn gom n Button
+                Bn = new Button[SoPT]; //khoi tao Button Bn gom n 
+                Pos = new int[SoPT];
                 pnNut.Controls.Clear(); //xong trong PnNut cac thanh trong
                 Chi_so = new Label[SoPT];
                 for (int i = 0; i < SoPT; i++)
@@ -87,6 +89,7 @@ namespace PMSapXep
                     pnNut.Controls.Add(btn);
                     Array[i] = 0;
                     Bn[i] = btn;
+                    Pos[i] = i;
                     Bn[i].ForeColor = Color.White;
                     Bn[i].BackColor = Color.OrangeRed;
 
@@ -94,7 +97,7 @@ namespace PMSapXep
                     Label lbChiSo = new Label();
                     lbChiSo.Text = i.ToString();
                     lbChiSo.Width = lbChiSo.Height = Size;
-                    lbChiSo.Location = new Point(Canh_le + i * (btn.Width + KhoangCachNut) + Size/2, btn.Location.Y + 100);
+                    lbChiSo.Location = new Point(Canh_le + i * (btn.Width + KhoangCachNut) + Size / 2, btn.Location.Y + btn.Height * 3);
                     pnNut.Controls.Add(lbChiSo);
                     Chi_so[i] = lbChiSo;
                     Chi_so[i].ForeColor = Color.Red;
@@ -151,20 +154,21 @@ namespace PMSapXep
 
         }
 
-        public void Hoan_vi(Control btn1, Control btn2)
+        public void Hoan_vi(Button[] arrBT, int Pos1, int Pos2)
         {
 
 
-            DiLen(btn1);
-            DiXuong(btn2);
+            DiLen(arrBT[Pos1]);
+            DiXuong(arrBT[Pos2]);
 
-            HoanVi(btn1, btn2);
+            HoanVi(arrBT[Pos1], arrBT[Pos2]);
 
-            DiXuong(btn1);
-            DiLen(btn2);
+            DiXuong(arrBT[Pos1]);
+            DiLen(arrBT[Pos2]);
 
-            btn1.Refresh();
-            btn2.Refresh();
+            int posTemp = Pos1;
+            Pos1 = Pos2;
+            Pos2 = posTemp;
 
 
         }
@@ -374,8 +378,40 @@ namespace PMSapXep
 
         private void btn_Batdau_Click(object sender, EventArgs e)
         {
-            Hoan_vi(Bn[0], Bn[2]);
-            Hoan_vi(Bn[2], Bn[4]);
+            InterchangeSort(Bn);
+        }
+
+
+        #region THUẬT TOÁN
+        #region InterchangeSort
+        private void InterchangeSort(Button[] M)
+        {
+            for (int i = 0; i < M.Length - 1; i++)
+            {
+                for (int j = i + 1; j < M.Length; j++)
+                {
+                    //Array[i] = int.Parse(M[i].Text.Trim());
+                    //Array[j] = int.Parse(M[j].Text.Trim());
+                    if (Array[i] > Array[j])
+                    {
+                        SwapInts(Array, i, j);
+
+                        Hoan_vi(Bn, Pos[i], Pos[j]);
+                        SwapInts(Pos, i, j);
+                    }
+                }
+            }
+        }
+        #endregion
+        #endregion
+
+        //hoan doi vi tri 2 phan tu trong mang
+        public void SwapInts(int[] arr, int Pos1, int Pos2)
+        {
+            int Temp = arr[Pos1];
+            arr[Pos1] = arr[Pos2];
+            arr[Pos2] = Temp;
+
         }
 
         private void trb_Tocdo_Scroll(object sender, EventArgs e)
