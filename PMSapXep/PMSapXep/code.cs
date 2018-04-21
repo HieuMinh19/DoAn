@@ -276,6 +276,57 @@ namespace PMSapXep
 
 
 		}
+		public void Interchangesort(ListBox lb_code, Boolean tang)
+		{
+			lb_code.Items.Add("void InterchangeSort(int a[], int N) ");
+			lb_code.Items.Add("    {");
+			lb_code.Items.Add("        int i, j;");
+			lb_code.Items.Add("        for(i = 0; i < N - 1; i++)");
+			lb_code.Items.Add("             for(j = i + 1; j < N; j++)");
+			if (tang)
+				lb_code.Items.Add("                 if (a[j] < a[i])");
+			else
+				lb_code.Items.Add("                 if (a[j] > a[i])");
+			lb_code.Items.Add("                   Swap(a[i], a[j]);");
+			lb_code.Items.Add("    }");
+			lb_code.Items.Add("  void Swap(int &a,int &b)  {");
+			lb_code.Items.Add("           int temp = a;");
+			lb_code.Items.Add("            a = b;");
+			lb_code.Items.Add("            b=temp;");
+			lb_code.Items.Add(" }");
+		}
+		public void ShakerSort(ListBox lb_code, Boolean tang)
+		{
+			lb_code.Items.Add("void ShakeSort(int a[], int n)");
+			lb_code.Items.Add("    {");
+			lb_code.Items.Add("        int i, j;");
+			lb_code.Items.Add("        int left, right, k;");
+			lb_code.Items.Add("        left = 0;");
+			lb_code.Items.Add("        right = n - 1;");
+			lb_code.Items.Add("        k = n - 1;");
+			lb_code.Items.Add("        while (left < right)");
+			lb_code.Items.Add("          {");
+			lb_code.Items.Add("                  for (j = right; j > left; j--)");
+			lb_code.Items.Add("                    if (a[j] < a[j - 1])");
+			lb_code.Items.Add("                      {");
+			lb_code.Items.Add("                        Swap(a[j], a[j - 1]);");
+			lb_code.Items.Add("                        k = j;");
+			lb_code.Items.Add("                      }");
+			lb_code.Items.Add("                  left = k;");
+			lb_code.Items.Add("                  for (j = left; j < right; j++)");
+			lb_code.Items.Add("                    if (a[j] > a[j + 1])");
+			lb_code.Items.Add("                      {");
+			lb_code.Items.Add("                        Swap(a[j], a[j - 1]);");
+			lb_code.Items.Add("                        k = j;");
+			lb_code.Items.Add("          }");
+			lb_code.Items.Add("        right = k; }");
+			lb_code.Items.Add("    }");
+			lb_code.Items.Add("  void Swap(int &a,int &b)  {");
+			lb_code.Items.Add("           int temp = a;");
+			lb_code.Items.Add("            a = b;");
+			lb_code.Items.Add("            b=temp;");
+			lb_code.Items.Add(" }");
+		}
 
 	}
 }

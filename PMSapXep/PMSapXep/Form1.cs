@@ -128,14 +128,6 @@ namespace PMSapXep
                 e.Handled = true;
             }
         }
-
-        private void rad_InterchangeSort_CheckedChanged(object sender, EventArgs e)
-        {
-			text_ytuong.Text = "Như đã biết, để sắp xếp một dãy số, ta có thể xét các nghịch thế có trong dãy và triệt tiêu dần chúng đi. Ý tưởng chính của giải thuật là xuất phát từ đầu dãy, tìm tất cả nghịch thế chứa phần tử này, triệt tiêu chúng bằng cách đổi chổ phần tử này với phần tử tương ứng trong cặp nghịch thế. Lặp lại xử lý trên với các phần tử kế tiếp theo trong dãy. ";
-
-
-		}
-
 		private void groupBox1_Enter(object sender, EventArgs e)
         {
             rad_InterchangeSort.Checked = true;
@@ -151,33 +143,41 @@ namespace PMSapXep
 
         }
 
-        private void rad_SelectionSort_CheckedChanged(object sender, EventArgs e)
-        {
+		#region ý tưởng và code
+		private void rad_InterchangeSort_CheckedChanged(object sender, EventArgs e)
+		{
+			text_ytuong.Text = "Xuất phát từ đầu dãy, tìm tất các các cặp nghịch thế, triệt tiêu bằng cách đổi chỗ 2 phần tử trong cặp nghịch thế.\r\nLặp lại xử lý trên với phần tử kế trong dãy.  ";
+			lb_code.Items.Clear();
+			code x = new code();
+			x.Interchangesort(lb_code, true);
+		}
+		private void rad_SelectionSort_CheckedChanged(object sender, EventArgs e)
+		{
 			lb_code.Items.Clear();
 			code x = new code();
 			x.Selectionsort(lb_code, true);
-			text_ytuong.Text = "Chọn phần tử nhỏ nhất trong N phần tử trong dãy hiện hành ban đầu.Đưa phần tử này về vị trí đầu dãy hiện hành\r\nXem dãy hiện hành chỉ còn N-1 phần tử của dãy hiện hành ban đầuBắt đầu từ vị trí thứ 2Lặp lại quá trình trên cho dãy hiện hành đến khi dãy hiện hành chỉ còn 1 phần tử";
+			text_ytuong.Text = "Chọn phần tử nhỏ nhất trong N phần tử trong dãy hiện hành ban đầu.Đưa phần tử này về vị trí đầu dãy hiện hành\r\nXem dãy hiện hành chỉ còn N-1 phần tử của dãy hiện hành ban đầuBắt đầu từ vị trí thứ 2\r\nLặp lại quá trình trên cho dãy hiện hành đến khi dãy hiện hành chỉ còn 1 phần tử";
 
 		}
 
 		private void rad_HeapSort_CheckedChanged(object sender, EventArgs e)
-        {
+		{
 			lb_code.Items.Clear();
-			text_ytuong.Text = "Heapsort còn được gọi là giải thuật vun đống, nó có thể được xem như bản cải tiến của Selection sort khi chia các phần tử thành 2 mảng con, 1 mảng các phần tử đã được sắp xếp và mảng còn lại các phần tử chưa được sắp xếp. Trong mảng chưa được sắp xếp, các phần tử lớn nhất sẽ được tách ra và đưa vào mảng đã được sắp xếp. Điều cải tiến ở Heapsort so với Selection sort ở việc sử dụng cấu trúc dữ liệu heap thay vì tìm kiếm tuyến tính (linear-time search) như Selection sort để tìm ra phần tử lớn nhất.Heapsort là thuật toán in-place, nghĩa là không cần thêm bất cứ cấu trúc dữ liệu phụ trợ trong quá trình chạy thuật toán.Tuy nhiên, giải thuật này không có độ ổn định(stability).";
+			text_ytuong.Text = "Heap Sort tận dụng được các phép so sánh ở bước i-1, mà thuật toán sắp xếp chọn trực tiếp không tận dụng được\r\nĐể làm được điều này Heap sort thao tác dựa trên cây.\r\nỞ cây trên, phần tử ở mức i chính là phần tử lớn trong cặp phần tử ở mức i +1, do đó phần tử ở nút gốc là phần tử lớn nhất.\r\nNếu loại bỏ gốc ra khỏi cây, thì việc cập  nhật cây chỉ xãy ra trên những nhấn liên quan đến phần tử mới loại bỏ, còn các nhánh khác thì bảo toàn.\r\nBước kế tiếp có thể sử dụng lại kết quả so sánh của bước hiện tại. ";
 			code x = new code();
 			x.heapsort(lb_code, true);
 		}
 
-        private void rad_MergeSort_CheckedChanged(object sender, EventArgs e)
-        {
+		private void rad_MergeSort_CheckedChanged(object sender, EventArgs e)
+		{
 			lb_code.Items.Clear();
 			code x = new code();
 			x.Mergesort(lb_code, true);
-			text_ytuong.Text = "Ý tưởng chúng ta sẽ chia mảng lớn thành những mảng con nhỏ hơn bằng cách chia đôi mảng lớn và chúng ta tiếp tục chia đôi các mảng con cho tới khi mảng con nhỏ nhất chỉ còn 1 phần tử. Sau đó chúng ta sẽ tiếng hành so sánh 2 mảng con có cùng mảng cơ sở (khi chúng ta chia đôi mảng lớn thành 2 mảng con thì mảng lớn đó chúng ta gọi là mảng cơ sở của 2 mảng con đó) khi so sánh chúng sẽ vừa sắp xếp vừa ghép 2 mảng con đó lại thành mảng cơ sở, chúng ta tiếp tục so sánh và ghép các mảng con lại đến khi còn lại mảng duy nhất thì đó là mảng đã được sắp xếp.";
+			text_ytuong.Text = "Giải thuật Merge sort sắp xếp dãy a1, a2, ..., an dựa trên nhận xét sau: \r\n    +Mỗi dãy a1, a2, ..., an bất kỳ là một tập hợp các dãy con liên tiếp mà mỗi dãy con đều đã có thứ tự. \r\n    +Dãy đã có thứ tự coi như có 1 dãy con.\r\nMảng A chia làm 02 phần bằng nhau\r\nSắp xếp 02 phần\r\nTrộn 02 nửa lại ";
 		}
 
 		private void rad_BubbleSort_CheckedChanged(object sender, EventArgs e)
-        {
+		{
 			lb_code.Items.Clear();
 			code x = new code();
 			x.bubblesort(lb_code, true);
@@ -186,37 +186,40 @@ namespace PMSapXep
 		}
 
 		private void rad_ShakerSort_CheckedChanged(object sender, EventArgs e)
-        {
-			text_ytuong.Text = "Shaker Sort là một cải tiến của Bubble Sort. Sau khi đưa phần tử nhỏ nhất về đầu dãy, thuật toán sẽ giúp chúng ta đưa phần tử lớn nhất về cuối dãy. Do đưa các phần tử về đúng vị trí ở cả hai đầu và ghi nhận những đoạn được sắp xếp nên Shaker Sort sẽ giúp cải thiện thời gian sắp xếp dãy số.";
-
+		{
+			text_ytuong.Text = "Trong mỗi lần sắp xếp, duyệt mảng theo 2 lượt từ 2 phía khác nhau:\r\n    +Lượt đi: đẩy phần tử nhỏ về đầu mảng.\r\n    +Lượt về: đẩy phần tử lớn về cuối mảng. \r\nGhi nhận lại những đoạn đã sắp xếp nhằm tiết kiệm các phép so sánh thừa.";
+			lb_code.Items.Clear();
+			code x = new code();
+			x.ShakerSort(lb_code, true);
 		}
 
 		private void rad_InsertionSort_CheckedChanged(object sender, EventArgs e)
-        {
+		{
 			lb_code.Items.Clear();
-			text_ytuong.Text = "Sắp xếp chèn(insertion sort) là một thuật toán sắp xếp bắt chước cách sắp xếp quân bài của những người chơi bài. Muốn sắp một bộ bài theo trật tự người chơi bài rút lần lượt từ quân thứ 2, so với các quân đứng trước nó để chèn vào vị trí thích hợp.";
+			text_ytuong.Text = "Giả sử có một dãy a0 , a1 ,... ,an-1 trong đó i phần tử đầu tiên a0 , a1 ,... ,ai-1 đã có thứ\r\nTìm cách chèn phần tử  ai vào vị trí thích hợp của đoạn đã được sắp để có dãy mới a0 , a1,... ,ai trở nên có thứ tự. Vị trí này chính là vị trí giữa hai phần tử ak-1 và ak thỏa ak-1 < ai < ak (1≤k≤i). ";
 			code x = new code();
 			x.insertionsort(lb_code, true);
 		}
 
 		private void rad_BinaryInsertionSort_CheckedChanged(object sender, EventArgs e)
-        {
-			text_ytuong.Text = "Chúng ta có thể sử dụng tìm kiếm nhị phân để giảm số lần so sánh trong phân loại chèn thông thường. Binary Insertion Sort là cải tiến của Insertion Sort khi sử dụng tìm kiếm nhị phân để tìm vị trí thích hợp để chèn các mục đã chọn ở mỗi lần lặp.";
+		{
+			text_ytuong.Text = "Giả sử có một dãy a0 , a1 ,... ,an-1 trong đó i phần tử đầu tiên a0 , a1 ,... ,ai-1 đã có thứ\r\nChúng tasử dụng tìm kiếm nhị phân để chèn phần tử  ai vào vị trí thích hợp của đoạn đã được sắp để có dãy mới a0 , a1,... ,ai trở nên có thứ tự. Vị trí này chính là vị trí giữa hai phần tử ak-1 và ak thỏa ak-1 < ai < ak (1≤k≤i). .";
 		}
 
 		private void rad_ShellSort_CheckedChanged(object sender, EventArgs e)
-        {
-			text_ytuong.Text = "Shell Sort là một giải thuật sắp xếp mang lại hiệu quả cao dựa trên giải thuật sắp xếp chèn (Insertion Sort). Giải thuật này tránh các trường hợp phải tráo đổi vị trí của hai phần tử xa nhau trong giải thuật sắp xếp chọn (nếu như phần tử nhỏ hơn ở vị trí bên phải khá xa so với phần tử lớn hơn bên trái).Đầu tiên, giải thuật này sử dụng giải thuật sắp xếp chọn trên các phần tử có khoảng cách xa nhau, sau đó sắp xếp các phần tử có khoảng cách hẹp hơn.Khoảng cách này còn được gọi là khoảng(interval) – là số vị trí từ phần tử này tới phần tử khác";
+		{
+			text_ytuong.Text = "Phân hoạch dãy thành các dãy con \r\nSắp xếp các dãy con theo phương pháp chèn trực tiếp \r\nDùng phương pháp chèn trực tiếp sắp xếp lại cả dãy. ";
+
 		}
 
 		private void rad_QuickSort_CheckedChanged(object sender, EventArgs e)
-        {
+		{
 			lb_code.Items.Clear();
 			code x = new code();
 			x.quicksort(lb_code, true);
-			text_ytuong.Text = "QuickSort là một thuật toán Divide and Conquer. Nó chọn một phần tử như là trục và phân chia mảng cho trước quanh trục nhặt được chọn.Có rất nhiều phiên bản khác nhau của quickSort chọn trục pivot bằng nhiều cách khác nhau.Luôn chọn yếu tố đầu tiên làm trục chính.Luôn chọn phần tử cuối cùng làm trục chính.Chọn một phần tử ngẫu nhiên như trục quay.Chọn trung vị làm trục.Quá trình quan trọng trong quickSort là phân vùng.Mục tiêu của các phân vùng là, cho mảng và một phần tử x của mảng là trục chính, đặt x tại vị trí chính xác của nó trong mảng sắp xếp và đặt tất cả các phần tử nhỏ hơn(nhỏ hơn x) trước x và đặt tất cả các phần tử lớn hơn(lớn hơn x) x.Tất cả điều này nên được thực hiện trong thời gian tuyến tính.";
+			text_ytuong.Text = "Giải thuật QuickSort sắp xếp dãy a1, a2 ..., aN dựa trên việc phân hoạch dãy ban đầu thành 3 phần\r\n    +Phần 1: Gồm các phần tử  có giá trị bé hơn x \r\n    +Phần 2: Gồm các phần tử  có giá trị bằng  x\r\n    +Phần 3: Gồm các phần tử  có giá trị lớn hơn \r\nSau khi thực hiện phân hoạch, dãy ban đầu được phân thành 3 đoạn:\r\n    •1. ak  ≤ x , với k = 1 .. j\r\n    • 2.ak = x , với k = j + 1..i - 1\r\n    • 3.ak   x , với k = i..N\r\nKhi đoạn thứ 2 đã có thứ tự.\r\n    +Nếu các đoạn 1 và 3 chỉ có 1 phần tử thì khi đó dãy con ban đầu đã được sắp.\r\n    +Nếu các đoạn 1 và 3  có nhiều hơn 1 phần tử  thì dãy ban đầu chỉ có thứ tự khi các đoạn 1, 3 được sắp xếp.\r\n    +Để sắp xếp các đoạn 1 và 3,ta phân hoạch dãy theo phương pháp ban đầu    ";
 		}
-
+		#endregion
 		private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
