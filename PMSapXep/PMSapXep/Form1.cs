@@ -318,65 +318,21 @@ namespace PMSapXep
 
         private void btn_Batdau_Click(object sender, EventArgs e)
         {
-            if(rad_InterchangeSort.Checked == true)
+            if (rad_InterchangeSort.Checked == true)
                 InterchangeSort(Bn);
             if (rad_SelectionSort.Checked == true)
                 SelectionSort(Bn);
             if (rad_BubbleSort.Checked == true)
                 BubbleSort(Bn);
-            if (rad_ShakerSort.Checked == true)// chưa chạy được
+            if (rad_ShakerSort.Checked == true)//c
                 ShakerSort(Bn);
             if (rad_InsertionSort.Checked == true)
                 InsertionSort(Bn);
-
-        }
-
-        private void InsertionSort(Button[] M)
-        {
-            for(int i = 1 ;i < M.Length;i++)
-            {
-                
-                int x = Array[i];
-                int j = i;
-                if(j > 0 && Array[j - 1] > x)
-                {
-                    DiLen(M[j]);
-                    while (j > 0 && Array[j - 1] > x)
-                    {
-
-                        QuaPhai(Pos, M[j - 1]);
-                        j--;
-                        DemQuickSort++;
-                    }
-                    QuaTrai(M[j+DemQuickSort]);
-                    DiXuong(M[j + DemQuickSort]);
-                }
-                    
-            }
-        }
-        public void QuaPhai(int[] ViTri,Control btn)
-        {
-            for(int i = 0;i < (Size+KhoangCachNut);i++)
-            {
-                btn.Left = btn.Left + 1;
-                SwapInts(ViTri, ViTri[i], ViTri[i + 1]);
-                Thread.Sleep(trb_Tocdo.Value);
-
-            }
-        }
-        public void QuaTrai(Control btn)
-        {
-            for(int i =0; i < DemQuickSort*(Size + KhoangCachNut);i++)
-            {
-                btn.Left = btn.Left - 1;
-                Thread.Sleep(trb_Tocdo.Value);
-            }
+           
         }
 
 
-
-
-
+        
 
 
 
@@ -398,6 +354,13 @@ namespace PMSapXep
 
             }
         }
+        public void Hoan_Tri_Node(int t1, int t2)
+        {
+            Button Temp = Bn[t1];
+            Bn[t1] = Bn[t2];
+            Bn[t2] = Temp;
+        }
+
 
         public void DiXuong(Control btn)
         {
@@ -531,10 +494,17 @@ namespace PMSapXep
             int Right = M.Length - 1;
             int k = 0;
             while (Left < Right)
-            {                
+            {
                 for (int i = Left; i < Right; i++)
                 {
-                    if (Array[i] > Array[i + 1])
+                    if ((Array[i] > Array[i + 1]) && rad_Tang.Checked == true)
+                    {
+                        SwapInts(Array, i, i + 1);
+                        Hoan_vi(Bn, Pos[i], Pos[i + 1]);
+                        SwapInts(Pos, i, i + 1);
+                        k = i;
+                    }
+                    if ((Array[i] < Array[i + 1]) && rad_Giam.Checked == true)
                     {
                         SwapInts(Array, i, i + 1);
                         Hoan_vi(Bn, Pos[i], Pos[i + 1]);
@@ -544,26 +514,77 @@ namespace PMSapXep
                 }
                 Right = k;
                 for (int i = Right; i > Left; i--)
-                { 
-                    if (Array[i] < Array[i - 1])
-                    {                            
-                         SwapInts(Array, i, i - 1);
-                         Hoan_vi(Bn, Pos[i], Pos[i - 1]);
-                         SwapInts(Pos, i, i - 1);
-                         k = i;
+                {
+                    if ((Array[i] < Array[i - 1]) && rad_Tang.Checked == true)
+                    {
+                        SwapInts(Array, i, i - 1);
+                        Hoan_vi(Bn, Pos[i - 1], Pos[i]);
+                        SwapInts(Pos, i, i - 1);
+                        k = i;
+                    }
+                    if ((Array[i] > Array[i - 1]) && rad_Giam.Checked == true)
+                    {
+                        SwapInts(Array, i, i - 1);
+                        Hoan_vi(Bn, Pos[i - 1], Pos[i]);
+                        SwapInts(Pos, i, i - 1);
+                        k = i;
                     }
                 }
-                Left = k;                        
-            }                           
+                Left = k;
+            }
             MessageBox.Show("Sắp Xếp Xong");
         }
         #endregion
 
+        #region InsertionSort 
+        private void InsertionSort(Button[] M)
+        {
+            for (int i = 1; i < M.Length; i++)
+            {
+                int x = Array[i];
+                int j = i;
+                if (j > 0 && Array[j - 1] > x)
+                {
+                    DiLen(M[j]);
+                    while (j > 0 && Array[j - 1] > x)
+                    {
+                        QuaPhai(M[j - 1]);
+                        SwapInts(Pos, j - 1, j);
+                        j--;
+                        DemQuickSort++;
+                    }
+                    QuaTrai(M[j]);
+                    DiXuong(M[j]);
+                    SwapInts(Pos, j - DemQuickSort, j);
+                }
+            }
+        }
+        public void QuaPhai(Control btn)
+        {
+            for (int i = 0; i < (Size + KhoangCachNut); i++)
+            {
+                btn.Left = btn.Left + 1;
+                //SwapInts(ViTri, ViTri[i], ViTri[i - 1]);
+                Thread.Sleep(trb_Tocdo.Value);
+
+            }
+        }
+        public void QuaTrai(Control btn)
+        {
+            for (int i = 0; i < DemQuickSort * (Size + KhoangCachNut); i++)
+            {
+                btn.Left = btn.Left - 1;
+                Thread.Sleep(trb_Tocdo.Value);
+            }
+        }
+        #endregion 
+
+     
         #endregion
 
 
 
-       
+
 
 
 
