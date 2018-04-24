@@ -23,7 +23,7 @@ namespace PMSapXep
         public static Label[] Chi_so;
         public static int[] Pos; //vi tri cua button trong mang
         int HEIGHT = 100; //chieu cao luc di chuyen button
-        int DemQuickSort = 0;// đếm số lần dich chuyển qua trái phỉa của button
+        int DemQuickSort ;// đếm số lần dich chuyển qua trái phỉa của button
         // siZE luc đầu là 60, t sửa thành 47 
 
         int Size ; // kich thươc NUt
@@ -326,18 +326,19 @@ namespace PMSapXep
                 BubbleSort(Bn);
             if (rad_ShakerSort.Checked == true)//ok
                 ShakerSort(Bn);
-            if (rad_InsertionSort.Checked == true)//chua chay dk
+            if (rad_InsertionSort.Checked == true)//ok
                 InsertionSort(Bn);
             if (rad_QuickSort.Checked == true)//ok
                 Quicksort_Batdau(Bn);
-
-
+            if (rad_MergeSort.Checked == true) // chuaw chay dk
+                MergeSort(Bn);
         }
 
+        
 
-    #region Di Chuyển Node
+        #region Di Chuyển Node
 
-    public void SwapInts(int[] arr, int Pos1, int Pos2)
+        public void SwapInts(int[] arr, int Pos1, int Pos2)
         {
             int Temp = arr[Pos1];
             arr[Pos1] = arr[Pos2];
@@ -540,23 +541,48 @@ namespace PMSapXep
         {
             for (int i = 1; i < M.Length; i++)
             {
+                DemQuickSort = 0;
                 int x = Array[i];
                 int j = i;
-                if (j > 0 && Array[j - 1] > x)
+                if(rad_Tang.Checked == true)
                 {
-                    DiLen(M[j]);
-                    while (j > 0 && Array[j - 1] > x)
+                    if (j > 0 && Array[j - 1] > x)
                     {
-                        QuaPhai(M[j - 1]);
-                        SwapInts(Pos, j - 1, j);
-                        j--;
-                        DemQuickSort++;
+                        DiLen(M[j]);
+                        while (j > 0 && Array[j - 1] > x)
+                        {
+                            QuaPhai(M[j - 1]);
+                            Hoan_Tri_Node(j, j - 1);
+                            SwapInts(Array, j, j - 1);
+                            j--;
+                            DemQuickSort++;
+                        }
+                        QuaTrai(M[j],DemQuickSort );
+                        DiXuong(M[j]);
+
                     }
-                    QuaTrai(M[i]);
-                    DiXuong(M[i]);
-                    SwapInts(Pos, i, j);
                 }
+                if (rad_Giam.Checked == true)
+                {
+                    if (j > 0 && Array[j - 1] < x)
+                    {
+                        DiLen(M[j]);
+                        while (j > 0 && Array[j - 1] < x)
+                        {
+                            QuaPhai(M[j - 1]);
+                            Hoan_Tri_Node(j, j - 1);
+                            SwapInts(Array, j, j - 1);
+                            j--;
+                            DemQuickSort++;
+                        }
+                        QuaTrai(M[j],DemQuickSort);
+                        DiXuong(M[j]);
+
+                    }
+                }
+
             }
+            MessageBox.Show("Sắp Xếp Xong");
         }
         public void QuaPhai(Control btn)
         {
@@ -568,17 +594,15 @@ namespace PMSapXep
 
             }
         }
-        public void QuaTrai(Control btn)
+        public void QuaTrai(Control btn, int Step)
         {
-            for (int i = 0; i < DemQuickSort * (Size + KhoangCachNut); i++)
+            for (int i = 0; i < Step * (Size + KhoangCachNut); i++)
             {
                 btn.Left = btn.Left - 1;
                 Thread.Sleep((10 - trb_Tocdo.Value) * 3);
             }
         }
         #endregion
-
-
 
         #region QuickSort
         private void Quicksort_Batdau(Button[] M)
@@ -623,6 +647,14 @@ namespace PMSapXep
             if (i < r)
                 Quicksort(array, i, r);
         }
+        #endregion
+
+        #region MergeSort
+        private void MergeSort(Button[] M)
+        {
+            
+        }
+
         #endregion
 
 
