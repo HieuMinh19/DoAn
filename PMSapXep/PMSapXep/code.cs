@@ -102,7 +102,6 @@ namespace PMSapXep
 			lb_code.Items.Add("            b=temp;");
 			lb_code.Items.Add(" }");
 		}
-
 		public void heapsort(ListBox lb_code, Boolean tang)
 		{
 			lb_code.Items.Add("void HeapSort(int a[], int n)");
@@ -327,6 +326,27 @@ namespace PMSapXep
 			lb_code.Items.Add("            b=temp;");
 			lb_code.Items.Add(" }");
 		}
-
+		public void shellsort(ListBox lb_code, Boolean tang)
+		{
+			lb_code.Items.Add("void ShellSort(int a[], int n, int h[], int k)");
+			lb_code.Items.Add("    {");
+			lb_code.Items.Add("        int step, i, j, x, len;");
+			lb_code.Items.Add("        for (step = 0; step < k; step++)");
+			lb_code.Items.Add("          {");
+			lb_code.Items.Add("                  len = h[step];");
+			lb_code.Items.Add("                  for (i = len; i < d; i++)");
+			lb_code.Items.Add("                    {");
+			lb_code.Items.Add("                      x = a[i];");
+			lb_code.Items.Add("                      j = i - len;");
+			lb_code.Items.Add("                      while ((x < a[j]) && (j >= 0))");
+			lb_code.Items.Add("                        {");
+			lb_code.Items.Add("	                         a[j + len] = a[j];");
+			lb_code.Items.Add("	                         j = j - len;");
+			lb_code.Items.Add("                        }");
+			lb_code.Items.Add("                      a[j + len] = x;");
+			lb_code.Items.Add("                    }");
+			lb_code.Items.Add("          }");
+			lb_code.Items.Add("    }");
+		}
 	}
 }
