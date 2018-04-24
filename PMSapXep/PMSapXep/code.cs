@@ -41,6 +41,19 @@ namespace PMSapXep
 			lb_code.Items.Add("         l = 0;");
 			lb_code.Items.Add("         r = i - 1;");
 			lb_code.Items.Add("         x = a[i];");
+			lb_code.Items.Add("         l = 0;");
+			lb_code.Items.Add("         r = i;");
+			lb_code.Items.Add("         while (l <= r)");
+			lb_code.Items.Add("          {");
+			lb_code.Items.Add("            m = (l+r)/2; ");
+			lb_code.Items.Add("            if(x < a[m]) r = m-1;  ");
+			lb_code.Items.Add("            else l = m+1; ");
+			lb_code.Items.Add("          }");
+			lb_code.Items.Add("          for(int j = i-1 ; j >=l ; j--) ");
+			lb_code.Items.Add("            a[j + 1] = a[j];");
+			lb_code.Items.Add("          a[l] = x; ");
+			lb_code.Items.Add("      }");
+			lb_code.Items.Add(" }");
 		}
 		public void Selectionsort(ListBox lb_code, Boolean tang)
 		{
