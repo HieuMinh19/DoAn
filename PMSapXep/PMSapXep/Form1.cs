@@ -318,27 +318,26 @@ namespace PMSapXep
 
         private void btn_Batdau_Click(object sender, EventArgs e)
         {
-            if (rad_InterchangeSort.Checked == true)
+            if (rad_InterchangeSort.Checked == true)//ok
                 InterchangeSort(Bn);
-            if (rad_SelectionSort.Checked == true)
+            if (rad_SelectionSort.Checked == true)//ok
                 SelectionSort(Bn);
-            if (rad_BubbleSort.Checked == true)
+            if (rad_BubbleSort.Checked == true)//ok
                 BubbleSort(Bn);
-            if (rad_ShakerSort.Checked == true)//c
+            if (rad_ShakerSort.Checked == true)//ok
                 ShakerSort(Bn);
-            if (rad_InsertionSort.Checked == true)
+            if (rad_InsertionSort.Checked == true)//chua chay dk
                 InsertionSort(Bn);
-           
+            if (rad_QuickSort.Checked == true)//ok
+                Quicksort_Batdau(Bn);
+
+
         }
 
 
-        
+    #region Di Chuyển Node
 
-
-
-        #region Di Chuyển Node
-
-        public void SwapInts(int[] arr, int Pos1, int Pos2)
+    public void SwapInts(int[] arr, int Pos1, int Pos2)
         {
             int Temp = arr[Pos1];
             arr[Pos1] = arr[Pos2];
@@ -350,7 +349,7 @@ namespace PMSapXep
             for (int i = 0; i < 100; i++)
             {
                 btn.Top = btn.Top - 1;
-                System.Threading.Thread.Sleep(trb_Tocdo.Value);
+                System.Threading.Thread.Sleep((10-trb_Tocdo.Value)*3);
 
             }
         }
@@ -368,7 +367,7 @@ namespace PMSapXep
             {
                 btn.Top = btn.Top + 1;
                 
-                System.Threading.Thread.Sleep(trb_Tocdo.Value);
+                System.Threading.Thread.Sleep((10 - trb_Tocdo.Value) * 3);
             }
             //if (rad_InsertionSort.Checked == true)
             //{
@@ -387,9 +386,9 @@ namespace PMSapXep
                 for (int i = p1.X; i < p2.X; i++)
                 {
                     btn2.Left = btn2.Left - 1;
-                    System.Threading.Thread.Sleep(trb_Tocdo.Value);
+                    System.Threading.Thread.Sleep((10 - trb_Tocdo.Value) * 3);
                     btn1.Left = btn1.Left + 1;
-                    System.Threading.Thread.Sleep(trb_Tocdo.Value);
+                    System.Threading.Thread.Sleep((10 - trb_Tocdo.Value) * 3);
                 }
             }
         }
@@ -553,9 +552,9 @@ namespace PMSapXep
                         j--;
                         DemQuickSort++;
                     }
-                    QuaTrai(M[j]);
-                    DiXuong(M[j]);
-                    SwapInts(Pos, j - DemQuickSort, j);
+                    QuaTrai(M[i]);
+                    DiXuong(M[i]);
+                    SwapInts(Pos, i, j);
                 }
             }
         }
@@ -565,7 +564,7 @@ namespace PMSapXep
             {
                 btn.Left = btn.Left + 1;
                 //SwapInts(ViTri, ViTri[i], ViTri[i - 1]);
-                Thread.Sleep(trb_Tocdo.Value);
+                Thread.Sleep((10 - trb_Tocdo.Value) * 3);
 
             }
         }
@@ -574,12 +573,61 @@ namespace PMSapXep
             for (int i = 0; i < DemQuickSort * (Size + KhoangCachNut); i++)
             {
                 btn.Left = btn.Left - 1;
-                Thread.Sleep(trb_Tocdo.Value);
+                Thread.Sleep((10 - trb_Tocdo.Value) * 3);
             }
         }
-        #endregion 
+        #endregion
 
-     
+
+
+        #region QuickSort
+        private void Quicksort_Batdau(Button[] M)
+        {
+
+            Quicksort(Array, 0, M.Length - 1);
+            MessageBox.Show("Sap xep xong");
+        }
+
+        private void Quicksort(int[] array, int l, int r)
+        {
+            int i = l;
+            int j = r;
+            int x = array[(i + j) / 2];
+            while (i <= j)
+            {
+                if (rad_Tang.Checked == true)
+                {
+                    while (array[i] < x)
+                        i++;
+                    while (array[j] > x)
+                        j--;
+                }
+                if (rad_Giam.Checked == true)
+                {
+                    while (array[i] > x)
+                        i++;
+                    while (array[j] < x)
+                        j--;
+                }
+                if (i <= j)
+                {
+                    SwapInts(array, i, j);
+                    Hoan_vi(Bn, i, j);
+                    Hoan_Tri_Node(i, j);
+                    i++;
+                    j--;
+                }
+            }
+            if (j > l)
+                Quicksort(array, l, j);
+            if (i < r)
+                Quicksort(array, i, r);
+        }
+        #endregion
+
+
+
+
         #endregion
 
 
