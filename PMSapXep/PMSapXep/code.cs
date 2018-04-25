@@ -319,14 +319,20 @@ namespace PMSapXep
 			lb_code.Items.Add("        while (left < right)");
 			lb_code.Items.Add("          {");
 			lb_code.Items.Add("                  for (j = right; j > left; j--)");
-			lb_code.Items.Add("                    if (a[j] < a[j - 1])");
+			if (tang)
+				lb_code.Items.Add("                    if (a[j] < a[j - 1])");
+			else
+				lb_code.Items.Add("                    if (a[j] > a[j - 1])");
 			lb_code.Items.Add("                      {");
 			lb_code.Items.Add("                        Swap(a[j], a[j - 1]);");
 			lb_code.Items.Add("                        k = j;");
 			lb_code.Items.Add("                      }");
 			lb_code.Items.Add("                  left = k;");
 			lb_code.Items.Add("                  for (j = left; j < right; j++)");
-			lb_code.Items.Add("                    if (a[j] > a[j + 1])");
+			if (tang)
+				lb_code.Items.Add("                    if (a[j] > a[j + 1])");
+			else
+				lb_code.Items.Add("                    if (a[j] < a[j + 1])");
 			lb_code.Items.Add("                      {");
 			lb_code.Items.Add("                        Swap(a[j], a[j - 1]);");
 			lb_code.Items.Add("                        k = j;");
@@ -347,11 +353,14 @@ namespace PMSapXep
 			lb_code.Items.Add("        for (step = 0; step < k; step++)");
 			lb_code.Items.Add("          {");
 			lb_code.Items.Add("                  len = h[step];");
-			lb_code.Items.Add("                  for (i = len; i < d; i++)");
+			lb_code.Items.Add("                  for (i = len; i < n; i++)");
 			lb_code.Items.Add("                    {");
 			lb_code.Items.Add("                      x = a[i];");
 			lb_code.Items.Add("                      j = i - len;");
-			lb_code.Items.Add("                      while ((x < a[j]) && (j >= 0))");
+			if (tang)
+				lb_code.Items.Add("                      while ((x < a[j]) && (j >= 0))");
+			else
+				lb_code.Items.Add("                      while ((x > a[j]) && (j >= 0))");
 			lb_code.Items.Add("                        {");
 			lb_code.Items.Add("	                         a[j + len] = a[j];");
 			lb_code.Items.Add("	                         j = j - len;");
