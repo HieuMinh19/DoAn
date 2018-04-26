@@ -59,10 +59,15 @@ namespace PMSapXep
             //tu dong tang gia tri cua vi tri phan tu
             this.txt_Vitri.Text = (ViTri + 1).ToString();
 
-            Form1.Bn[ViTri].BackColor = Color.Green;
-            
+            //Đổi màu node khi nhận giá trị nhập vào
+            Form1.Bn[ViTri].BackgroundImage = Properties.Resources.daxep;
+            Form1.Bn[ViTri].Refresh();
+            System.Threading.Thread.Sleep(1000);
+            Form1.Bn[ViTri].BackgroundImage = Properties.Resources.chuaxep;
+            Form1.Bn[ViTri].Refresh();
 
-            
+
+
         }
 
         private void btn_exits_Click(object sender, EventArgs e)

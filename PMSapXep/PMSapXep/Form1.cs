@@ -33,11 +33,20 @@ namespace PMSapXep
 
         private void btnTaoMang_Click(object sender, EventArgs e)
         {
-            #region thiet lap kich thuoc node
+
             //khoi tao kich thuoc mang
             SoPT = int.Parse(txtNhapPT.Text.Trim());
             //tính toán vị tí phần tử dựa trên số phần tử
-            switch(SoPT)
+
+            Tao_Mang(Properties.Resources.chuaxep);
+
+
+        }
+
+        public void Tao_Mang(System.Drawing.Image nen)
+        {
+            #region thiet lap kich thuoc node
+            switch (SoPT)
             {
                 case 2:
                 case 3:
@@ -66,9 +75,8 @@ namespace PMSapXep
                     Canh_le = (pnNut.Width - Size * SoPT - KhoangCachNut * (SoPT - 1)) / 2;
                     break;
             }
-           
-
             #endregion
+
             #region tao mang
             if (1 < SoPT && SoPT < 16)
             {
@@ -81,18 +89,19 @@ namespace PMSapXep
                 for (int i = 0; i < SoPT; i++)
                 {
                     //tao button
-                    Button btn = new Button();           
+                    Button btn = new Button();
                     btn.Text = "0";
-                    btn.Width = btn.Height = Size;         
+                    btn.Width = btn.Height = Size;
                     btn.Location = new Point(Canh_le + i * (btn.Width + KhoangCachNut),
-                        pnNut.Height / 2 - btn.Height / 2);                             
+                        pnNut.Height / 2 - btn.Height / 2);
                     pnNut.Controls.Add(btn);
                     Array[i] = 0;
                     Bn[i] = btn;
                     Pos[i] = i;
                     Bn[i].ForeColor = Color.White;
-                    Bn[i].BackColor = Color.OrangeRed;
-
+                    Bn[i].FlatStyle = FlatStyle.Flat;
+                    Bn[i].BackgroundImage = nen;
+                    Bn[i].BackgroundImageLayout = ImageLayout.Stretch;
                     //tao chi_So
                     Label lbChiSo = new Label();
                     lbChiSo.Text = i.ToString();
@@ -109,8 +118,6 @@ namespace PMSapXep
                 txtNhapPT.Focus();
             }
             #endregion 
-
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -338,58 +345,12 @@ namespace PMSapXep
 				Quicksort_Batdau(Bn);
 			if(rad_HeapSort.Checked==true)
 				HeapSort_Batdau(Bn);
-
+            if (rad_BinaryInsertionSort.Checked)
+                BinaryInsertionSort(Bn);
         }
 
-        private void InsertionSort(Button[] M)
-        {
-            for(int i = 1 ;i < M.Length;i++)
-            {
-                
-                int x = Array[i];
-                int j = i;
-                if(j > 0 && Array[j - 1] > x)
-                {
-                    DiLen(M[j]);
-                    while (j > 0 && Array[j - 1] > x)
-                    {
-
-                        QuaPhai(Pos, M[j - 1]);
-                        j--;
-                        DemQuickSort++;
-                    }
-                    QuaTrai(M[j+DemQuickSort]);
-                    DiXuong(M[j + DemQuickSort]);
-                }
-                    
-            }
-        }
-        public void QuaPhai(int[] ViTri,Control btn)
-        {
-            for(int i = 0;i < (Size+KhoangCachNut);i++)
-            {
-                btn.Left = btn.Left + 1;
-                SwapInts(ViTri, ViTri[i], ViTri[i + 1]);
-                Thread.Sleep(trb_Tocdo.Value);
-
-            }
-        }
-        public void QuaTrai(Control btn)
-        {
-            for(int i =0; i < DemQuickSort*(Size + KhoangCachNut);i++)
-            {
-                btn.Left = btn.Left - 1;
-                Thread.Sleep(trb_Tocdo.Value);
-            }
-        }
-
-
-
-
-
-
-
-
+        
+        
         #region Di Chuyển Node
 
         public void SwapInts(int[] arr, int Pos1, int Pos2)
@@ -417,19 +378,34 @@ namespace PMSapXep
                 
                 System.Threading.Thread.Sleep(trb_Tocdo.Value);
             }
-            //if (rad_InsertionSort.Checked == true)
-            //{
-            //    SwapInts(Pos, DemQuickSort, )
-            // }
+            
         }
+        public void QuaPhai(Control btn)
+        {
+            for (int i = 0; i < (Size + KhoangCachNut); i++)
+            {
+                btn.Left = btn.Left + 1;
+                //SwapInts(ViTri, ViTri[i], ViTri[i - 1]);
+                Thread.Sleep((10 - trb_Tocdo.Value) * 3);
 
-		public void Hoan_Tri_Node(int t1, int t2)
+            }
+        }
+        public void QuaTrai(Control btn, int Step)
+        {
+            for (int i = 0; i < Step * (Size + KhoangCachNut); i++)
+            {
+                btn.Left = btn.Left - 1;
+                Thread.Sleep((10 - trb_Tocdo.Value) * 3);
+            }
+        }
+        public void Hoan_Tri_Node(int t1, int t2)
 		{
 			Button Temp = Bn[t1];
 			Bn[t1] = Bn[t2];
 			Bn[t2] = Temp;
 		}
-		public void HoanVi(Control btn1, Control btn2)
+        //btn1 qua phai, btn2  qua trai
+        public void HoanVi(Control btn1, Control btn2)
         {
             Point p1 = btn1.Location;
             Point p2 = btn2.Location;
@@ -453,7 +429,34 @@ namespace PMSapXep
             DiXuong(arrBT[Pos1]);
             DiLen(arrBT[Pos2]);
         }
+
+        public void QuaPhai(int[] ViTri, Control btn)
+        {
+            for (int i = 0; i < (Size + KhoangCachNut); i++)
+            {
+                btn.Left = btn.Left + 1;
+                
+                Thread.Sleep(trb_Tocdo.Value);
+            }
+        }
+        public void QuaTrai(Control btn)
+        {
+            for (int i = 0; i < DemQuickSort * (Size + KhoangCachNut); i++)
+            {
+                btn.Left = btn.Left - 1;
+                Thread.Sleep(trb_Tocdo.Value);
+            }
+        }
         #endregion
+
+        //ham thiet lap mau cua node
+        public void Dat_mau_node(Button t, System.Drawing.Image image)
+        {
+            t.Refresh();
+            t.BackgroundImage = image;
+            t.BackgroundImageLayout = ImageLayout.Stretch;
+
+        }
 
         #region THUẬT TOÁN
 
@@ -464,8 +467,7 @@ namespace PMSapXep
             {
                 for (int j = i + 1; j < M.Length; j++)
                 {
-                    //Array[i] = int.Parse(M[i].Text.Trim());
-                    //Array[j] = int.Parse(M[j].Text.Trim());
+                    
                     if (Array[i] > Array[j] && rad_Tang.Checked == true)
                     {
                         SwapInts(Array, i, j);
@@ -479,6 +481,7 @@ namespace PMSapXep
                         SwapInts(Pos, i, j);
                     }
                 }
+                //Dat_mau_node(Bn[i], Properties.Resources.daxep);
             }
             MessageBox.Show("Sắp Xếp Xong");
         }
@@ -714,18 +717,95 @@ namespace PMSapXep
 		{
 			HeapSort(Array, M.Length);
 		}
-				#endregion
-		#endregion
+        #endregion
+        
+        #region InsertionSort 
+        private void InsertionSort(Button[] M)
+        {
+            for (int i = 1; i < M.Length; i++)
+            {
+                DemQuickSort = 0;
+                int x = Array[i];
+                int j = i;
+                if (rad_Tang.Checked == true)
+                {
+                    if (j > 0 && Array[j - 1] > x)
+                    {
+                        DiLen(M[j]);
+                        while (j > 0 && Array[j - 1] > x)
+                        {
+                            QuaPhai(M[j - 1]);
+                            Hoan_Tri_Node(j, j - 1);
+                            SwapInts(Array, j, j - 1);
+                            j--;
+                            DemQuickSort++;
+                        }
+                        QuaTrai(M[j], DemQuickSort);
+                        DiXuong(M[j]);
+
+                    }
+                }
+                if (rad_Giam.Checked == true)
+                {
+                    if (j > 0 && Array[j - 1] < x)
+                    {
+                        DiLen(M[j]);
+                        while (j > 0 && Array[j - 1] < x)
+                        {
+                            QuaPhai(M[j - 1]);
+                            Hoan_Tri_Node(j, j - 1);
+                            SwapInts(Array, j, j - 1);
+                            j--;
+                            DemQuickSort++;
+                        }
+                        QuaTrai(M[j], DemQuickSort);
+                        DiXuong(M[j]);
+
+                    }
+                }
+
+            }
+           
+        }
+        #endregion
+
+        #region BinaryInsertionSort
+        private void BinaryInsertionSort(Button[] M)
+        {
+            {
+                int l, r, m;
+                int x;
+                for (int i = 1; i < M.Length - 1; i++)
+                {
+                    x = Array[i];
+                    l = 0;
+                    r = i;
+                    while (l <= r)
+                    {
+
+                        m = (l + r) / 2;
+
+                        if (x < Array[m]) r = m - 1;
+                        else l = m + 1;
+
+                    }
+
+                    for (int j = i - 1; j >= l; j--)
+                    {
 
 
 
+                    }
 
+                }
+            }
+        }
+        #endregion
 
+        #endregion
 
-
-
-		//hoan doi vi tri 2 phan tu trong mang
-		private void trb_Tocdo_Scroll(object sender, EventArgs e)
+        //hoan doi vi tri 2 phan tu trong mang
+        private void trb_Tocdo_Scroll(object sender, EventArgs e)
         {
 
         }
@@ -761,6 +841,11 @@ namespace PMSapXep
         }
 
         private void lb_code_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
 
         }
