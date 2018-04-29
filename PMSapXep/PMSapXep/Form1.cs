@@ -772,34 +772,42 @@ namespace PMSapXep
         #region BinaryInsertionSort
         private void BinaryInsertionSort(Button[] M)
         {
+            int l, r, m, i;
+            int DoiCho = 0;
+            int x;//lưu giá trị a[i] tránh bị ghi đè khi dời chỗ các phần tử.
+            for (i = 1; i < M.Length; i++)
             {
-                int l, r, m;
-                int x;
-                for (int i = 1; i < M.Length - 1; i++)
+                DemQuickSort = 0;
+                DoiCho = 0;
+                x = Array[i];
+                l = 0;
+                r = i;
+                while (l <= r) // tìm vị trí chèn x
                 {
-                    x = Array[i];
-                    l = 0;
-                    r = i;
-                    while (l <= r)
+                    m = (l + r) / 2; // tìm vị trí thích hợp m
+                    if (x < Array[m])
                     {
-
-                        m = (l + r) / 2;
-
-                        if (x < Array[m]) r = m - 1;
-                        else l = m + 1;
-
+                        r = m - 1;
+                        DoiCho++;
                     }
-
-                    for (int j = i - 1; j >= l; j--)
-                    {
-
-
-
-                    }
-
+                    else l = m + 1;
                 }
+                if (DoiCho == 0)
+                    continue;
+                DiLen(M[i]);
+                for (int j = i - 1; j >= l; j--)
+                {
+                  
+                    QuaPhai(M[j]);
+                    SwapInts(Array, j, j + 1);
+                    Hoan_Tri_Node(j, j + 1);
+                    DemQuickSort++;
+                }
+                    QuaTrai(M[l]);
+                    DiXuong(M[l]);
+                   
             }
-        }
+    }
         #endregion
 
         #endregion
