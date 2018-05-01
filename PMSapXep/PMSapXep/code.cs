@@ -279,7 +279,7 @@ namespace PMSapXep
 				lb_code.Items.Add("                     j--;");
 			}
 
-			lb_code.Items.Add("                       if(i <= j");
+			lb_code.Items.Add("                       if(i <= j)");
 			lb_code.Items.Add("                         { ");
 			lb_code.Items.Add("                           Swap(a[i], a[j]);");
 			lb_code.Items.Add("                           i++ ; j--;");
