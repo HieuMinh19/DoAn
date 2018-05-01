@@ -127,7 +127,7 @@ namespace PMSapXep
 			lb_code.Items.Add("              Swap(a[0], a[r]);");
 			lb_code.Items.Add("              r--;");
 			lb_code.Items.Add("              if (r > 0)");
-			lb_code.Items.Add("                 Shift(a, 0, r);");
+			lb_code.Items.Add("                 CreateHeap(a, n);");
 			lb_code.Items.Add("           }");
 			lb_code.Items.Add("      }");
 			lb_code.Items.Add("void Shift(int a[], int l, int r)");
@@ -151,8 +151,7 @@ namespace PMSapXep
 			lb_code.Items.Add("                  return;");
 			lb_code.Items.Add("               else");
 			lb_code.Items.Add("                 {");
-			lb_code.Items.Add("                    a[i] = a[j];");
-			lb_code.Items.Add("                    a[j] = x;");
+			lb_code.Items.Add("                    a[i] = a[j]; a[j] = x;");
 			lb_code.Items.Add("                    i = j;");
 			lb_code.Items.Add("                    j = 2 * i + 1;");
 			lb_code.Items.Add("                    x = a[i];");
