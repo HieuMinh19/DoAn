@@ -256,16 +256,28 @@ namespace PMSapXep
 			lb_code.Items.Add("            int i, j, x;");
 			lb_code.Items.Add("            x = a[(left + right) / 2]; ");
 			lb_code.Items.Add("            i = left; j = right;");
-			lb_code.Items.Add("               do");
+			lb_code.Items.Add("               while(i <= j);");
 			lb_code.Items.Add("                  {");
 			if (tang)
-				lb_code.Items.Add("                   while(a[i] < x) i++;");
+			{
+				lb_code.Items.Add("                   while(a[i] < x)");
+				lb_code.Items.Add("                     i++;");
+			}
 			else
-				lb_code.Items.Add("                   while(a[i] > x) i++;");
+			{
+				lb_code.Items.Add("                   while(a[i] > x)");
+				lb_code.Items.Add("                     i++;");
+			}
 			if (tang)
-				lb_code.Items.Add("                   while(a[j] > x) j--;");
+			{
+				lb_code.Items.Add("                   while(a[j] > x) ");
+				lb_code.Items.Add("                     j--;");
+			}
 			else
-				lb_code.Items.Add("                   while(a[j] < x) j--;");
+			{
+				lb_code.Items.Add("                   while(a[j] < x) ");
+				lb_code.Items.Add("                     j--;");
+			}
 
 			lb_code.Items.Add("                       if(i <= j");
 			lb_code.Items.Add("                         { ");
@@ -273,7 +285,6 @@ namespace PMSapXep
 			lb_code.Items.Add("                           i++ ; j--;");
 			lb_code.Items.Add("                         }");
 			lb_code.Items.Add("                   }");
-			lb_code.Items.Add("               while(i <= j);");
 			lb_code.Items.Add("               if(left < j)");
 			lb_code.Items.Add("                   QuickSort(a, left, j);");
 			lb_code.Items.Add("               if(i < right)");

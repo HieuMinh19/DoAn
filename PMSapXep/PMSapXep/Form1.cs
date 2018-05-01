@@ -604,29 +604,61 @@ namespace PMSapXep
 
 		private void Quicksort(int[] array, int l, int r)
 		{
+			lb_code.SelectedIndex = 0;
+			System.Threading.Thread.Sleep(1500);
 			int i = l;
 			int j = r;
 			int x = array[(i + j) / 2];
 			while (i <= j)
 			{
+				lb_code.SelectedIndex = 5;
+				System.Threading.Thread.Sleep(1500);
 				if (rad_Tang.Checked == true)
 				{
 					while (array[i] < x)
+					{
+						lb_code.SelectedIndex = 7;
+						System.Threading.Thread.Sleep(1500);
+						lb_code.SelectedIndex = 8;
+						System.Threading.Thread.Sleep(1500);
 						i++;
+					}
 					while (array[j] > x)
+					{
+						lb_code.SelectedIndex = 9;
+						System.Threading.Thread.Sleep(1500);
+						lb_code.SelectedIndex = 10;
+						System.Threading.Thread.Sleep(1500);
 						j--;
+					}
 				}
 				if (rad_Giam.Checked == true)
 				{
 					while (array[i] > x)
+					{
+						lb_code.SelectedIndex = 7;
+						System.Threading.Thread.Sleep(1500);
+						lb_code.SelectedIndex = 8;
+						System.Threading.Thread.Sleep(1500);
 						i++;
+					}
 					while (array[j] < x)
+					{
+						lb_code.SelectedIndex = 9;
+						System.Threading.Thread.Sleep(1500);
+						lb_code.SelectedIndex = 10;
+						System.Threading.Thread.Sleep(1500);
 						j--;
+					}
 				}
+				lb_code.SelectedIndex = 11;
+				System.Threading.Thread.Sleep(1500);
 				if (i <= j)
 				{
 					if (array[i] != array[j])
 					{
+						lb_code.SelectedIndex = 13;
+						System.Threading.Thread.Sleep(2000);
 						SwapInts(array, i, j);
 						Hoan_vi(Bn, i, j);
 						Hoan_Tri_Node(i, j);
@@ -635,10 +667,22 @@ namespace PMSapXep
 					j--;
 				}
 			}
+			lb_code.SelectedIndex = 17;
+			System.Threading.Thread.Sleep(1500);
 			if (j > l)
+			{
+				lb_code.SelectedIndex = 18;
+				System.Threading.Thread.Sleep(1500);
 				Quicksort(array, l, j);
+			}
+			lb_code.SelectedIndex = 19;
+			System.Threading.Thread.Sleep(1500);
 			if (i < r)
+			{
+				lb_code.SelectedIndex = 20;
+				System.Threading.Thread.Sleep(1500);
 				Quicksort(array, i, r);
+			}
 		}
 		#endregion
 
