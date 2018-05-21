@@ -337,7 +337,6 @@ F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\de\DevExpress.Pdf.v17.2.Core
 F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\es\DevExpress.Pdf.v17.2.Core.resources.dll
 F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\ja\DevExpress.Pdf.v17.2.Core.resources.dll
 F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\ru\DevExpress.Pdf.v17.2.Core.resources.dll
-F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.csprojResolveAssemblyReference.cache
 F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.Form1.resources
 F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.NhapPT.resources
 F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.Properties.Resources.resources
@@ -594,3 +593,4 @@ C:\Users\ASUS\Desktop\New folder (3)\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.c
 C:\Users\ASUS\Desktop\New folder (3)\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.csproj.CopyComplete
 C:\Users\ASUS\Desktop\New folder (3)\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.exe
 C:\Users\ASUS\Desktop\New folder (3)\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.pdb
+F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.csprojAssemblyReference.cache
