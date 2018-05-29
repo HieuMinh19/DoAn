@@ -39,7 +39,7 @@ namespace PMSapXep
         {
             btn_Ngaunhien.Enabled = true;
             btnxoamang.Enabled = true;
-            button3.Enabled = true;
+            btn_mofile.Enabled = true;
             button4.Enabled = true;
             button5.Enabled = true;
 
@@ -134,6 +134,7 @@ namespace PMSapXep
             #endregion 
         }
 
+        //ham co do tre
         public void Tre(int milisecond)
         {
             Application.DoEvents();
@@ -363,7 +364,7 @@ namespace PMSapXep
         }
 
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnmofile_Click(object sender, EventArgs e)
         {
             MessageBox.Show("hàng đầu tiên chứa số phần tử mảng, các hàng tiếp theo chứa các phần tử", "Hướng dẫn");
             Process notePad = new Process();
@@ -382,7 +383,7 @@ namespace PMSapXep
             btnPause.Enabled = true;
 
             btnhuy.Enabled = true;
-            button3.Enabled = false;
+            btn_mofile.Enabled = false;
             button4.Enabled = false;
             button5.Enabled = false;
             btn_Ngaunhien.Enabled = false;
@@ -416,7 +417,7 @@ namespace PMSapXep
 
             btnTaoMang.Enabled = true;
             btnhuy.Enabled = true;
-            button3.Enabled = false;
+            btn_mofile.Enabled = false;
             button4.Enabled = false;
             button5.Enabled = false;
             btn_Ngaunhien.Enabled = false;
@@ -445,7 +446,7 @@ namespace PMSapXep
         public void DiLen(Control btn)
         {
             //di len do cao 50
-            for (int i = 0; i < Size +10; i++)
+            for (int i = 0; i < Size +5; i++)
             {
                 btn.Top = btn.Top - 1;
                 System.Threading.Thread.Sleep((10 - trb_Tocdo.Value) / 3);
@@ -455,7 +456,7 @@ namespace PMSapXep
 
         public void DiXuong(Control btn)
         {
-            for (int i = 0; i < Size + 10; i++)
+            for (int i = 0; i < Size + 5; i++)
             {
                 btn.Top = btn.Top + 1;
                 System.Threading.Thread.Sleep((10 - trb_Tocdo.Value) / 3);
@@ -570,58 +571,27 @@ namespace PMSapXep
                     }
                 }
                 //Dat_mau_node(Bn[i], Properties.Resources.daxep);
+                Bn[Pos[i]].ForeColor = Color.White;
+                Bn[Pos[i]].FlatStyle = FlatStyle.Flat;
+                Bn[Pos[i]].BackgroundImage = Properties.Resources.daxep;
+                Bn[Pos[i]].BackgroundImageLayout = ImageLayout.Stretch;
+                Bn[Pos[i]].Refresh();
+
+                //đổi màu button cuối cùng của mảng
+                if (i == M.Length - 2)
+                {
+                    Bn[Pos[M.Length - 1]].ForeColor = Color.White;
+                    Bn[Pos[M.Length - 1]].FlatStyle = FlatStyle.Flat;
+                    Bn[Pos[M.Length - 1]].BackgroundImage = Properties.Resources.daxep;
+                    Bn[Pos[M.Length - 1]].BackgroundImageLayout = ImageLayout.Stretch;
+                    Bn[Pos[M.Length - 1]].Refresh();
+                }
             }
-            MessageBox.Show("S?p X?p Xong");
+            
         }
 
 
         #endregion
-
-
-        //#region SelectionSort        
-        //private void SelectionSort(Button[] M)
-        //{
-        //    int min;
-        //    for (int i = 0; i < M.Length - 1; i++)
-        //    {
-        //        lb_code.SelectedIndex = 5;
-        //        Thread.Sleep(3000);
-        //        min = i;
-        //        for (int j = i + 1; j < M.Length; j++)
-        //        {
-        //            lb_code.SelectedIndex = 7;
-        //            Thread.Sleep(3000);
-        //            if (Array[j] < Array[min] && rad_Tang.Checked == true)
-        //            {
-        //                lb_code.SelectedIndex = 8;
-        //                Thread.Sleep(3000);
-        //                min = j;
-        //            }
-
-        //            if (Array[j] > Array[min] && rad_Giam.Checked == true)
-        //                min = j;
-        //            lb_code.SelectedIndex = 6;
-        //            Thread.Sleep(3000);
-        //        }
-        //        lb_code.SelectedIndex = 9;
-        //        Thread.Sleep(3000);
-        //        if (i != min)
-        //        {
-
-        //            SwapInts(Array, i, min);
-        //            Hoan_vi(Bn, Pos[i], Pos[min]);
-        //            lb_code.SelectedIndex = 10;
-        //            Thread.Sleep(2000);
-        //            SwapInts(Pos, i, min);
-        //        }
-        //        lb_code.SelectedIndex = 3;
-        //        Thread.Sleep(3000);
-
-        //    }
-
-        //}
-
-        //#endregion
 
         #region SelectionSort        
         private void SelectionSort(Button[] M)
@@ -660,6 +630,7 @@ namespace PMSapXep
                     pnNut.Controls.Add(Mui_ten_xanh_xuong_2);
                     Mui_ten_xanh_xuong_2.Refresh();
                     Tre((10 - trb_Tocdo.Value) * 10);
+
                     if (Array[j] < Array[min] && rad_Tang.Checked == true)
                     {
                         min = j;
@@ -675,10 +646,10 @@ namespace PMSapXep
                     if (Array[j] > Array[min] && rad_Giam.Checked == true)
                         min = j;
                     lb_code.SelectedIndex = 6;
-                    //Thread.Sleep(3000);
+                    
                 }
                 lb_code.SelectedIndex = 9;
-                // Thread.Sleep(3000);
+               
                 if (i != min)
                 {
 
@@ -689,12 +660,12 @@ namespace PMSapXep
                     //hoan vi button tren giao dien
                     Hoan_vi(Bn, Pos[i], Pos[min]);
                     lb_code.SelectedIndex = 10;
-                    //Thread.Sleep(2000);
+                    
                     //cap nhat vi tri cua button
                     SwapInts(Pos, i, min);
                 }
                 lb_code.SelectedIndex = 3;
-                // Thread.Sleep(3000);
+                
 
 
                 Bn[Pos[i]].ForeColor = Color.White;
@@ -928,30 +899,30 @@ namespace PMSapXep
 		private void Quicksort(int[] array, int l, int r)
 		{
 			lb_code.SelectedIndex = 0;
-			System.Threading.Thread.Sleep(1500);
-			int i = l;
+            Tre((10 - trb_Tocdo.Value) * 20);
+            int i = l;
 			int j = r;
 			int x = array[(i + j) / 2];
 			while (i <= j)
 			{
 				lb_code.SelectedIndex = 5;
-				System.Threading.Thread.Sleep(1500);
+				Tre((10 - trb_Tocdo.Value) * 20);
 				if (rad_Tang.Checked == true)
 				{
 					while (array[i] < x)
 					{
 						lb_code.SelectedIndex = 7;
-						System.Threading.Thread.Sleep(1500);
+						Tre((10 - trb_Tocdo.Value) * 20);
 						lb_code.SelectedIndex = 8;
-						System.Threading.Thread.Sleep(1500);
+						Tre((10 - trb_Tocdo.Value) * 20);
 						i++;
 					}
 					while (array[j] > x)
 					{
 						lb_code.SelectedIndex = 9;
-						System.Threading.Thread.Sleep(1500);
+						Tre((10 - trb_Tocdo.Value) * 20);
 						lb_code.SelectedIndex = 10;
-						System.Threading.Thread.Sleep(1500);
+						Tre((10 - trb_Tocdo.Value) * 20);
 						j--;
 					}
 				}
@@ -960,22 +931,22 @@ namespace PMSapXep
 					while (array[i] > x)
 					{
 						lb_code.SelectedIndex = 7;
-						System.Threading.Thread.Sleep(1500);
+						Tre((10 - trb_Tocdo.Value) * 20);
 						lb_code.SelectedIndex = 8;
-						System.Threading.Thread.Sleep(1500);
+						Tre((10 - trb_Tocdo.Value) * 20);
 						i++;
 					}
 					while (array[j] < x)
 					{
 						lb_code.SelectedIndex = 9;
-						System.Threading.Thread.Sleep(1500);
+						Tre((10 - trb_Tocdo.Value) * 20);
 						lb_code.SelectedIndex = 10;
-						System.Threading.Thread.Sleep(1500);
+						Tre((10 - trb_Tocdo.Value) * 20);
 						j--;
 					}
 				}
 				lb_code.SelectedIndex = 11;
-				System.Threading.Thread.Sleep(1500);
+				Tre((10 - trb_Tocdo.Value) * 20);
 				if (i <= j)
 				{
 					if (array[i] != array[j])
@@ -991,19 +962,19 @@ namespace PMSapXep
 				}
 			}
 			lb_code.SelectedIndex = 17;
-			System.Threading.Thread.Sleep(1500);
+			Tre((10 - trb_Tocdo.Value) * 20);
 			if (j > l)
 			{
 				lb_code.SelectedIndex = 18;
-				System.Threading.Thread.Sleep(1500);
+				Tre((10 - trb_Tocdo.Value) * 20);
 				Quicksort(array, l, j);
 			}
 			lb_code.SelectedIndex = 19;
-			System.Threading.Thread.Sleep(1500);
+			Tre((10 - trb_Tocdo.Value) * 20);
 			if (i < r)
 			{
 				lb_code.SelectedIndex = 20;
-				System.Threading.Thread.Sleep(1500);
+				Tre((10 - trb_Tocdo.Value) * 20);
 				Quicksort(array, i, r);
 			}
 		}
@@ -1013,7 +984,7 @@ namespace PMSapXep
 		private void shift(int[] array, int l, int r)
 		{
 			lb_code.SelectedIndex = 13;
-			System.Threading.Thread.Sleep(1500);
+			Tre((10 - trb_Tocdo.Value) * 20);
 			int x, i, j;
 			i = l;
 			j = 2 * i + 1;
@@ -1021,28 +992,28 @@ namespace PMSapXep
 			if (rad_Tang.Checked == true)
 			{
 				lb_code.SelectedIndex = 19;
-				System.Threading.Thread.Sleep(1500);
+				Tre((10 - trb_Tocdo.Value) * 20);
 				while (j <= r)
 				{
 					lb_code.SelectedIndex = 21;
-					System.Threading.Thread.Sleep(1500);
+					Tre((10 - trb_Tocdo.Value) * 20);
 					if (j < r)
 					{
 						lb_code.SelectedIndex = 22;
-						System.Threading.Thread.Sleep(1500);
+						Tre((10 - trb_Tocdo.Value) * 20);
 						if (array[j] < array[j + 1])
 						{
 							lb_code.SelectedIndex = 23;
-							System.Threading.Thread.Sleep(1500);
+							Tre((10 - trb_Tocdo.Value) * 20);
 							j++;
 						}
 					}
 					lb_code.SelectedIndex = 24;
-					System.Threading.Thread.Sleep(1500);
+					Tre((10 - trb_Tocdo.Value) * 20);
 					if (array[j] <= x)
 					{
 						lb_code.SelectedIndex = 25;
-						System.Threading.Thread.Sleep(1500);
+						Tre((10 - trb_Tocdo.Value) * 20);
 						return;
 					}
 					else
@@ -1111,7 +1082,7 @@ namespace PMSapXep
 			CreateHeap(array, n);
 			r = n - 1;
 			lb_code.SelectedIndex = 5;
-			System.Threading.Thread.Sleep(1500);
+			Tre((10 - trb_Tocdo.Value) * 20);
 			while (r > 0)
 			{
 				if (rad_Tang.Checked == true)
@@ -1119,8 +1090,8 @@ namespace PMSapXep
 					if (array[0] > array[r])
 					{
 						lb_code.SelectedIndex = 7;
-						System.Threading.Thread.Sleep(1000);
-						SwapInts(array, 0, r);
+                        Tre((10 - trb_Tocdo.Value) * 20);
+                        SwapInts(array, 0, r);
 						Hoan_vi(Bn, 0, r);
 						Hoan_Tri_Node(0, r);
 					}
@@ -1138,7 +1109,7 @@ namespace PMSapXep
 				}
 				r--;
 				lb_code.SelectedIndex = 9;
-				System.Threading.Thread.Sleep(1500);
+				Tre((10 - trb_Tocdo.Value) * 20);
 				if (r > 0)
 				{
 					lb_code.SelectedIndex = 10;
@@ -1298,6 +1269,8 @@ namespace PMSapXep
         {
 
         }
+
+      
 
         private void btn_xuatgip_Click(object sender, EventArgs e)
         {

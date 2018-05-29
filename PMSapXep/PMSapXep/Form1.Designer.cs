@@ -41,7 +41,7 @@
             this.rad_ShellSort = new System.Windows.Forms.RadioButton();
             this.rad_BinaryInsertionSort = new System.Windows.Forms.RadioButton();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_mofile = new System.Windows.Forms.Button();
             this.btn_Ngaunhien = new System.Windows.Forms.Button();
             this.btnTaoMang = new System.Windows.Forms.Button();
             this.lbSophantu = new System.Windows.Forms.Label();
@@ -50,6 +50,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pnNut = new System.Windows.Forms.Panel();
+            this.Mui_ten_xanh_xuong_2 = new System.Windows.Forms.Label();
+            this.Mui_ten_xanh_xuong_1 = new System.Windows.Forms.Label();
+            this.Mui_ten_xanh_len_2 = new System.Windows.Forms.Label();
+            this.Mui_ten_xanh_len_1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnxoamang = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -72,10 +76,6 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.text_ytuong = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.Mui_ten_xanh_len_2 = new System.Windows.Forms.Label();
-            this.Mui_ten_xanh_len_1 = new System.Windows.Forms.Label();
-            this.Mui_ten_xanh_xuong_1 = new System.Windows.Forms.Label();
-            this.Mui_ten_xanh_xuong_2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnNut.SuspendLayout();
@@ -161,7 +161,7 @@
             this.groupBox1.Controls.Add(this.rad_BubbleSort);
             this.groupBox1.Controls.Add(this.rad_ShakerSort);
             this.groupBox1.Controls.Add(this.rad_InsertionSort);
-            this.groupBox1.Location = new System.Drawing.Point(283, 44);
+            this.groupBox1.Location = new System.Drawing.Point(280, 44);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(265, 134);
             this.groupBox1.TabIndex = 2;
@@ -243,19 +243,19 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // btn_mofile
             // 
-            this.button3.Enabled = false;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button3.Location = new System.Drawing.Point(8, 76);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 25);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Mở File";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btn_mofile.Enabled = false;
+            this.btn_mofile.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_mofile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_mofile.Location = new System.Drawing.Point(8, 76);
+            this.btn_mofile.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_mofile.Name = "btn_mofile";
+            this.btn_mofile.Size = new System.Drawing.Size(89, 25);
+            this.btn_mofile.TabIndex = 7;
+            this.btn_mofile.Text = "Mở File";
+            this.btn_mofile.UseVisualStyleBackColor = true;
+            this.btn_mofile.Click += new System.EventHandler(this.btnmofile_Click);
             // 
             // btn_Ngaunhien
             // 
@@ -348,6 +348,64 @@
             this.pnNut.Click += new System.EventHandler(this.pnNut_Click);
             this.pnNut.Paint += new System.Windows.Forms.PaintEventHandler(this.pnNut_Paint);
             // 
+            // Mui_ten_xanh_xuong_2
+            // 
+            this.Mui_ten_xanh_xuong_2.BackColor = System.Drawing.Color.Transparent;
+            this.Mui_ten_xanh_xuong_2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mui_ten_xanh_xuong_2.Image = global::PMSapXep.Properties.Resources.down_icon;
+            this.Mui_ten_xanh_xuong_2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Mui_ten_xanh_xuong_2.Location = new System.Drawing.Point(672, 81);
+            this.Mui_ten_xanh_xuong_2.Name = "Mui_ten_xanh_xuong_2";
+            this.Mui_ten_xanh_xuong_2.Size = new System.Drawing.Size(60, 63);
+            this.Mui_ten_xanh_xuong_2.TabIndex = 26;
+            this.Mui_ten_xanh_xuong_2.Text = "d2";
+            this.Mui_ten_xanh_xuong_2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Mui_ten_xanh_xuong_2.Visible = false;
+            // 
+            // Mui_ten_xanh_xuong_1
+            // 
+            this.Mui_ten_xanh_xuong_1.BackColor = System.Drawing.Color.Transparent;
+            this.Mui_ten_xanh_xuong_1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mui_ten_xanh_xuong_1.Image = global::PMSapXep.Properties.Resources.down_icon;
+            this.Mui_ten_xanh_xuong_1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Mui_ten_xanh_xuong_1.Location = new System.Drawing.Point(755, 96);
+            this.Mui_ten_xanh_xuong_1.Name = "Mui_ten_xanh_xuong_1";
+            this.Mui_ten_xanh_xuong_1.Size = new System.Drawing.Size(60, 63);
+            this.Mui_ten_xanh_xuong_1.TabIndex = 25;
+            this.Mui_ten_xanh_xuong_1.Text = "d1";
+            this.Mui_ten_xanh_xuong_1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Mui_ten_xanh_xuong_1.Visible = false;
+            // 
+            // Mui_ten_xanh_len_2
+            // 
+            this.Mui_ten_xanh_len_2.BackColor = System.Drawing.Color.Transparent;
+            this.Mui_ten_xanh_len_2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mui_ten_xanh_len_2.ForeColor = System.Drawing.Color.Black;
+            this.Mui_ten_xanh_len_2.Image = global::PMSapXep.Properties.Resources.muiten2;
+            this.Mui_ten_xanh_len_2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Mui_ten_xanh_len_2.Location = new System.Drawing.Point(568, 81);
+            this.Mui_ten_xanh_len_2.Name = "Mui_ten_xanh_len_2";
+            this.Mui_ten_xanh_len_2.Size = new System.Drawing.Size(60, 60);
+            this.Mui_ten_xanh_len_2.TabIndex = 24;
+            this.Mui_ten_xanh_len_2.Text = "u2";
+            this.Mui_ten_xanh_len_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Mui_ten_xanh_len_2.Visible = false;
+            // 
+            // Mui_ten_xanh_len_1
+            // 
+            this.Mui_ten_xanh_len_1.BackColor = System.Drawing.Color.Transparent;
+            this.Mui_ten_xanh_len_1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mui_ten_xanh_len_1.ForeColor = System.Drawing.Color.Black;
+            this.Mui_ten_xanh_len_1.Image = global::PMSapXep.Properties.Resources.muiten1;
+            this.Mui_ten_xanh_len_1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Mui_ten_xanh_len_1.Location = new System.Drawing.Point(484, 81);
+            this.Mui_ten_xanh_len_1.Name = "Mui_ten_xanh_len_1";
+            this.Mui_ten_xanh_len_1.Size = new System.Drawing.Size(60, 60);
+            this.Mui_ten_xanh_len_1.TabIndex = 23;
+            this.Mui_ten_xanh_len_1.Text = "u1";
+            this.Mui_ten_xanh_len_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Mui_ten_xanh_len_1.Visible = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnxoamang);
@@ -356,7 +414,7 @@
             this.groupBox2.Controls.Add(this.lbSophantu);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.btnTaoMang);
-            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.btn_mofile);
             this.groupBox2.Controls.Add(this.btn_Ngaunhien);
             this.groupBox2.Location = new System.Drawing.Point(31, 42);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
@@ -575,60 +633,6 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Mui_ten_xanh_len_2
-            // 
-            this.Mui_ten_xanh_len_2.BackColor = System.Drawing.Color.Transparent;
-            this.Mui_ten_xanh_len_2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mui_ten_xanh_len_2.ForeColor = System.Drawing.Color.Black;
-            this.Mui_ten_xanh_len_2.Image = global::PMSapXep.Properties.Resources.muiten2;
-            this.Mui_ten_xanh_len_2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Mui_ten_xanh_len_2.Location = new System.Drawing.Point(568, 81);
-            this.Mui_ten_xanh_len_2.Name = "Mui_ten_xanh_len_2";
-            this.Mui_ten_xanh_len_2.Size = new System.Drawing.Size(60, 60);
-            this.Mui_ten_xanh_len_2.TabIndex = 24;
-            this.Mui_ten_xanh_len_2.Text = "u2";
-            this.Mui_ten_xanh_len_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // Mui_ten_xanh_len_1
-            // 
-            this.Mui_ten_xanh_len_1.BackColor = System.Drawing.Color.Transparent;
-            this.Mui_ten_xanh_len_1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mui_ten_xanh_len_1.ForeColor = System.Drawing.Color.Black;
-            this.Mui_ten_xanh_len_1.Image = global::PMSapXep.Properties.Resources.muiten1;
-            this.Mui_ten_xanh_len_1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Mui_ten_xanh_len_1.Location = new System.Drawing.Point(484, 81);
-            this.Mui_ten_xanh_len_1.Name = "Mui_ten_xanh_len_1";
-            this.Mui_ten_xanh_len_1.Size = new System.Drawing.Size(60, 60);
-            this.Mui_ten_xanh_len_1.TabIndex = 23;
-            this.Mui_ten_xanh_len_1.Text = "u1";
-            this.Mui_ten_xanh_len_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // Mui_ten_xanh_xuong_1
-            // 
-            this.Mui_ten_xanh_xuong_1.BackColor = System.Drawing.Color.Transparent;
-            this.Mui_ten_xanh_xuong_1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mui_ten_xanh_xuong_1.Image = global::PMSapXep.Properties.Resources.down_icon;
-            this.Mui_ten_xanh_xuong_1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Mui_ten_xanh_xuong_1.Location = new System.Drawing.Point(755, 96);
-            this.Mui_ten_xanh_xuong_1.Name = "Mui_ten_xanh_xuong_1";
-            this.Mui_ten_xanh_xuong_1.Size = new System.Drawing.Size(60, 63);
-            this.Mui_ten_xanh_xuong_1.TabIndex = 25;
-            this.Mui_ten_xanh_xuong_1.Text = "d1";
-            this.Mui_ten_xanh_xuong_1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // Mui_ten_xanh_xuong_2
-            // 
-            this.Mui_ten_xanh_xuong_2.BackColor = System.Drawing.Color.Transparent;
-            this.Mui_ten_xanh_xuong_2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mui_ten_xanh_xuong_2.Image = global::PMSapXep.Properties.Resources.down_icon;
-            this.Mui_ten_xanh_xuong_2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Mui_ten_xanh_xuong_2.Location = new System.Drawing.Point(672, 81);
-            this.Mui_ten_xanh_xuong_2.Name = "Mui_ten_xanh_xuong_2";
-            this.Mui_ten_xanh_xuong_2.Size = new System.Drawing.Size(60, 63);
-            this.Mui_ten_xanh_xuong_2.TabIndex = 26;
-            this.Mui_ten_xanh_xuong_2.Text = "d2";
-            this.Mui_ten_xanh_xuong_2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -684,7 +688,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnTaoMang;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_mofile;
         private System.Windows.Forms.Button btn_Ngaunhien;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label lbSophantu;
