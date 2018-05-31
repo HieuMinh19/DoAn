@@ -301,11 +301,6 @@ D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DoAn\PMSapXep\PMSapXep\obj\
 D:\HỌC KÌ 4_KÌ 2 NĂM 2\Lập Trình Trực Quan\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.csproj.GenerateResource.Cache
 F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\PMSapXep.exe
 F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\PMSapXep.pdb
-F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\DevExpress.Data.v17.2.dll
-F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\DevExpress.Printing.v17.2.Core.dll
-F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\DevExpress.Sparkline.v17.2.Core.dll
-F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\DevExpress.Utils.v17.2.dll
-F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\DevExpress.XtraEditors.v17.2.dll
 F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\DevExpress.Pdf.v17.2.Core.dll
 F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\DevExpress.Data.v17.2.xml
 F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\DevExpress.Printing.v17.2.Core.xml

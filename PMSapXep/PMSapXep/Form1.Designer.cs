@@ -385,7 +385,7 @@
             this.Mui_ten_xanh_len_2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Mui_ten_xanh_len_2.Location = new System.Drawing.Point(568, 81);
             this.Mui_ten_xanh_len_2.Name = "Mui_ten_xanh_len_2";
-            this.Mui_ten_xanh_len_2.Size = new System.Drawing.Size(60, 60);
+            this.Mui_ten_xanh_len_2.Size = new System.Drawing.Size(60, 49);
             this.Mui_ten_xanh_len_2.TabIndex = 24;
             this.Mui_ten_xanh_len_2.Text = "u2";
             this.Mui_ten_xanh_len_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -400,11 +400,12 @@
             this.Mui_ten_xanh_len_1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Mui_ten_xanh_len_1.Location = new System.Drawing.Point(484, 81);
             this.Mui_ten_xanh_len_1.Name = "Mui_ten_xanh_len_1";
-            this.Mui_ten_xanh_len_1.Size = new System.Drawing.Size(60, 60);
+            this.Mui_ten_xanh_len_1.Size = new System.Drawing.Size(58, 60);
             this.Mui_ten_xanh_len_1.TabIndex = 23;
             this.Mui_ten_xanh_len_1.Text = "u1";
             this.Mui_ten_xanh_len_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Mui_ten_xanh_len_1.Visible = false;
+            this.Mui_ten_xanh_len_1.Click += new System.EventHandler(this.Mui_ten_xanh_len_1_Click);
             // 
             // groupBox2
             // 
@@ -528,6 +529,7 @@
             this.btnhuy.TabIndex = 3;
             this.btnhuy.Text = "Hủy";
             this.btnhuy.UseVisualStyleBackColor = true;
+            this.btnhuy.Click += new System.EventHandler(this.btnhuy_Click_1);
             // 
             // btn_Batdau
             // 

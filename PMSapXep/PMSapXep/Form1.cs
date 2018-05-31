@@ -16,6 +16,11 @@ namespace PMSapXep
         public Form1()
         {
             InitializeComponent();
+
+            //auto load thuật toán và ý tưởng của thuật toán InterchangeSort
+            rad_InsertionSort.Checked = true;
+            rad_InterchangeSort.Checked = true;
+
         }
         #region Khai bao bien toan cuc
         public static int SoPT = 0;
@@ -128,7 +133,7 @@ namespace PMSapXep
             }
             else
             {
-                MessageBox.Show("M?ng t? 2 -> 15 ph?n t?");
+                MessageBox.Show("Mảng từ 2 đến 15 phần tử");
                 txtNhapPT.Focus();
             }
             #endregion 
@@ -164,7 +169,7 @@ namespace PMSapXep
 
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -178,14 +183,14 @@ namespace PMSapXep
 			text_ytuong.Text = "Xuất phát từ đầu dãy, tìm tất các các cặp nghịch thế, triệt tiêu bằng cách đổi chỗ 2 phần tử trong cặp nghịch thế.\r\nLặp lại xử lý trên với phần tử kế trong dãy.  ";
 			lb_code.Items.Clear();
 			code x = new code();
-			x.Interchangesort(lb_code, true);
+			x.Interchangesort(lb_code, rad_Tang.Checked);
 		}
 
 		private void rad_SelectionSort_CheckedChanged(object sender, EventArgs e)
 		{
 			lb_code.Items.Clear();
 			code x = new code();
-			x.Selectionsort(lb_code, true);
+			x.Selectionsort(lb_code, rad_Tang.Checked);
 			text_ytuong.Text = "Chọn phần tử nhỏ nhất trong N phần tử trong dãy hiện hành ban đầu.Đưa phần tử này về vị trí đầu dãy hiện hành\r\nXem dãy hiện hành chỉ còn N-1 phần tử của dãy hiện hành ban đầuBắt đầu từ vị trí thứ 2\r\nLặp lại quá trình trên cho dãy hiện hành đến khi dãy hiện hành chỉ còn 1 phần tử";
 
 		}
@@ -195,14 +200,14 @@ namespace PMSapXep
 			lb_code.Items.Clear();
 			text_ytuong.Text = "Heap Sort tận dụng được các phép so sánh ở bước i-1, mà thuật toán sắp xếp chọn trực tiếp không tận dụng được\r\nĐể làm được điều này Heap sort thao tác dựa trên cây.\r\nỞ cây trên, phần tử ở mức i chính là phần tử lớn trong cặp phần tử ở mức i +1, do đó phần tử ở nút gốc là phần tử lớn nhất.\r\nNếu loại bỏ gốc ra khỏi cây, thì việc cập  nhật cây chỉ xãy ra trên những nhấn liên quan đến phần tử mới loại bỏ, còn các nhánh khác thì bảo toàn.\r\nBước kế tiếp có thể sử dụng lại kết quả so sánh của bước hiện tại. ";
 			code x = new code();
-			x.heapsort(lb_code, true);
+			x.heapsort(lb_code, rad_Tang.Checked);
 		}
 
 		private void rad_MergeSort_CheckedChanged(object sender, EventArgs e)
 		{
 			lb_code.Items.Clear();
 			code x = new code();
-			x.Mergesort(lb_code, true);
+			x.Mergesort(lb_code, rad_Tang.Checked);
 			text_ytuong.Text = "Giải thuật Merge sort sắp xếp dãy a1, a2, ..., an dựa trên nhận xét sau: \r\n    +Mỗi dãy a1, a2, ..., an bất kỳ là một tập hợp các dãy con liên tiếp mà mỗi dãy con đều đã có thứ tự. \r\n    +Dãy đã có thứ tự coi như có 1 dãy con.\r\nMảng A chia làm 02 phần bằng nhau\r\nSắp xếp 02 phần\r\nTrộn 02 nửa lại ";
 		}
 
@@ -210,7 +215,7 @@ namespace PMSapXep
 		{
 			lb_code.Items.Clear();
 			code x = new code();
-			x.bubblesort(lb_code, true);
+			x.bubblesort(lb_code, rad_Tang.Checked);
 			text_ytuong.Text = "Xuất phát từ cuối dãy, đổi chỗ các cặp phần tử kế cận để đưa phần tử nhỏ hơn trong cặp phần tử đó về vị trí đúng đầu dãy hiện hành, sau đó sẽ không xét đến nó ở bước tiếp theo, do vậy ở lần xử lý thứ i sẽ có vị trí đầu dãy là i.\r\nLặp lại xử lý trên cho đến khi không còn cặp phần tử nào để xét.";
 
 		}
@@ -220,7 +225,7 @@ namespace PMSapXep
 			text_ytuong.Text = "Trong mỗi lần sắp xếp, duyệt mảng theo 2 lượt từ 2 phía khác nhau:\r\n    +Lượt đi: đẩy phần tử nhỏ về đầu mảng.\r\n    +Lượt về: đẩy phần tử lớn về cuối mảng. \r\nGhi nhận lại những đoạn đã sắp xếp nhằm tiết kiệm các phép so sánh thừa.";
 			lb_code.Items.Clear();
 			code x = new code();
-			x.ShakerSort(lb_code, true);
+			x.ShakerSort(lb_code, rad_Tang.Checked);
 		}
 
 		private void rad_InsertionSort_CheckedChanged(object sender, EventArgs e)
@@ -228,14 +233,14 @@ namespace PMSapXep
 			lb_code.Items.Clear();
 			text_ytuong.Text = "Giả sử có một dãy a0 , a1 ,... ,an-1 trong đó i phần tử đầu tiên a0 , a1 ,... ,ai-1 đã có thứ\r\nTìm cách chèn phần tử  ai vào vị trí thích hợp của đoạn đã được sắp để có dãy mới a0 , a1,... ,ai trở nên có thứ tự. Vị trí này chính là vị trí giữa hai phần tử ak-1 và ak thỏa ak-1 < ai < ak (1≤k≤i). ";
 			code x = new code();
-			x.insertionsort(lb_code, true);
+			x.insertionsort(lb_code, rad_Tang.Checked);
 		}
 
 		private void rad_BinaryInsertionSort_CheckedChanged(object sender, EventArgs e)
 		{
 			lb_code.Items.Clear();
 			code x = new code();
-			x.Binaryinsertionsort(lb_code, true);
+			x.Binaryinsertionsort(lb_code, rad_Tang.Checked);
 			text_ytuong.Text = "Giả sử có một dãy a0 , a1 ,... ,an-1 trong đó i phần tử đầu tiên a0 , a1 ,... ,ai-1 đã có thứ\r\nChúng tasử dụng tìm kiếm nhị phân để chèn phần tử  ai vào vị trí thích hợp của đoạn đã được sắp để có dãy mới a0 , a1,... ,ai trở nên có thứ tự. Vị trí này chính là vị trí giữa hai phần tử ak-1 và ak thỏa ak-1 < ai < ak (1≤k≤i). .";
 		}
 
@@ -244,14 +249,14 @@ namespace PMSapXep
 			text_ytuong.Text = "Phân hoạch dãy thành các dãy con \r\nSắp xếp các dãy con theo phương pháp chèn trực tiếp \r\nDùng phương pháp chèn trực tiếp sắp xếp lại cả dãy. ";
 			lb_code.Items.Clear();
 			code x = new code();
-			x.shellsort(lb_code, true);
+			x.shellsort(lb_code, rad_Tang.Checked);
 		}
 
 		private void rad_QuickSort_CheckedChanged(object sender, EventArgs e)
 		{
 			lb_code.Items.Clear();
 			code x = new code();
-			x.quicksort(lb_code, true);
+			x.quicksort(lb_code, rad_Tang.Checked);
 			text_ytuong.Text = "Giải thuật QuickSort sắp xếp dãy a1, a2 ..., aN dựa trên việc phân hoạch dãy ban đầu thành 3 phần\r\n    +Phần 1: Gồm các phần tử  có giá trị bé hơn x \r\n    +Phần 2: Gồm các phần tử  có giá trị bằng  x\r\n    +Phần 3: Gồm các phần tử  có giá trị lớn hơn \r\nSau khi thực hiện phân hoạch, dãy ban đầu được phân thành 3 đoạn:\r\n    •1. ak  ≤ x , với k = 1 .. j\r\n    • 2.ak = x , với k = j + 1..i - 1\r\n    • 3.ak   x , với k = i..N\r\nKhi đoạn thứ 2 đã có thứ tự.\r\n    +Nếu các đoạn 1 và 3 chỉ có 1 phần tử thì khi đó dãy con ban đầu đã được sắp.\r\n    +Nếu các đoạn 1 và 3  có nhiều hơn 1 phần tử  thì dãy ban đầu chỉ có thứ tự khi các đoạn 1, 3 được sắp xếp.\r\n    +Để sắp xếp các đoạn 1 và 3,ta phân hoạch dãy theo phương pháp ban đầu    ";
 		}
 		#endregion
@@ -335,7 +340,7 @@ namespace PMSapXep
 
         private void rad_Giam_CheckedChanged(object sender, EventArgs e)
         {
-
+            lb_code.Refresh();
         }
 
         private void groupBox4_Enter(object sender, EventArgs e)
@@ -375,7 +380,7 @@ namespace PMSapXep
 
         private void rad_Tang_CheckedChanged(object sender, EventArgs e)
         {
-
+            lb_code.Refresh();
         }
 
         private void btn_Batdau_Click(object sender, EventArgs e)
@@ -554,23 +559,48 @@ namespace PMSapXep
         {
             for (int i = 0; i < M.Length - 1; i++)
             {
+                Mui_ten_xanh_xuong_1.Visible = true;
+                Mui_ten_xanh_xuong_1.Text = "i=" + i;
+                Mui_ten_xanh_xuong_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y - Size - 70);
+                pnNut.Controls.Add(Mui_ten_xanh_xuong_1);
+                Mui_ten_xanh_xuong_1.Refresh();
+                //select dong code trong list box
+                lb_code.SelectedIndex = 3;
+                Tre((10 - trb_Tocdo.Value) * 100);
                 for (int j = i + 1; j < M.Length; j++)
                 {
+                    Mui_ten_xanh_xuong_2.Visible = true;
+                    Mui_ten_xanh_xuong_2.Text = "j=" + j;
+                    Mui_ten_xanh_xuong_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * j) + (Size / 2) - 30, Bn[j].Location.Y - Size - 70);
+                    pnNut.Controls.Add(Mui_ten_xanh_xuong_2);
+                    Mui_ten_xanh_xuong_2.Refresh();
+                    Tre((10 - trb_Tocdo.Value) * 100);
 
+                    //select dong code trong list box
+                    lb_code.SelectedIndex = 4;
+                    Tre((10 - trb_Tocdo.Value) * 100);
+
+                    lb_code.SelectedIndex = 5;
+                    Tre((10 - trb_Tocdo.Value) * 100);
                     if (Array[i] > Array[j] && rad_Tang.Checked == true)
                     {
+                        lb_code.SelectedIndex = 6;
+                        Tre((10 - trb_Tocdo.Value) * 100);
                         SwapInts(Array, i, j);
                         Hoan_vi(Bn, Pos[i], Pos[j]);
                         SwapInts(Pos, i, j);
                     }
                     else if (Array[i] < Array[j] && rad_Giam.Checked == true)
                     {
+                        lb_code.SelectedIndex = 6;
+                        Tre((10 - trb_Tocdo.Value) * 100);
+
                         SwapInts(Array, i, j);
                         Hoan_vi(Bn, Pos[i], Pos[j]);
                         SwapInts(Pos, i, j);
                     }
                 }
-                //Dat_mau_node(Bn[i], Properties.Resources.daxep);
+                
                 Bn[Pos[i]].ForeColor = Color.White;
                 Bn[Pos[i]].FlatStyle = FlatStyle.Flat;
                 Bn[Pos[i]].BackgroundImage = Properties.Resources.daxep;
@@ -609,7 +639,7 @@ namespace PMSapXep
                 Mui_ten_xanh_xuong_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[min].Location.Y - Size - 70);
                 pnNut.Controls.Add(Mui_ten_xanh_xuong_1);
                 Mui_ten_xanh_xuong_1.Refresh();
-                Tre((10 - trb_Tocdo.Value) * 10);
+                Tre((10 - trb_Tocdo.Value) * 100);
 
                 //thiết lập mũi tên chỉ vị trí MIN đầu tiên
                 Mui_ten_xanh_len_1.Visible = true;
@@ -617,7 +647,7 @@ namespace PMSapXep
                 Mui_ten_xanh_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * min) + (Size / 2) - 30, Bn[min].Location.Y + 2 * Size + 5);
                 pnNut.Controls.Add(Mui_ten_xanh_len_1);
                 Mui_ten_xanh_len_1.Refresh();
-                Tre((10 - trb_Tocdo.Value) * 10);
+                Tre((10 - trb_Tocdo.Value) * 100);
 
                 for (int j = i + 1; j < M.Length; j++)
                 {
@@ -629,7 +659,7 @@ namespace PMSapXep
 
                     pnNut.Controls.Add(Mui_ten_xanh_xuong_2);
                     Mui_ten_xanh_xuong_2.Refresh();
-                    Tre((10 - trb_Tocdo.Value) * 10);
+                    Tre((10 - trb_Tocdo.Value) * 100);
 
                     if (Array[j] < Array[min] && rad_Tang.Checked == true)
                     {
@@ -693,25 +723,65 @@ namespace PMSapXep
         #region BubbleSort
         private void BubbleSort(Button[] M)
         {
-            for (int i = 1; i < M.Length; i++)
+
+            for (int i = 0; i < M.Length - 1; i++)
             {
-                for (int j = M.Length - 1; j >= i; j--)
+
+                Mui_ten_xanh_xuong_1.Visible = true;
+                Mui_ten_xanh_xuong_1.Text = "i=" + i;
+                Mui_ten_xanh_xuong_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + 5, Bn[i].Location.Y - Size - 80);
+                pnNut.Controls.Add(Mui_ten_xanh_xuong_1);
+                Mui_ten_xanh_xuong_1.Refresh();
+                for (int j = M.Length - 1; j > i; j--)
                 {
+                    int x = j - 1;
+                    Mui_ten_xanh_xuong_2.Visible = true;
+                    Mui_ten_xanh_xuong_2.Text = "j=" + j;
+                    Mui_ten_xanh_xuong_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * j) + 5, Bn[j].Location.Y - Size - 80);
+                    pnNut.Controls.Add(Mui_ten_xanh_xuong_2);
+                    Mui_ten_xanh_xuong_2.Refresh();
+                    lb_code.SelectedIndex = 5;
+                    Tre((10 - trb_Tocdo.Value) * 100);
+                    //lb_code.SelectedIndex = 5;
                     if (Array[j - 1] > Array[j] && rad_Tang.Checked == true)
                     {
+                        lb_code.SelectedIndex = 6;
+                        Mui_ten_xanh_len_1.Visible = true;
+                        Mui_ten_xanh_len_1.Text = "j-1=" + x;
+                        Mui_ten_xanh_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * x) + 5, Bn[j].Location.Y + Size + 80);
+                        pnNut.Controls.Add(Mui_ten_xanh_len_1);
+                        Mui_ten_xanh_len_1.Refresh();
                         SwapInts(Array, j - 1, j);
                         Hoan_vi(Bn, Pos[j - 1], Pos[j]);
                         SwapInts(Pos, j - 1, j);
                     }
                     if (Array[j - 1] < Array[j] && rad_Giam.Checked == true)
                     {
+                        lb_code.SelectedIndex = 6;
+                        Mui_ten_xanh_len_1.Visible = true;
+                        Mui_ten_xanh_len_1.Text = "j-1=" + x;
+                        Mui_ten_xanh_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * x) + 5, Bn[j].Location.Y + Size + 80);
+                        pnNut.Controls.Add(Mui_ten_xanh_len_1);
+                        Mui_ten_xanh_len_1.Refresh();
                         SwapInts(Array, j - 1, j);
                         Hoan_vi(Bn, Pos[j - 1], Pos[j]);
                         SwapInts(Pos, j - 1, j);
                     }
                 }
+                Bn[Pos[i]].ForeColor = Color.White;
+                Bn[Pos[i]].FlatStyle = FlatStyle.Flat;
+                Bn[Pos[i]].BackgroundImage = Properties.Resources.daxep;
+                Bn[Pos[i]].BackgroundImageLayout = ImageLayout.Stretch;
+                Bn[Pos[i]].Refresh();
+                if (i == M.Length - 2)
+                {
+                    Bn[Pos[M.Length - 1]].ForeColor = Color.White;
+                    Bn[Pos[M.Length - 1]].FlatStyle = FlatStyle.Flat;
+                    Bn[Pos[M.Length - 1]].BackgroundImage = Properties.Resources.daxep;
+                    Bn[Pos[M.Length - 1]].BackgroundImageLayout = ImageLayout.Stretch;
+                    Bn[Pos[M.Length - 1]].Refresh();
+                }
             }
-            MessageBox.Show("S?p X?p Xong");
         }
         #endregion
 
@@ -753,8 +823,21 @@ namespace PMSapXep
         #region InsertionSort 
         private void InsertionSort(Button[] M)
         {
+            Bn[0].ForeColor = Color.White;
+            Bn[0].FlatStyle = FlatStyle.Flat;
+            Bn[0].BackgroundImage = Properties.Resources.daxep;
+            Bn[0].BackgroundImageLayout = ImageLayout.Stretch;
+            Bn[0].Refresh();
+            lb_code.SelectedIndex = 2;
+            Tre((10 - trb_Tocdo.Value) * 100);
             for (int i = 1; i < M.Length; i++)
             {
+
+                Mui_ten_xanh_xuong_1.Visible = true;
+                Mui_ten_xanh_xuong_1.Text = "i=" + i;
+                Mui_ten_xanh_xuong_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + 5, Bn[i].Location.Y - Size - 80);
+                pnNut.Controls.Add(Mui_ten_xanh_xuong_1);
+                Mui_ten_xanh_xuong_1.Refresh();
                 DemQuickSort = 0;
                 int x = Array[i];
                 int j = i;
@@ -762,43 +845,83 @@ namespace PMSapXep
                 {
                     if (j > 0 && Array[j - 1] > x)
                     {
+                        lb_code.SelectedIndex = 5;
                         DiLen(M[j]);
+                        //
+
+                        //
                         while (j > 0 && Array[j - 1] > x)
                         {
+                            int y = j - 1;
+                            lb_code.SelectedIndex = 9;
+                            Mui_ten_xanh_len_1.Visible = true;
+                            Mui_ten_xanh_len_1.Text = "j-1=" + y;
+                            Mui_ten_xanh_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * (j - 1)) + 5, Bn[j - 1].Location.Y + Size);
+                            pnNut.Controls.Add(Mui_ten_xanh_len_1);
+                            Mui_ten_xanh_len_1.Refresh();
+
                             QuaPhai(M[j - 1]);
                             Hoan_Tri_Node(j, j - 1);
                             SwapInts(Array, j, j - 1);
+                            // Hoan_vi(Bn, Pos[j], Pos[j-1]);//
+                            // SwapInts(Pos, j, j-1);//t
+
                             j--;
                             DemQuickSort++;
                         }
+                        lb_code.SelectedIndex = 12;
                         QuaTrai(M[j], DemQuickSort);
                         DiXuong(M[j]);
-
+                        Bn[j].ForeColor = Color.White;
+                        Bn[j].FlatStyle = FlatStyle.Flat;
+                        Bn[j].BackgroundImage = Properties.Resources.daxep;
+                        Bn[j].BackgroundImageLayout = ImageLayout.Stretch;
+                        Bn[j].Refresh();
                     }
                 }
                 if (rad_Giam.Checked == true)
                 {
                     if (j > 0 && Array[j - 1] < x)
                     {
+                        lb_code.SelectedIndex = 5;
                         DiLen(M[j]);
                         while (j > 0 && Array[j - 1] < x)
                         {
+                            int y = j - 1;
+                            lb_code.SelectedIndex = 9;
+                            Mui_ten_xanh_len_1.Visible = true;
+                            Mui_ten_xanh_len_1.Text = "j-1=" + y;
+                            Mui_ten_xanh_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * (j - 1)) + 5, Bn[j - 1].Location.Y + Size);
+                            pnNut.Controls.Add(Mui_ten_xanh_len_1);
+                            Mui_ten_xanh_len_1.Refresh();
+                            lb_code.SelectedIndex = 9;
                             QuaPhai(M[j - 1]);
                             Hoan_Tri_Node(j, j - 1);
                             SwapInts(Array, j, j - 1);
                             j--;
                             DemQuickSort++;
                         }
+                        lb_code.SelectedIndex = 12;
                         QuaTrai(M[j], DemQuickSort);
                         DiXuong(M[j]);
 
+                        Bn[j].ForeColor = Color.White;
+                        Bn[j].FlatStyle = FlatStyle.Flat;
+                        Bn[j].BackgroundImage = Properties.Resources.daxep;
+                        Bn[j].BackgroundImageLayout = ImageLayout.Stretch;
+                        Bn[j].Refresh();
                     }
                 }
 
-            }
+                Bn[i].ForeColor = Color.White;
+                Bn[i].FlatStyle = FlatStyle.Flat;
+                Bn[i].BackgroundImage = Properties.Resources.daxep;
+                Bn[i].BackgroundImageLayout = ImageLayout.Stretch;
+                Bn[i].Refresh();
 
+            }
         }
-        #endregion
+            #endregion
 
         #region BinaryInsertionSort
         private void BinaryInsertionSort(Button[] M)
@@ -808,7 +931,7 @@ namespace PMSapXep
             int x;//luu giá tr? a[i] tránh b? ghi dè khi d?i ch? các ph?n t?.
             for (i = 1; i < M.Length; i++)
             {
-                DemQuickSort = 0;
+               DemQuickSort = 0;
                 DoiCho = 0;
                 x = Array[i];
                 l = 0;
@@ -1270,7 +1393,15 @@ namespace PMSapXep
 
         }
 
-      
+        private void btnhuy_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Mui_ten_xanh_len_1_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void btn_xuatgip_Click(object sender, EventArgs e)
         {
