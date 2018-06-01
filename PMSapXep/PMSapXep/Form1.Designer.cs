@@ -50,10 +50,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pnNut = new System.Windows.Forms.Panel();
-            this.Mui_ten_xanh_xuong_2 = new System.Windows.Forms.Label();
-            this.Mui_ten_xanh_xuong_1 = new System.Windows.Forms.Label();
-            this.Mui_ten_xanh_len_2 = new System.Windows.Forms.Label();
-            this.Mui_ten_xanh_len_1 = new System.Windows.Forms.Label();
+            this.Mui_ten_len_3 = new System.Windows.Forms.Label();
+            this.Mui_ten_xuong_2 = new System.Windows.Forms.Label();
+            this.Mui_ten_xuong_1 = new System.Windows.Forms.Label();
+            this.Mui_ten_len_2 = new System.Windows.Forms.Label();
+            this.Mui_ten_len_1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnxoamang = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -336,10 +337,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnNut.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnNut.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnNut.Controls.Add(this.Mui_ten_xanh_xuong_2);
-            this.pnNut.Controls.Add(this.Mui_ten_xanh_xuong_1);
-            this.pnNut.Controls.Add(this.Mui_ten_xanh_len_2);
-            this.pnNut.Controls.Add(this.Mui_ten_xanh_len_1);
+            this.pnNut.Controls.Add(this.Mui_ten_len_3);
+            this.pnNut.Controls.Add(this.Mui_ten_xuong_2);
+            this.pnNut.Controls.Add(this.Mui_ten_xuong_1);
+            this.pnNut.Controls.Add(this.Mui_ten_len_2);
+            this.pnNut.Controls.Add(this.Mui_ten_len_1);
             this.pnNut.Location = new System.Drawing.Point(31, 268);
             this.pnNut.Margin = new System.Windows.Forms.Padding(2);
             this.pnNut.Name = "pnNut";
@@ -348,64 +350,80 @@
             this.pnNut.Click += new System.EventHandler(this.pnNut_Click);
             this.pnNut.Paint += new System.Windows.Forms.PaintEventHandler(this.pnNut_Paint);
             // 
-            // Mui_ten_xanh_xuong_2
+            // Mui_ten_len_3
             // 
-            this.Mui_ten_xanh_xuong_2.BackColor = System.Drawing.Color.Transparent;
-            this.Mui_ten_xanh_xuong_2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mui_ten_xanh_xuong_2.Image = global::PMSapXep.Properties.Resources.down_icon;
-            this.Mui_ten_xanh_xuong_2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Mui_ten_xanh_xuong_2.Location = new System.Drawing.Point(672, 81);
-            this.Mui_ten_xanh_xuong_2.Name = "Mui_ten_xanh_xuong_2";
-            this.Mui_ten_xanh_xuong_2.Size = new System.Drawing.Size(60, 63);
-            this.Mui_ten_xanh_xuong_2.TabIndex = 26;
-            this.Mui_ten_xanh_xuong_2.Text = "d2";
-            this.Mui_ten_xanh_xuong_2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Mui_ten_xanh_xuong_2.Visible = false;
+            this.Mui_ten_len_3.BackColor = System.Drawing.Color.Transparent;
+            this.Mui_ten_len_3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mui_ten_len_3.ForeColor = System.Drawing.Color.Black;
+            this.Mui_ten_len_3.Image = global::PMSapXep.Properties.Resources.muiten1;
+            this.Mui_ten_len_3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Mui_ten_len_3.Location = new System.Drawing.Point(621, 82);
+            this.Mui_ten_len_3.Name = "Mui_ten_len_3";
+            this.Mui_ten_len_3.Size = new System.Drawing.Size(58, 60);
+            this.Mui_ten_len_3.TabIndex = 27;
+            this.Mui_ten_len_3.Text = "u3";
+            this.Mui_ten_len_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Mui_ten_len_3.Visible = false;
             // 
-            // Mui_ten_xanh_xuong_1
+            // Mui_ten_xuong_2
             // 
-            this.Mui_ten_xanh_xuong_1.BackColor = System.Drawing.Color.Transparent;
-            this.Mui_ten_xanh_xuong_1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mui_ten_xanh_xuong_1.Image = global::PMSapXep.Properties.Resources.down_icon;
-            this.Mui_ten_xanh_xuong_1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Mui_ten_xanh_xuong_1.Location = new System.Drawing.Point(755, 96);
-            this.Mui_ten_xanh_xuong_1.Name = "Mui_ten_xanh_xuong_1";
-            this.Mui_ten_xanh_xuong_1.Size = new System.Drawing.Size(60, 63);
-            this.Mui_ten_xanh_xuong_1.TabIndex = 25;
-            this.Mui_ten_xanh_xuong_1.Text = "d1";
-            this.Mui_ten_xanh_xuong_1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Mui_ten_xanh_xuong_1.Visible = false;
+            this.Mui_ten_xuong_2.BackColor = System.Drawing.Color.Transparent;
+            this.Mui_ten_xuong_2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mui_ten_xuong_2.Image = global::PMSapXep.Properties.Resources.down_icon;
+            this.Mui_ten_xuong_2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Mui_ten_xuong_2.Location = new System.Drawing.Point(672, 81);
+            this.Mui_ten_xuong_2.Name = "Mui_ten_xuong_2";
+            this.Mui_ten_xuong_2.Size = new System.Drawing.Size(60, 63);
+            this.Mui_ten_xuong_2.TabIndex = 26;
+            this.Mui_ten_xuong_2.Text = "d2";
+            this.Mui_ten_xuong_2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Mui_ten_xuong_2.Visible = false;
             // 
-            // Mui_ten_xanh_len_2
+            // Mui_ten_xuong_1
             // 
-            this.Mui_ten_xanh_len_2.BackColor = System.Drawing.Color.Transparent;
-            this.Mui_ten_xanh_len_2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mui_ten_xanh_len_2.ForeColor = System.Drawing.Color.Black;
-            this.Mui_ten_xanh_len_2.Image = global::PMSapXep.Properties.Resources.muiten2;
-            this.Mui_ten_xanh_len_2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Mui_ten_xanh_len_2.Location = new System.Drawing.Point(568, 81);
-            this.Mui_ten_xanh_len_2.Name = "Mui_ten_xanh_len_2";
-            this.Mui_ten_xanh_len_2.Size = new System.Drawing.Size(60, 49);
-            this.Mui_ten_xanh_len_2.TabIndex = 24;
-            this.Mui_ten_xanh_len_2.Text = "u2";
-            this.Mui_ten_xanh_len_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Mui_ten_xanh_len_2.Visible = false;
+            this.Mui_ten_xuong_1.BackColor = System.Drawing.Color.Transparent;
+            this.Mui_ten_xuong_1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mui_ten_xuong_1.Image = global::PMSapXep.Properties.Resources.down_icon;
+            this.Mui_ten_xuong_1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Mui_ten_xuong_1.Location = new System.Drawing.Point(755, 96);
+            this.Mui_ten_xuong_1.Name = "Mui_ten_xuong_1";
+            this.Mui_ten_xuong_1.Size = new System.Drawing.Size(60, 63);
+            this.Mui_ten_xuong_1.TabIndex = 25;
+            this.Mui_ten_xuong_1.Text = "d1";
+            this.Mui_ten_xuong_1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Mui_ten_xuong_1.Visible = false;
             // 
-            // Mui_ten_xanh_len_1
+            // Mui_ten_len_2
             // 
-            this.Mui_ten_xanh_len_1.BackColor = System.Drawing.Color.Transparent;
-            this.Mui_ten_xanh_len_1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mui_ten_xanh_len_1.ForeColor = System.Drawing.Color.Black;
-            this.Mui_ten_xanh_len_1.Image = global::PMSapXep.Properties.Resources.muiten1;
-            this.Mui_ten_xanh_len_1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Mui_ten_xanh_len_1.Location = new System.Drawing.Point(484, 81);
-            this.Mui_ten_xanh_len_1.Name = "Mui_ten_xanh_len_1";
-            this.Mui_ten_xanh_len_1.Size = new System.Drawing.Size(58, 60);
-            this.Mui_ten_xanh_len_1.TabIndex = 23;
-            this.Mui_ten_xanh_len_1.Text = "u1";
-            this.Mui_ten_xanh_len_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Mui_ten_xanh_len_1.Visible = false;
-            this.Mui_ten_xanh_len_1.Click += new System.EventHandler(this.Mui_ten_xanh_len_1_Click);
+            this.Mui_ten_len_2.BackColor = System.Drawing.Color.Transparent;
+            this.Mui_ten_len_2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mui_ten_len_2.ForeColor = System.Drawing.Color.Black;
+            this.Mui_ten_len_2.Image = global::PMSapXep.Properties.Resources.muiten2;
+            this.Mui_ten_len_2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Mui_ten_len_2.Location = new System.Drawing.Point(568, 81);
+            this.Mui_ten_len_2.Name = "Mui_ten_len_2";
+            this.Mui_ten_len_2.Size = new System.Drawing.Size(60, 49);
+            this.Mui_ten_len_2.TabIndex = 24;
+            this.Mui_ten_len_2.Text = "u2";
+            this.Mui_ten_len_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Mui_ten_len_2.Visible = false;
+            this.Mui_ten_len_2.Click += new System.EventHandler(this.Mui_ten_len_2_Click);
+            // 
+            // Mui_ten_len_1
+            // 
+            this.Mui_ten_len_1.BackColor = System.Drawing.Color.Transparent;
+            this.Mui_ten_len_1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mui_ten_len_1.ForeColor = System.Drawing.Color.Black;
+            this.Mui_ten_len_1.Image = global::PMSapXep.Properties.Resources.muiten1;
+            this.Mui_ten_len_1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Mui_ten_len_1.Location = new System.Drawing.Point(484, 81);
+            this.Mui_ten_len_1.Name = "Mui_ten_len_1";
+            this.Mui_ten_len_1.Size = new System.Drawing.Size(58, 60);
+            this.Mui_ten_len_1.TabIndex = 23;
+            this.Mui_ten_len_1.Text = "u1";
+            this.Mui_ten_len_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Mui_ten_len_1.Visible = false;
+            this.Mui_ten_len_1.Click += new System.EventHandler(this.Mui_ten_xanh_len_1_Click);
             // 
             // groupBox2
             // 
@@ -717,10 +735,11 @@
 		private System.Windows.Forms.ListBox lb_code;
 		private System.Windows.Forms.TextBox text_ytuong;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label Mui_ten_xanh_len_2;
-        private System.Windows.Forms.Label Mui_ten_xanh_len_1;
-        private System.Windows.Forms.Label Mui_ten_xanh_xuong_2;
-        private System.Windows.Forms.Label Mui_ten_xanh_xuong_1;
+        private System.Windows.Forms.Label Mui_ten_len_2;
+        private System.Windows.Forms.Label Mui_ten_len_1;
+        private System.Windows.Forms.Label Mui_ten_xuong_2;
+        private System.Windows.Forms.Label Mui_ten_xuong_1;
+        private System.Windows.Forms.Label Mui_ten_len_3;
     }
 }
 
