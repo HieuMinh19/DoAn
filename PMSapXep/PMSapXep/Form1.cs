@@ -60,6 +60,15 @@ namespace PMSapXep
         }
 
         #region các hàm khác
+        //Không cho phép nhập kí tự trong textbox
+        private void txt_SoPT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
 
         public void Tao_Mang(System.Drawing.Image nen)
         {
@@ -82,6 +91,7 @@ namespace PMSapXep
                     Size = 60;
                     KhoangCachNut = 25;
                     Canh_le = (pnNut.Width - Size * SoPT - KhoangCachNut * (SoPT - 1)) / 2;
+
                     break;
                 case 11:
                 case 12:
@@ -125,7 +135,31 @@ namespace PMSapXep
                     Label lbChiSo = new Label();
                     lbChiSo.Text = i.ToString();
                     lbChiSo.Width = lbChiSo.Height = Size;
-                    lbChiSo.Location = new Point(Canh_le + i * (btn.Width + KhoangCachNut) + Size / 2, btn.Location.Y + btn.Height * 3);
+                    switch (SoPT)
+                    {
+                        case 2:
+                        case 3:
+                        case 4:
+                        case 5:
+                            lbChiSo.Location = new Point(Canh_le + i * (btn.Width + KhoangCachNut) + Size / 2, btn.Location.Y + btn.Height * 3);
+                            break;
+                        case 6:
+                        case 7:
+                        case 8:
+                        case 9:
+                        case 10:
+                            lbChiSo.Location = new Point(Canh_le + i * (btn.Width + KhoangCachNut) + Size / 2, btn.Location.Y + btn.Height * 3 + 10);
+                            break;
+                        case 11:
+                        case 12:
+                        case 13:
+                        case 14:
+                        case 15:
+                            lbChiSo.Location = new Point(Canh_le + i * (btn.Width + KhoangCachNut) + Size / 2, btn.Location.Y + btn.Height * 4);
+                            break;
+                    }
+
+                    
                     pnNut.Controls.Add(lbChiSo);
                     Chi_so[i] = lbChiSo;
                     Chi_so[i].ForeColor = Color.Red;
@@ -155,13 +189,9 @@ namespace PMSapXep
         {
 
         }
-        private void txt_SoPT_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
+
+       
+
         private void groupBox1_Enter(object sender, EventArgs e)
         {
             rad_InterchangeSort.Checked = true;
@@ -259,8 +289,9 @@ namespace PMSapXep
 			x.quicksort(lb_code, rad_Tang.Checked);
 			text_ytuong.Text = "Giải thuật QuickSort sắp xếp dãy a1, a2 ..., aN dựa trên việc phân hoạch dãy ban đầu thành 3 phần\r\n    +Phần 1: Gồm các phần tử  có giá trị bé hơn x \r\n    +Phần 2: Gồm các phần tử  có giá trị bằng  x\r\n    +Phần 3: Gồm các phần tử  có giá trị lớn hơn \r\nSau khi thực hiện phân hoạch, dãy ban đầu được phân thành 3 đoạn:\r\n    •1. ak  ≤ x , với k = 1 .. j\r\n    • 2.ak = x , với k = j + 1..i - 1\r\n    • 3.ak   x , với k = i..N\r\nKhi đoạn thứ 2 đã có thứ tự.\r\n    +Nếu các đoạn 1 và 3 chỉ có 1 phần tử thì khi đó dãy con ban đầu đã được sắp.\r\n    +Nếu các đoạn 1 và 3  có nhiều hơn 1 phần tử  thì dãy ban đầu chỉ có thứ tự khi các đoạn 1, 3 được sắp xếp.\r\n    +Để sắp xếp các đoạn 1 và 3,ta phân hoạch dãy theo phương pháp ban đầu    ";
 		}
-		#endregion
-		private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        #endregion
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -277,10 +308,10 @@ namespace PMSapXep
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.TopMost = true;
-            //this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
-            MaximizeBox = false;
+            //this.TopMost = true;
+            ////this.FormBorderStyle = FormBorderStyle.None;
+            //this.WindowState = FormWindowState.Maximized;
+            //MaximizeBox = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -385,8 +416,8 @@ namespace PMSapXep
 
         private void btn_Batdau_Click(object sender, EventArgs e)
         {
-            btnPause.Enabled = true;
 
+            btnPause.Enabled = true;
             btnhuy.Enabled = true;
             btn_mofile.Enabled = false;
             button4.Enabled = false;
@@ -474,7 +505,7 @@ namespace PMSapXep
             for (int i = 0; i < (Size + KhoangCachNut); i++)
             {
                 btn.Left = btn.Left + 1;
-                //SwapInts(ViTri, ViTri[i], ViTri[i - 1]);
+                
                 Thread.Sleep((10 - trb_Tocdo.Value) / 3);
                 Application.DoEvents();
             }
@@ -1280,13 +1311,9 @@ namespace PMSapXep
 
         #endregion
 
-
-
-
-
         #endregion
 
-        //hoan doi vi tri 2 phan tu trong mang
+        
         private void trb_Tocdo_Scroll(object sender, EventArgs e)
         {
 
@@ -1395,7 +1422,20 @@ namespace PMSapXep
 
         private void btnhuy_Click_1(object sender, EventArgs e)
         {
-            
+            this.Close();
+            //if (!timer1.Enabled)
+            //{
+            //    timer1.Stop();
+            //    Mui_ten_xanh_xuong_1.Visible = false;
+            //    Mui_ten_xanh_xuong_1.Refresh();
+            //    Mui_ten_xanh_xuong_2.Visible = false;
+            //    Mui_ten_xanh_xuong_2.Refresh();
+            //    Mui_ten_xanh_len_1.Visible = false;
+            //    Mui_ten_xanh_len_1.Refresh();
+            //    Mui_ten_xanh_len_2.Visible = false;
+            //    Mui_ten_xanh_len_2.Refresh();
+            //}
+          
         }
 
         private void Mui_ten_xanh_len_1_Click(object sender, EventArgs e)
