@@ -125,7 +125,30 @@ namespace PMSapXep
                     Label lbChiSo = new Label();
                     lbChiSo.Text = i.ToString();
                     lbChiSo.Width = lbChiSo.Height = Size;
-                    lbChiSo.Location = new Point(Canh_le + i * (btn.Width + KhoangCachNut) + Size / 2, btn.Location.Y + btn.Height * 3);
+
+                    switch (SoPT)
+                    {
+                        case 2:
+                        case 3:
+                        case 4:
+                        case 5:
+                            lbChiSo.Location = new Point(Canh_le + i * (btn.Width + KhoangCachNut) + Size / 2, btn.Location.Y + btn.Height * 3);
+                            break;
+                        case 6:
+                        case 7:
+                        case 8:
+                        case 9:
+                        case 10:
+                            lbChiSo.Location = new Point(Canh_le + i * (btn.Width + KhoangCachNut) + Size / 2, btn.Location.Y + btn.Height * 3 + 10);
+                            break;
+                        case 11:
+                        case 12:
+                        case 13:
+                        case 14:
+                        case 15:
+                            lbChiSo.Location = new Point(Canh_le + i * (btn.Width + KhoangCachNut) + Size / 2, btn.Location.Y + btn.Height * 4);
+                            break;
+                    }
                     pnNut.Controls.Add(lbChiSo);
                     Chi_so[i] = lbChiSo;
                     Chi_so[i].ForeColor = Color.Red;
@@ -1021,52 +1044,86 @@ namespace PMSapXep
 
 		private void Quicksort(int[] array, int l, int r)
 		{
-			lb_code.SelectedIndex = 0;
-            Tre((10 - trb_Tocdo.Value) * 20);
+            pnNut.Controls.Remove(Mui_ten_len_1);
+            pnNut.Controls.Remove(Mui_ten_len_2);
+            pnNut.Controls.Remove(Mui_ten_len_3);
+            lb_code.SelectedIndex = 0;
+            Mui_ten_xuong_1.Visible = true;
+            Mui_ten_xuong_1.Text = "Left=" + l;
+            Mui_ten_xuong_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * l) + (Size / 2) - 30, Bn[l].Location.Y - Size - 70);
+            pnNut.Controls.Add(Mui_ten_xuong_1);
+            Mui_ten_xuong_1.Refresh();
+            Tre((10 - trb_Tocdo.Value) * 100);
+            Mui_ten_xuong_2.Visible = true;
+            Mui_ten_xuong_2.Text = "Right=" + r;
+            Mui_ten_xuong_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * r) + (Size / 2) - 30, Bn[r].Location.Y - Size - 70);
+            pnNut.Controls.Add(Mui_ten_xuong_2);
+            Mui_ten_xuong_2.Refresh();
+            Tre((10 - trb_Tocdo.Value) * 100);
             int i = l;
-			int j = r;
-			int x = array[(i + j) / 2];
-			while (i <= j)
+            lb_code.SelectedIndex = 2;
+            Mui_ten_len_3.Visible = true;
+            Mui_ten_len_3.Text = "i=" + i;
+            Mui_ten_len_3.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
+            pnNut.Controls.Add(Mui_ten_len_3);
+            Mui_ten_len_3.Refresh();
+            Tre((10 - trb_Tocdo.Value) * 100);
+            int j = r;
+            lb_code.SelectedIndex = 3;
+            Mui_ten_len_1.Visible = true;
+            Mui_ten_len_1.Text = "j=" + j;
+            Mui_ten_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * j) + (Size / 2) - 30, Bn[j].Location.Y + 2 * Size + 5);
+            pnNut.Controls.Add(Mui_ten_len_1);
+            Mui_ten_len_1.Refresh();
+            Tre((10 - trb_Tocdo.Value) * 100);
+            int x = array[(i + j) / 2];
+            int X = (i + j) / 2;
+            lb_code.SelectedIndex = 4;
+            Mui_ten_len_2.Visible = true;
+            Mui_ten_len_2.Text = "MID=" + X;
+            Mui_ten_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * X) + (Size / 2) - 30, Bn[X].Location.Y + 2 * Size + 5+130);
+            pnNut.Controls.Add(Mui_ten_len_2);
+            Mui_ten_len_2.Refresh();
+            Tre((10 - trb_Tocdo.Value) * 100);
+            while (i <= j)
 			{
-				lb_code.SelectedIndex = 5;
-				Tre((10 - trb_Tocdo.Value) * 20);
 				if (rad_Tang.Checked == true)
 				{
-					while (array[i] < x)
-					{
-						lb_code.SelectedIndex = 7;
-						Tre((10 - trb_Tocdo.Value) * 20);
-						lb_code.SelectedIndex = 8;
-						Tre((10 - trb_Tocdo.Value) * 20);
-						i++;
-					}
+                    while (array[i] < x)
+                    {
+                        lb_code.SelectedIndex = 8;
+                        i++;
+                        Mui_ten_len_3.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
+                        Mui_ten_len_3.Refresh();
+                        Tre((10 - trb_Tocdo.Value) * 100);
+                    }
 					while (array[j] > x)
 					{
-						lb_code.SelectedIndex = 9;
-						Tre((10 - trb_Tocdo.Value) * 20);
 						lb_code.SelectedIndex = 10;
-						Tre((10 - trb_Tocdo.Value) * 20);
 						j--;
-					}
+                        Mui_ten_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * j) + (Size / 2) - 30, Bn[j].Location.Y + 2 * Size + 5);
+                        Mui_ten_len_1.Refresh();
+                        Tre((10 - trb_Tocdo.Value) * 100);
+                    }
 				}
 				if (rad_Giam.Checked == true)
 				{
 					while (array[i] > x)
 					{
-						lb_code.SelectedIndex = 7;
-						Tre((10 - trb_Tocdo.Value) * 20);
-						lb_code.SelectedIndex = 8;
-						Tre((10 - trb_Tocdo.Value) * 20);
-						i++;
-					}
+                        lb_code.SelectedIndex = 8;
+                        i++;
+                        Mui_ten_len_3.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
+                        Mui_ten_len_3.Refresh();
+                        Tre((10 - trb_Tocdo.Value) * 100);
+                    }
 					while (array[j] < x)
 					{
-						lb_code.SelectedIndex = 9;
-						Tre((10 - trb_Tocdo.Value) * 20);
-						lb_code.SelectedIndex = 10;
-						Tre((10 - trb_Tocdo.Value) * 20);
-						j--;
-					}
+                        lb_code.SelectedIndex = 10;
+                        j--;
+                        Mui_ten_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * j) + (Size / 2) - 30, Bn[j].Location.Y + 2 * Size + 5);
+                        Mui_ten_len_1.Refresh();
+                        Tre((10 - trb_Tocdo.Value) * 100);
+                    }
 				}
 				lb_code.SelectedIndex = 11;
 				Tre((10 - trb_Tocdo.Value) * 20);
@@ -1075,13 +1132,18 @@ namespace PMSapXep
 					if (array[i] != array[j])
 					{
 						lb_code.SelectedIndex = 13;
-						System.Threading.Thread.Sleep(2000);
 						SwapInts(array, i, j);
 						Hoan_vi(Bn, i, j);
 						Hoan_Tri_Node(i, j);
 					}
 					i++;
-					j--;
+                    j--;
+                    lb_code.SelectedIndex = 14;
+                    Mui_ten_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * j) + (Size / 2) - 30, Bn[j].Location.Y + 2 * Size + 5);
+                    Mui_ten_len_1.Refresh();
+                    Mui_ten_len_3.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
+                    Mui_ten_len_3.Refresh();
+                    Tre((10 - trb_Tocdo.Value) * 300);
 				}
 			}
 			lb_code.SelectedIndex = 17;
@@ -1176,6 +1238,7 @@ namespace PMSapXep
                         SwapInts(array, i, j);
 						Hoan_vi(Bn, i, j);
 						Hoan_Tri_Node(i, j);
+                        SwapInts(Pos, i, j);
                         lb_code.SelectedIndex = 29;
                         i = j;
                         j = 2 * i + 1;
@@ -1220,7 +1283,8 @@ namespace PMSapXep
                         SwapInts(array, i, j);
 						Hoan_vi(Bn, i, j);
 						Hoan_Tri_Node(i, j);
-						i = j;
+                        SwapInts(Pos, i, j);
+                        i = j;
 						j = 2 * i + 1;
 						x = array[i];
 					}
@@ -1291,7 +1355,8 @@ namespace PMSapXep
                         SwapInts(array, 0, r);
 						Hoan_vi(Bn, 0, r);
 						Hoan_Tri_Node(0, r);
-					}
+                        SwapInts(Pos, 0, r);
+                    }
 				}
 				else
 				{
@@ -1307,8 +1372,14 @@ namespace PMSapXep
                         SwapInts(array, 0, r);
 						Hoan_vi(Bn, 0, r);
 						Hoan_Tri_Node(0, r);
-					}
+                        SwapInts(Pos, 0, r);
+                    }
 				}
+                Bn[r].ForeColor = Color.White;
+                Bn[r].FlatStyle = FlatStyle.Flat;
+                Bn[r].BackgroundImage = Properties.Resources.daxep;
+                Bn[r].BackgroundImageLayout = ImageLayout.Stretch;
+                Bn[r].Refresh();
                 lb_code.SelectedIndex = 8;
                 r--;
                 Tre((10 - trb_Tocdo.Value) * 100);
@@ -1317,6 +1388,14 @@ namespace PMSapXep
                 Mui_ten_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * r) + (Size / 2) - 30, Bn[r].Location.Y + 2 * Size + 5);
                 pnNut.Controls.Add(Mui_ten_len_2);
                 Mui_ten_len_2.Refresh();
+                if (r == 0)
+                {
+                    Bn[0].ForeColor = Color.White;
+                    Bn[0].FlatStyle = FlatStyle.Flat;
+                    Bn[0].BackgroundImage = Properties.Resources.daxep;
+                    Bn[0].BackgroundImageLayout = ImageLayout.Stretch;
+                    Bn[0].Refresh();
+                }
                 Tre((10 - trb_Tocdo.Value) * 100);
                 if (r > 0)
 				{
@@ -1326,8 +1405,16 @@ namespace PMSapXep
 		}
 		private void HeapSort_Batdau(Button[] M)
 		{
-			HeapSort(Array, M.Length);
-			MessageBox.Show("Sap xep xong");
+            HeapSort(Array, M.Length);
+            for (int i = 0; i < 15; i++)
+            {
+                Bn[i].ForeColor = Color.White;
+                Bn[i].FlatStyle = FlatStyle.Flat;
+                Bn[i].BackgroundImage = Properties.Resources.daxep;
+                Bn[i].BackgroundImageLayout = ImageLayout.Stretch;
+                Bn[i].Refresh();
+            }
+            MessageBox.Show("Sap xep xong");
 		}
 		#endregion
 
