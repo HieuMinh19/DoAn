@@ -114,7 +114,7 @@ namespace PMSapXep
             this.Controls.Add(this.txt_Vitri);
             this.Name = "NhapPT";
             this.Text = "Nhập phần tử";
-            this.Load += new System.EventHandler(this.NhapPT_Load);
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 

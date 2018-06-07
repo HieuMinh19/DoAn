@@ -56,6 +56,7 @@ namespace PMSapXep
           
             Form1.Array[ViTri] = GiaTri;
             Form1.Bn[ViTri].Text = GiaTri.ToString();
+            
             //tu dong tang gia tri cua vi tri phan tu
             this.txt_Vitri.Text = (ViTri + 1).ToString();
 
@@ -75,10 +76,7 @@ namespace PMSapXep
             this.Close();
         }
 
-        private void NhapPT_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void txt_Vitri_TextChanged(object sender, EventArgs e)
         {

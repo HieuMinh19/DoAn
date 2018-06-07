@@ -405,13 +405,13 @@ namespace PMSapXep
             MessageBox.Show("hàng đầu tiên chứa số phần tử mảng, các hàng tiếp theo chứa các phần tử", "Hướng dẫn");
             Process notePad = new Process();
             notePad.StartInfo.FileName = "notepad.exe";
-            notePad.StartInfo.Arguments = Application.StartupPath + @"/TEST.txt";
+            notePad.StartInfo.Arguments =  "\\ThuatToanSapXep\\DoAn\\PMSapXep\\PMSapXep/TEST.txt";
             notePad.Start();
         }
 
         private void rad_Tang_CheckedChanged(object sender, EventArgs e)
         {
-            lb_code.Refresh();
+            
         }
 
         private void btn_Batdau_Click(object sender, EventArgs e)
@@ -479,6 +479,7 @@ namespace PMSapXep
             arr[Pos1] = arr[Pos2];
             arr[Pos2] = Temp;
         }
+
         public void DiLen(Control btn)
         {
             //di len do cao 50
@@ -1384,25 +1385,30 @@ namespace PMSapXep
 
         private void button4_Click(object sender, EventArgs e)
         {
-
             Xoa_mang(Bn);
-            StreamReader Re = File.OpenText("TEST.txt");
-            string input = null;
+            StreamReader Re = File.OpenText("\\ThuatToanSapXep\\DoAn\\PMSapXep\\PMSapXep/TEST.txt");
+            string input;
             int i = 0;
             int kt = 0;
+
+            //kt < 1  dùng để loại bỏ phần tử đầu chỉ số phần tử trong mảng.
+            //dùng chỉ để đọc số phần tử. 
             while ((kt < 1) && ((input = Re.ReadLine()) != null))
             {
                 SoPT = Convert.ToInt32(input);
                 kt++;
             }
             Tao_Mang(Properties.Resources.chuaxep);
+            
             while (((input = Re.ReadLine()) != null) && (i < SoPT))
             {
                 Array[i] = Convert.ToInt32(input);
                 Bn[i].Text = Array[i].ToString();
                 i++;
             }
-            Re.Close();
+
+            
+Re.Close();
             btn_Batdau.Enabled = true;
             rad_BubbleSort.Enabled = true;
             rad_HeapSort.Enabled = true;
@@ -1422,20 +1428,20 @@ namespace PMSapXep
 
         private void btnhuy_Click_1(object sender, EventArgs e)
         {
-            this.Close();
-            //if (!timer1.Enabled)
-            //{
-            //    timer1.Stop();
-            //    Mui_ten_xanh_xuong_1.Visible = false;
-            //    Mui_ten_xanh_xuong_1.Refresh();
-            //    Mui_ten_xanh_xuong_2.Visible = false;
-            //    Mui_ten_xanh_xuong_2.Refresh();
-            //    Mui_ten_xanh_len_1.Visible = false;
-            //    Mui_ten_xanh_len_1.Refresh();
-            //    Mui_ten_xanh_len_2.Visible = false;
-            //    Mui_ten_xanh_len_2.Refresh();
-            //}
-          
+            //this.Close();
+            if (!timer1.Enabled)
+            {
+                timer1.Start();
+                Mui_ten_xanh_xuong_1.Visible = false;
+                Mui_ten_xanh_xuong_1.Refresh();
+                Mui_ten_xanh_xuong_2.Visible = false;
+                Mui_ten_xanh_xuong_2.Refresh();
+                Mui_ten_xanh_len_1.Visible = false;
+                Mui_ten_xanh_len_1.Refresh();
+                Mui_ten_xanh_len_2.Visible = false;
+                Mui_ten_xanh_len_2.Refresh();
+            }
+
         }
 
         private void Mui_ten_xanh_len_1_Click(object sender, EventArgs e)
