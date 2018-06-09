@@ -589,3 +589,12 @@ C:\Users\ASUS\Desktop\New folder (3)\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.c
 C:\Users\ASUS\Desktop\New folder (3)\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.exe
 C:\Users\ASUS\Desktop\New folder (3)\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.pdb
 F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.csprojAssemblyReference.cache
+F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.Api2.dll
+F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.dll
+F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.Types.dll
+F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.Utilities.dll
+F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.xml
+F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.dll.config
+F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.Api2.xml
+F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.Types.xml
+F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.Utilities.xml
