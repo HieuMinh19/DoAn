@@ -344,8 +344,8 @@ namespace PMSapXep
 
             //this.TopMost = true;
             ////this.FormBorderStyle = FormBorderStyle.None;
-            //this.WindowState = FormWindowState.Maximized;
-            //MaximizeBox = false;
+            this.WindowState = FormWindowState.Maximized;
+            MaximizeBox = false;
             //  StartRecording();
         }
 
@@ -451,7 +451,6 @@ namespace PMSapXep
 
         private void btn_Batdau_Click(object sender, EventArgs e)
         {
-
             btnPause.Enabled = true;
             btnhuy.Enabled = true;
             btn_mofile.Enabled = false;
@@ -460,10 +459,7 @@ namespace PMSapXep
             btn_Ngaunhien.Enabled = false;
             btnTaoMang.Enabled = false;
             btnxoamang.Enabled = false;
-
             btn_Batdau.Enabled = false;
-
-
 
             if (rad_InterchangeSort.Checked == true)
                 InterchangeSort(Bn);
@@ -484,7 +480,7 @@ namespace PMSapXep
             if (rad_QuickSort.Checked == true)
                 Quicksort_Batdau(Bn);
             if (rad_MergeSort.Checked == true)//chua 
-                MergeSort_Batdau(Bn);
+                MergeSort(Bn);
 
             btnTaoMang.Enabled = true;
             btnhuy.Enabled = true;
@@ -1350,6 +1346,7 @@ namespace PMSapXep
                 Bn[r].BackgroundImageLayout = ImageLayout.Stretch;
                 Bn[r].Refresh();
             }
+
             CheckHuy = false;
         }
 
@@ -1774,80 +1771,90 @@ namespace PMSapXep
         }
         #endregion
 
-        #region MergeSort
-        private void MergeSort_Batdau(Button[] M)
-        {
-            MergeSort(Array, 0, M.Length - 1);
-            for (int i = 0; i < M.Length; i++)
-            {
-                Bn[i].ForeColor = Color.White;
-                Bn[i].FlatStyle = FlatStyle.Flat;
-                Bn[i].BackgroundImage = Properties.Resources.daxep;
-                Bn[i].BackgroundImageLayout = ImageLayout.Stretch;
-                Bn[i].Refresh();
-            }
-            MessageBox.Show("Sap xep xong");
-        }
-        private void Merge(int[] array, int l, int m, int r)
+        #region Mearge
+        private void merge(int[] arr, int l, int m, int r)
         {
             int i, j, k;
             int n1 = m - l + 1;
             int n2 = r - m;
-            Bn1 = new Button[n1];
-            Bn2 = new Button[n2];
             int[] L = new int[n1];
             int[] R = new int[n2];
             for (i = 0; i < n1; i++)
-                L[i] = Array[l + 1];
+                L[i] = arr[l + i];
             for (j = 0; j < n2; j++)
-                R[j] = Array[m + 1 + j];
+                R[j] = arr[m + 1 + j];
             i = 0;
             j = 0;
             k = l;
+            int x = 0;
+            int[] b = new int[n1 + n2];
             while (i < n1 && j < n2)
             {
                 if (L[i] <= R[j])
                 {
-                    Array[k] = L[i];
+                    b[x] = k;
                     i++;
+                    x++;
                 }
                 else
                 {
-                    Array[k] = R[j];
+                    b[x] = k;
                     j++;
+                    x++;
                 }
                 k++;
             }
+
             while (i < n1)
             {
-                Array[k] = L[i];
+                b[x] = k;
                 i++;
                 k++;
+                x++;
             }
+
             while (j < n2)
             {
-                Array[k] = R[j];
+                b[x] = k;
                 j++;
                 k++;
+                x++;
+            }
+            int e;
+            int temp;
+            for (int c = 0; c < x; c++)
+            {
+                e = c;
+                for (int d = c; d < x; d++)
+                    if (arr[b[e]] > arr[b[d]])
+                        e = d;
+                if (e != c)
+                {
+                    SwapInts(arr, b[c], b[e]);
+                    Hoan_vi(Bn, b[c], b[e]);
+                    Hoan_Tri_Node(b[c], b[e]);
+                }
             }
         }
-        private void MergeSort(int[] array, int l, int r)
+        private void MergeSort_BatDau(int[] array, int l, int r)
         {
             if (l < r)
             {
+
                 int m = l + (r - l) / 2;
-                MergeSort(array, l, m);
-                MergeSort(array, m + 1, r);
-                Merge(array, l, m, r);
+                MergeSort_BatDau(array, l, m);
+                MergeSort_BatDau(array, m + 1, r);
+                merge(array, l, m, r);
             }
         }
-
+        private void MergeSort(Button[] M)
+        {
+            MergeSort_BatDau(Array, 0, M.Length - 1);
+            MessageBox.Show("Sap xep xong");
+        }
         #endregion
 
         #endregion
-
-
-
 
         private void trb_Tocdo_Scroll(object sender, EventArgs e)
         {
@@ -1916,7 +1923,6 @@ namespace PMSapXep
             }
         }
 
-
         private void button4_Click(object sender, EventArgs e)
         {
             Xoa_mang(Bn);
@@ -1981,8 +1987,6 @@ namespace PMSapXep
             rad_Tang.Enabled = true;
         }
 
-       
-
         private void btnhuy_Click_1(object sender, EventArgs e)
         {
             CheckHuy = true;
@@ -1993,7 +1997,6 @@ namespace PMSapXep
 
         }
 
-
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
 
@@ -2001,8 +2004,6 @@ namespace PMSapXep
             //    job.Stop();
             //job.Dispose();
         }
-
-       
 
         private void button4_Click_1(object sender, EventArgs e)
         {
