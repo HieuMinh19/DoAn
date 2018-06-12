@@ -44,7 +44,7 @@ namespace PMSapXep
             job.ShowFlashingBoundary = true;
             job.ShowCountdown = true;
             job.CaptureMouseCursor = true;
-            job.OutputPath = @"F:\ThuatToanSapXep\DoAn\Output";
+            job.OutputPath = @"C:\Output";
             job.Start();
         }
 
@@ -71,9 +71,8 @@ namespace PMSapXep
         private void btnTaoMang_Click(object sender, EventArgs e)
         {
             btn_Ngaunhien.Enabled = true;
-            btnxoamang.Enabled = true;
-            btn_mofile.Enabled = true;
-            button4.Enabled = true;
+           
+            btnDocFile.Enabled = true;
             button5.Enabled = true;
 
 
@@ -341,12 +340,12 @@ namespace PMSapXep
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            btnDocFile.Enabled = true;
             //this.TopMost = true;
             ////this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             MaximizeBox = false;
-            //  StartRecording();
+            //StartRecording();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -453,12 +452,12 @@ namespace PMSapXep
         {
             btnPause.Enabled = true;
             btnhuy.Enabled = true;
-            btn_mofile.Enabled = false;
-            button4.Enabled = false;
+           
+            btnDocFile.Enabled = false;
             button5.Enabled = false;
             btn_Ngaunhien.Enabled = false;
             btnTaoMang.Enabled = false;
-            btnxoamang.Enabled = false;
+            
             btn_Batdau.Enabled = false;
 
             if (rad_InterchangeSort.Checked == true)
@@ -479,19 +478,18 @@ namespace PMSapXep
                 HeapSort_Batdau(Bn);
             if (rad_QuickSort.Checked == true)
                 Quicksort_Batdau(Bn);
-            if (rad_MergeSort.Checked == true)//chua 
+            if (rad_MergeSort.Checked == true)
                 MergeSort(Bn);
 
             btnTaoMang.Enabled = true;
             btnhuy.Enabled = true;
-            btn_mofile.Enabled = false;
-            button4.Enabled = false;
+            btnDocFile.Enabled = true;
             button5.Enabled = false;
             btn_Ngaunhien.Enabled = false;
             btnhuy.Enabled = false;
             btnPause.Enabled = false;
             btn_xuatgip.Enabled = false;
-            btnxoamang.Enabled = false;
+            
 
             btn_Batdau.Enabled = false;
 
@@ -502,11 +500,6 @@ namespace PMSapXep
                 MessageBox.Show("sắp xếp xong");
             }
         }
-
-
-
- 
-
 
         #region Di chuyen node
 
@@ -1105,6 +1098,7 @@ namespace PMSapXep
                     if (j > 0 && Array[j - 1] > x)
                     {
                         lb_code.SelectedIndex = 5;
+                        Tre((10 - trb_Tocdo.Value) * 100);
                         DiLen(M[j]);
                         //
 
@@ -1120,6 +1114,7 @@ namespace PMSapXep
 
                             int y = j - 1;
                             lb_code.SelectedIndex = 9;
+                            Tre((10 - trb_Tocdo.Value) * 100);
                             Mui_ten_len_1.Visible = true;
                             Mui_ten_len_1.Text = "j-1=" + y;
                             Mui_ten_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * (j - 1)) + 5, Bn[j - 1].Location.Y + Size);
@@ -1129,13 +1124,13 @@ namespace PMSapXep
                             QuaPhai(M[j - 1]);
                             Hoan_Tri_Node(j, j - 1);
                             SwapInts(Array, j, j - 1);
-                            // Hoan_vi(Bn, Pos[j], Pos[j-1]);//
-                            // SwapInts(Pos, j, j-1);//t
+                           
 
                             j--;
                             DemQuickSort++;
                         }
                         lb_code.SelectedIndex = 12;
+                        Tre((10 - trb_Tocdo.Value) * 100);
                         QuaTrai(M[j], DemQuickSort);
                         DiXuong(M[j]);
                         Bn[j].ForeColor = Color.White;
@@ -1150,6 +1145,7 @@ namespace PMSapXep
                     if (j > 0 && Array[j - 1] < x)
                     {
                         lb_code.SelectedIndex = 5;
+                        Tre((10 - trb_Tocdo.Value) * 100);
                         DiLen(M[j]);
                         while (j > 0 && Array[j - 1] < x)
                         {
@@ -1162,12 +1158,14 @@ namespace PMSapXep
 
                             int y = j - 1;
                             lb_code.SelectedIndex = 9;
+                            Tre((10 - trb_Tocdo.Value) * 100);
                             Mui_ten_len_1.Visible = true;
                             Mui_ten_len_1.Text = "j-1=" + y;
                             Mui_ten_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * (j - 1)) + 5, Bn[j - 1].Location.Y + Size);
                             pnNut.Controls.Add(Mui_ten_len_1);
                             Mui_ten_len_1.Refresh();
                             lb_code.SelectedIndex = 9;
+                            Tre((10 - trb_Tocdo.Value) * 100);
                             QuaPhai(M[j - 1]);
                             Hoan_Tri_Node(j, j - 1);
                             SwapInts(Array, j, j - 1);
@@ -1175,6 +1173,7 @@ namespace PMSapXep
                             DemQuickSort++;
                         }
                         lb_code.SelectedIndex = 12;
+                        Tre((10 - trb_Tocdo.Value) * 100);
                         QuaTrai(M[j], DemQuickSort);
                         DiXuong(M[j]);
 
@@ -1200,9 +1199,19 @@ namespace PMSapXep
         #region BinaryInsertionSort
         private void BinaryInsertionSort(Button[] M)
         {
-            int l, r, m, i;
+            int a = 500;
+            lb_code.SelectedIndex = 0;
+            System.Threading.Thread.Sleep(a);
+            int l, r, m, i = 1, j = -1, x;
+            Mui_ten_xuong_1.Visible = true;
+            Mui_ten_xuong_1.Text = "i=" + i;
+            Mui_ten_xuong_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 20, Bn[i].Location.Y - Size - 70);
+            pnNut.Controls.Add(Mui_ten_xuong_1);
+            Mui_ten_xuong_1.Refresh();
+            Tre((10 - trb_Tocdo.Value) * 100);
+            lb_code.SelectedIndex = 2;
+            System.Threading.Thread.Sleep(a);
             int DoiCho = 0;
-            int x;//luu giá tr? a[i] tránh b? ghi dè khi d?i ch? các ph?n t?.
             for (i = 1; i < M.Length; i++)
             {
                 //huy chuong trinh
@@ -1212,12 +1221,50 @@ namespace PMSapXep
                     break;
                 }
 
+                //doi mau node
+                Bn[i-1].ForeColor = Color.White;
+                Bn[i-1].FlatStyle = FlatStyle.Flat;
+                Bn[i-1].BackgroundImage = Properties.Resources.daxep;
+                Bn[i-1].BackgroundImageLayout = ImageLayout.Stretch;
+                Bn[i-1].Refresh();
+
+                lb_code.SelectedIndex = 3;
+                Tre((10 - trb_Tocdo.Value) * 100);
+                Mui_ten_xuong_1.Visible = true;
+                Mui_ten_xuong_1.Text = "i=" + i;
+                Mui_ten_xuong_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 20, Bn[i].Location.Y - Size - 70);
+                Mui_ten_xuong_1.Refresh();
+                Tre((10 - trb_Tocdo.Value) * 100);
                 DemQuickSort = 0;
                 DoiCho = 0;
                 x = Array[i];
+                lb_code.SelectedIndex = 5;
+                System.Threading.Thread.Sleep(a);
+                lb_code.SelectedIndex = 6;
+                System.Threading.Thread.Sleep(a);
                 l = 0;
+                Mui_ten_len_1.Visible = true;
+                Mui_ten_len_1.Text = "Left = " + l;
+                Mui_ten_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * l) + (Size / 2) - 20, Bn[l].Location.Y + Size + 20);
+                pnNut.Controls.Add(Mui_ten_len_1);
+                Mui_ten_len_1.Refresh();
+                Tre((10 - trb_Tocdo.Value) * 100);
+                lb_code.SelectedIndex = 7;
+                System.Threading.Thread.Sleep(a);
+                lb_code.SelectedIndex = 8;
+                System.Threading.Thread.Sleep(a);
                 r = i;
-                while (l <= r) // tìm v? trí chèn x
+                Mui_ten_len_3.Visible = true;
+                Mui_ten_len_3.Text = "Right = " + r;
+                Mui_ten_len_3.Location = new Point((Canh_le + (Size + KhoangCachNut) * r) + (Size / 2) - 20, Bn[r].Location.Y + Size + 10);
+                pnNut.Controls.Add(Mui_ten_len_3);
+                Mui_ten_len_3.Refresh();
+                Tre((10 - trb_Tocdo.Value) * 100);
+
+                lb_code.SelectedIndex = 9;
+                System.Threading.Thread.Sleep(a);
+
+                while (l <= r) // tìm vị trí chèn x
                 {
                     //huy chuong trinh
                     if (CheckHuy)
@@ -1226,18 +1273,86 @@ namespace PMSapXep
                         break;
                     }
 
-                    m = (l + r) / 2; // tìm v? trí thích h?p m
-                    if (x < Array[m])
+                    lb_code.SelectedIndex = 10;
+                    System.Threading.Thread.Sleep(a);
+
+                    m = (l + r) / 2;
+                    lb_code.SelectedIndex = 12;
+                    System.Threading.Thread.Sleep(a);
+                    Mui_ten_len_2.Visible = true;
+                    Mui_ten_len_2.Text = "Mid = " + m;
+                    Mui_ten_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * m) + (Size / 2) - 20, Bn[m].Location.Y + Size + 50);
+                    pnNut.Controls.Add(Mui_ten_len_2);
+                    Mui_ten_len_2.Refresh();
+                    Tre((10 - trb_Tocdo.Value) * 100);
+
+
+                    if (rad_Tang.Checked == true)
                     {
-                        r = m - 1;
-                        DoiCho++;
+
+                        if (x < Array[m])
+                        {
+
+                            r = m - 1;
+                            lb_code.SelectedIndex = 13;
+                            System.Threading.Thread.Sleep(a);
+                            if(r >= 0)
+                            {
+                                Mui_ten_len_3.Text = "Right = " + r;
+                                Mui_ten_len_3.Location = new Point((Canh_le + (Size + KhoangCachNut) * r) + (Size / 2) - 20, Bn[r].Location.Y + Size + 10);
+                                Mui_ten_len_3.Refresh();
+                            }
+                            Tre((10 - trb_Tocdo.Value) * 100);
+                            DoiCho++;
+                        }
+                        else
+                        {
+                            l = m + 1;
+                            Mui_ten_len_1.Text = "Left = " + l;
+                            Mui_ten_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * l) + (Size / 2) - 20, Bn[l].Location.Y + Size + 5);
+                            Mui_ten_len_1.Refresh();
+                            Tre((10 - trb_Tocdo.Value) * 100);
+                            lb_code.SelectedIndex = 14;
+                            System.Threading.Thread.Sleep(a);
+                        }
                     }
-                    else l = m + 1;
+                    else if (rad_Giam.Checked == true)
+                    {
+
+                        if (x > Array[m])
+                        {
+                            r = m - 1;
+                            lb_code.SelectedIndex = 13;
+                            System.Threading.Thread.Sleep(a);
+
+                            if(r >= 0)
+                            {
+                                Mui_ten_len_3.Text = "Right = " + r;
+                                Mui_ten_len_3.Location = new Point((Canh_le + (Size + KhoangCachNut) * r) + (Size / 2) - 20, Bn[r].Location.Y + Size + 17);
+                                Mui_ten_len_3.Refresh();
+                            }
+                            
+                            Tre((10 - trb_Tocdo.Value) * 100);
+
+                            DoiCho++;
+                        }
+                        else
+                        {
+                            l = m + 1;
+                            lb_code.SelectedIndex = 14;
+                            System.Threading.Thread.Sleep(a);
+                            Mui_ten_len_1.Text = "Left = " + l;
+                            Mui_ten_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * l) + (Size / 2) - 20, Bn[l].Location.Y + Size + 20);
+                            Mui_ten_len_1.Refresh();
+                            Tre((10 - trb_Tocdo.Value) * 100);
+                        }
+                    }
+
                 }
                 if (DoiCho == 0)
                     continue;
                 DiLen(M[i]);
-                for (int j = i - 1; j >= l; j--)
+                for (j = i - 1; j >= l; j--)
                 {
                     //huy chuong trinh
                     if (CheckHuy)
@@ -1246,13 +1361,35 @@ namespace PMSapXep
                         break;
                     }
 
+                    lb_code.SelectedIndex = 16;
+                    Tre((10 - trb_Tocdo.Value) * 100);
+                    lb_code.SelectedIndex = 17;
+                    System.Threading.Thread.Sleep(a);
+
                     QuaPhai(M[j]);
                     SwapInts(Array, j, j + 1);
                     Hoan_Tri_Node(j, j + 1);
+                 
+                    Mui_ten_xuong_2.Visible = true;
+                    Mui_ten_xuong_2.Text = "j=" + j;
+                    Mui_ten_xuong_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * j) + (Size / 2) - 20, Bn[j].Location.Y - Size - 50); ;
+                    pnNut.Controls.Add(Mui_ten_xuong_2);
+                    Mui_ten_xuong_2.Refresh();
+                    Tre((10 - trb_Tocdo.Value) * 100);
+
                     DemQuickSort++;
                 }
-                QuaTrai(M[l]);
+                lb_code.SelectedIndex = 18;
+                System.Threading.Thread.Sleep(a);
+                QuaTrai(M[l], DemQuickSort);
+
                 DiXuong(M[l]);
+               
+                Bn[l].ForeColor = Color.White;
+                Bn[l].FlatStyle = FlatStyle.Flat;
+                Bn[l].BackgroundImage = Properties.Resources.daxep;
+                Bn[l].BackgroundImageLayout = ImageLayout.Stretch;
+                Bn[l].Refresh();
 
             }
             CheckHuy = false;
@@ -1262,68 +1399,124 @@ namespace PMSapXep
         #region ShellSort
         private void ShellSort(Button[] M)
         {
+            lb_code.SelectedIndex = 0;
+            Tre((10 - trb_Tocdo.Value) * 100);
+            int i = 0, j = 0, step, temp;
+            lb_code.SelectedIndex = 2;
+            Mui_ten_len_1.Visible = true;
+            Mui_ten_len_1.Text = "i=" + i;
+            Mui_ten_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
+            pnNut.Controls.Add(Mui_ten_len_1);
+            Mui_ten_xuong_1.Refresh();
+            Tre((10 - trb_Tocdo.Value) * 100);
+            Mui_ten_xuong_2.Visible = true;
+            Mui_ten_xuong_2.Text = "j=" + j;
+            Mui_ten_xuong_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * j) + (Size / 2) - 30, Bn[j].Location.Y - Size - 80);
+            pnNut.Controls.Add(Mui_ten_xuong_2);
+            Mui_ten_xuong_2.Refresh();
+            Tre((10 - trb_Tocdo.Value) * 100);
 
-            int i, j, gap, temp;
-            for (gap = SoPT / 2; gap > 0; gap = gap / 2)
+            for (step = SoPT / 2; step > 0; step = step / 2)
             {
-                //huy chuong trinh
-                if (CheckHuy)
+                if(CheckHuy)
                 {
                     pnNut.Controls.Clear();
                     break;
                 }
-                for (i = 0; i < SoPT; i = i + gap)
+
+                txtStep.Visible = true;
+                pnNut.Controls.Add(txtStep);
+                txtStep.Text = step.ToString();
+                panel1.Refresh();
+                lb_code.SelectedIndex = 3;
+                Tre((10 - trb_Tocdo.Value) * 100);
+                for (i = 0; i < SoPT; i = i + step)
                 {
-                    //huy chuong trinh
                     if (CheckHuy)
                     {
                         pnNut.Controls.Clear();
                         break;
                     }
 
+                    lb_code.SelectedIndex = 5;
+                    Tre((10 - trb_Tocdo.Value) * 100);
+                    Mui_ten_len_1.Text = "i=" + i;
+                    Mui_ten_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
+                    Mui_ten_len_1.Refresh();
+                    Tre((10 - trb_Tocdo.Value) * 100);
+                    lb_code.SelectedIndex = 7;
+                    Tre((10 - trb_Tocdo.Value) * 100);
                     temp = Array[i];
                     if (rad_Tang.Checked == true)
                     {
-                        for (j = i; j > 0 && Array[j - gap] > temp; j = j - gap)
+                        for (j = i; j > 0 && Array[j - step] > temp; j = j - step)
                         {
-                            //huy chuong trinh
                             if (CheckHuy)
                             {
                                 pnNut.Controls.Clear();
                                 break;
                             }
-                            Array[j] = Array[j - gap];
-                            SwapInts(Array, j - gap, j);
-                            Hoan_vi(Bn, Pos[j - gap], Pos[j]);
-                            SwapInts(Pos, j - gap, j);
+
+                            lb_code.SelectedIndex = 8;
+                            Tre((10 - trb_Tocdo.Value) * 100);
+                            Mui_ten_xuong_2.Visible = true;
+                            Mui_ten_xuong_2.Text = "j=" + j;
+                            Mui_ten_xuong_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * j) + (Size / 2) - 30, Bn[j].Location.Y - Size - 80);
+                            Mui_ten_xuong_2.Refresh();
+                            Tre((10 - trb_Tocdo.Value) * 100);
+                            lb_code.SelectedIndex = 10;
+                            Tre((10 - trb_Tocdo.Value) * 100);
+                            Array[j] = Array[j - step];
+                            SwapInts(Array, j - step, j);
+                            Hoan_vi(Bn, Pos[j - step], Pos[j]);
+                            SwapInts(Pos, j - step, j);
                         }
 
-
+                        lb_code.SelectedIndex = 12;
+                        Tre((10 - trb_Tocdo.Value) * 100);
                         Array[j] = temp;
+
                     }
                     else if (rad_Giam.Checked == true)
                     {
-                        for (j = i; j > 0 && Array[j - gap] < temp; j = j - gap)
+                        for (j = i; j > 0 && Array[j - step] < temp; j = j - step)
                         {
-                            //huy chuong trinh
                             if (CheckHuy)
                             {
                                 pnNut.Controls.Clear();
                                 break;
                             }
 
-                            Array[j] = Array[j - gap];
-                            SwapInts(Array, j - gap, j);
-                            Hoan_vi(Bn, Pos[j - gap], Pos[j]);
-                            SwapInts(Pos, j - gap, j);
+                            lb_code.SelectedIndex = 8;
+                            Tre((10 - trb_Tocdo.Value) * 100);
+                            Mui_ten_xuong_2.Visible = true;
+                            Mui_ten_xuong_2.Text = "j=" + j;
+                            Mui_ten_xuong_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * j) + (Size / 2) - 30, Bn[j].Location.Y - Size - 80);
+                            Mui_ten_xuong_2.Refresh();
+                            Tre((10 - trb_Tocdo.Value) * 100);
+                            lb_code.SelectedIndex = 10;
+                            Tre((10 - trb_Tocdo.Value) * 100);
+                            Array[j] = Array[j - step];
+                            SwapInts(Array, j - step, j);
+                            Hoan_vi(Bn, Pos[j - step], Pos[j]);
+                            SwapInts(Pos, j - step, j);
                         }
-
-
+                        lb_code.SelectedIndex = 12;
+                        Tre((10 - trb_Tocdo.Value) * 100);
                         Array[j] = temp;
+
                     }
 
                 }
 
+            }
+            for (int a = 0; a < M.Length; a++)
+            {
+                M[a].ForeColor = Color.White;
+                M[a].FlatStyle = FlatStyle.Flat;
+                M[a].BackgroundImage = Properties.Resources.daxep;
+                M[a].BackgroundImageLayout = ImageLayout.Stretch;
+                M[a].Refresh();
             }
             CheckHuy = false;
         }
@@ -2056,6 +2249,11 @@ namespace PMSapXep
                 rad_Giam.Enabled = true;
                 rad_Tang.Enabled = true;
             }
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+            btnDocFile.Enabled = true;
         }
 
         private void Mui_ten_len_2_Click(object sender, EventArgs e)

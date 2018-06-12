@@ -41,8 +41,7 @@
             this.rad_HeapSort = new System.Windows.Forms.RadioButton();
             this.rad_ShellSort = new System.Windows.Forms.RadioButton();
             this.rad_BinaryInsertionSort = new System.Windows.Forms.RadioButton();
-            this.button4 = new System.Windows.Forms.Button();
-            this.btn_mofile = new System.Windows.Forms.Button();
+            this.btnDocFile = new System.Windows.Forms.Button();
             this.btn_Ngaunhien = new System.Windows.Forms.Button();
             this.btnTaoMang = new System.Windows.Forms.Button();
             this.lbSophantu = new System.Windows.Forms.Label();
@@ -51,6 +50,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pnNut = new System.Windows.Forms.Panel();
+            this.txtStep = new System.Windows.Forms.TextBox();
+            this.Mui_ten_len_3 = new System.Windows.Forms.Label();
             this.Mui_ten_xanh_xuong_2 = new System.Windows.Forms.Label();
             this.Mui_ten_xanh_xuong_1 = new System.Windows.Forms.Label();
             this.Mui_ten_xanh_len_2 = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@
             this.Mui_ten_len_2 = new System.Windows.Forms.Label();
             this.Mui_ten_len_1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnxoamang = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.txtNhapPT = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -83,7 +83,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.Mui_ten_len_3 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnNut.SuspendLayout();
@@ -236,33 +236,19 @@
             this.rad_BinaryInsertionSort.UseVisualStyleBackColor = true;
             this.rad_BinaryInsertionSort.CheckedChanged += new System.EventHandler(this.rad_BinaryInsertionSort_CheckedChanged);
             // 
-            // button4
+            // btnDocFile
             // 
-            this.button4.Enabled = false;
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button4.Location = new System.Drawing.Point(125, 76);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(89, 25);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Đọc File";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
-            // 
-            // btn_mofile
-            // 
-            this.btn_mofile.Enabled = false;
-            this.btn_mofile.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_mofile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btn_mofile.Location = new System.Drawing.Point(8, 76);
-            this.btn_mofile.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_mofile.Name = "btn_mofile";
-            this.btn_mofile.Size = new System.Drawing.Size(89, 25);
-            this.btn_mofile.TabIndex = 7;
-            this.btn_mofile.Text = "Mở File";
-            this.btn_mofile.UseVisualStyleBackColor = true;
-            this.btn_mofile.Click += new System.EventHandler(this.btnmofile_Click);
+            this.btnDocFile.Enabled = false;
+            this.btnDocFile.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDocFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnDocFile.Location = new System.Drawing.Point(127, 87);
+            this.btnDocFile.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDocFile.Name = "btnDocFile";
+            this.btnDocFile.Size = new System.Drawing.Size(89, 25);
+            this.btnDocFile.TabIndex = 8;
+            this.btnDocFile.Text = "Đọc File";
+            this.btnDocFile.UseVisualStyleBackColor = true;
+            this.btnDocFile.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // btn_Ngaunhien
             // 
@@ -282,7 +268,7 @@
             // 
             this.btnTaoMang.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaoMang.ForeColor = System.Drawing.Color.Blue;
-            this.btnTaoMang.Location = new System.Drawing.Point(125, 107);
+            this.btnTaoMang.Location = new System.Drawing.Point(4, 90);
             this.btnTaoMang.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaoMang.Name = "btnTaoMang";
             this.btnTaoMang.Size = new System.Drawing.Size(89, 25);
@@ -343,6 +329,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnNut.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnNut.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnNut.Controls.Add(this.txtStep);
             this.pnNut.Controls.Add(this.Mui_ten_len_3);
             this.pnNut.Controls.Add(this.Mui_ten_xanh_xuong_2);
             this.pnNut.Controls.Add(this.Mui_ten_xanh_xuong_1);
@@ -358,6 +345,29 @@
             this.pnNut.Size = new System.Drawing.Size(1304, 229);
             this.pnNut.TabIndex = 5;
             this.pnNut.Click += new System.EventHandler(this.pnNut_Click);
+            // 
+            // txtStep
+            // 
+            this.txtStep.Location = new System.Drawing.Point(1038, 52);
+            this.txtStep.Name = "txtStep";
+            this.txtStep.Size = new System.Drawing.Size(87, 20);
+            this.txtStep.TabIndex = 28;
+            this.txtStep.Visible = false;
+            // 
+            // Mui_ten_len_3
+            // 
+            this.Mui_ten_len_3.BackColor = System.Drawing.Color.Transparent;
+            this.Mui_ten_len_3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mui_ten_len_3.ForeColor = System.Drawing.Color.Black;
+            this.Mui_ten_len_3.Image = ((System.Drawing.Image)(resources.GetObject("Mui_ten_len_3.Image")));
+            this.Mui_ten_len_3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Mui_ten_len_3.Location = new System.Drawing.Point(875, 84);
+            this.Mui_ten_len_3.Name = "Mui_ten_len_3";
+            this.Mui_ten_len_3.Size = new System.Drawing.Size(78, 60);
+            this.Mui_ten_len_3.TabIndex = 27;
+            this.Mui_ten_len_3.Text = "u3";
+            this.Mui_ten_len_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Mui_ten_len_3.Visible = false;
             // 
             // Mui_ten_xanh_xuong_2
             // 
@@ -396,7 +406,7 @@
             this.Mui_ten_xanh_len_2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Mui_ten_xanh_len_2.Location = new System.Drawing.Point(568, 81);
             this.Mui_ten_xanh_len_2.Name = "Mui_ten_xanh_len_2";
-            this.Mui_ten_xanh_len_2.Size = new System.Drawing.Size(60, 49);
+            this.Mui_ten_xanh_len_2.Size = new System.Drawing.Size(71, 49);
             this.Mui_ten_xanh_len_2.TabIndex = 24;
             this.Mui_ten_xanh_len_2.Text = "u2";
             this.Mui_ten_xanh_len_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -409,9 +419,9 @@
             this.Mui_ten_xanh_len_1.ForeColor = System.Drawing.Color.Black;
             this.Mui_ten_xanh_len_1.Image = ((System.Drawing.Image)(resources.GetObject("Mui_ten_xanh_len_1.Image")));
             this.Mui_ten_xanh_len_1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Mui_ten_xanh_len_1.Location = new System.Drawing.Point(484, 81);
+            this.Mui_ten_xanh_len_1.Location = new System.Drawing.Point(469, 81);
             this.Mui_ten_xanh_len_1.Name = "Mui_ten_xanh_len_1";
-            this.Mui_ten_xanh_len_1.Size = new System.Drawing.Size(58, 60);
+            this.Mui_ten_xanh_len_1.Size = new System.Drawing.Size(73, 60);
             this.Mui_ten_xanh_len_1.TabIndex = 23;
             this.Mui_ten_xanh_len_1.Text = "u1";
             this.Mui_ten_xanh_len_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -477,13 +487,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnxoamang);
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.txtNhapPT);
             this.groupBox2.Controls.Add(this.lbSophantu);
-            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Controls.Add(this.btnDocFile);
             this.groupBox2.Controls.Add(this.btnTaoMang);
-            this.groupBox2.Controls.Add(this.btn_mofile);
             this.groupBox2.Controls.Add(this.btn_Ngaunhien);
             this.groupBox2.Location = new System.Drawing.Point(31, 42);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
@@ -493,19 +501,7 @@
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Khởi Tạo";
-            // 
-            // btnxoamang
-            // 
-            this.btnxoamang.Enabled = false;
-            this.btnxoamang.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnxoamang.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnxoamang.Location = new System.Drawing.Point(8, 107);
-            this.btnxoamang.Margin = new System.Windows.Forms.Padding(2);
-            this.btnxoamang.Name = "btnxoamang";
-            this.btnxoamang.Size = new System.Drawing.Size(89, 24);
-            this.btnxoamang.TabIndex = 12;
-            this.btnxoamang.Text = "Xóa mảng";
-            this.btnxoamang.UseVisualStyleBackColor = true;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // button5
             // 
@@ -528,7 +524,7 @@
             this.txtNhapPT.Name = "txtNhapPT";
             this.txtNhapPT.Size = new System.Drawing.Size(90, 20);
             this.txtNhapPT.TabIndex = 9;
-            this.txtNhapPT.Text = "5";
+            this.txtNhapPT.Text = "10";
             this.txtNhapPT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtNhapPT.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txtNhapPT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_SoPT_KeyPress);
@@ -704,20 +700,10 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // Mui_ten_len_3
+            // contextMenuStrip1
             // 
-            this.Mui_ten_len_3.BackColor = System.Drawing.Color.Transparent;
-            this.Mui_ten_len_3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mui_ten_len_3.ForeColor = System.Drawing.Color.Black;
-            this.Mui_ten_len_3.Image = ((System.Drawing.Image)(resources.GetObject("Mui_ten_len_3.Image")));
-            this.Mui_ten_len_3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Mui_ten_len_3.Location = new System.Drawing.Point(895, 84);
-            this.Mui_ten_len_3.Name = "Mui_ten_len_3";
-            this.Mui_ten_len_3.Size = new System.Drawing.Size(58, 60);
-            this.Mui_ten_len_3.TabIndex = 27;
-            this.Mui_ten_len_3.Text = "u1";
-            this.Mui_ten_len_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Mui_ten_len_3.Visible = false;
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Form1
             // 
@@ -735,12 +721,14 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "mô phỏng giải thuật sắp xếp";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnNut.ResumeLayout(false);
+            this.pnNut.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -773,8 +761,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnTaoMang;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button btn_mofile;
+        private System.Windows.Forms.Button btnDocFile;
         private System.Windows.Forms.Button btn_Ngaunhien;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label lbSophantu;
@@ -797,7 +784,6 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Button btnhuy;
-        private System.Windows.Forms.Button btnxoamang;
 		private System.Windows.Forms.ListBox lb_code;
 		private System.Windows.Forms.TextBox text_ytuong;
         private System.Windows.Forms.Timer timer1;
@@ -815,6 +801,8 @@
         private System.Windows.Forms.Label Mui_ten_xuong_2;
         private System.Windows.Forms.Label Mui_ten_xuong_1;
         private System.Windows.Forms.Label Mui_ten_len_3;
+        private System.Windows.Forms.TextBox txtStep;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 
