@@ -51,18 +51,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pnNut = new System.Windows.Forms.Panel();
-            this.Mui_ten_len_3 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
             this.Mui_ten_xanh_xuong_2 = new System.Windows.Forms.Label();
             this.Mui_ten_xanh_xuong_1 = new System.Windows.Forms.Label();
             this.Mui_ten_xanh_len_2 = new System.Windows.Forms.Label();
             this.Mui_ten_xanh_len_1 = new System.Windows.Forms.Label();
-=======
             this.Mui_ten_xuong_2 = new System.Windows.Forms.Label();
             this.Mui_ten_xuong_1 = new System.Windows.Forms.Label();
             this.Mui_ten_len_2 = new System.Windows.Forms.Label();
             this.Mui_ten_len_1 = new System.Windows.Forms.Label();
->>>>>>> 4f2f2923e9c594d316d54d4e88d9d7b887df0ebd
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnxoamang = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -87,6 +83,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.Mui_ten_len_3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnNut.SuspendLayout();
@@ -178,7 +175,6 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thuật toán";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter_1);
             // 
             // rad_MergeSort
             // 
@@ -252,7 +248,7 @@
             this.button4.TabIndex = 8;
             this.button4.Text = "Đọc File";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // btn_mofile
             // 
@@ -348,50 +344,21 @@
             this.pnNut.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnNut.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnNut.Controls.Add(this.Mui_ten_len_3);
-<<<<<<< HEAD
             this.pnNut.Controls.Add(this.Mui_ten_xanh_xuong_2);
             this.pnNut.Controls.Add(this.Mui_ten_xanh_xuong_1);
             this.pnNut.Controls.Add(this.Mui_ten_xanh_len_2);
             this.pnNut.Controls.Add(this.Mui_ten_xanh_len_1);
-=======
             this.pnNut.Controls.Add(this.Mui_ten_xuong_2);
             this.pnNut.Controls.Add(this.Mui_ten_xuong_1);
             this.pnNut.Controls.Add(this.Mui_ten_len_2);
             this.pnNut.Controls.Add(this.Mui_ten_len_1);
->>>>>>> 4f2f2923e9c594d316d54d4e88d9d7b887df0ebd
             this.pnNut.Location = new System.Drawing.Point(31, 268);
             this.pnNut.Margin = new System.Windows.Forms.Padding(2);
             this.pnNut.Name = "pnNut";
             this.pnNut.Size = new System.Drawing.Size(1304, 229);
             this.pnNut.TabIndex = 5;
             this.pnNut.Click += new System.EventHandler(this.pnNut_Click);
-            this.pnNut.Paint += new System.Windows.Forms.PaintEventHandler(this.pnNut_Paint);
             // 
-            // Mui_ten_len_3
-            // 
-            this.Mui_ten_len_3.BackColor = System.Drawing.Color.Transparent;
-            this.Mui_ten_len_3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mui_ten_len_3.ForeColor = System.Drawing.Color.Black;
-<<<<<<< HEAD
-            this.Mui_ten_len_3.Image = ((System.Drawing.Image)(resources.GetObject("Mui_ten_len_3.Image")));
-            this.Mui_ten_len_3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Mui_ten_len_3.Location = new System.Drawing.Point(402, 84);
-            this.Mui_ten_len_3.Name = "Mui_ten_len_3";
-            this.Mui_ten_len_3.Size = new System.Drawing.Size(58, 60);
-            this.Mui_ten_len_3.TabIndex = 28;
-=======
-            this.Mui_ten_len_3.Image = global::PMSapXep.Properties.Resources.muiten1;
-            this.Mui_ten_len_3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Mui_ten_len_3.Location = new System.Drawing.Point(621, 82);
-            this.Mui_ten_len_3.Name = "Mui_ten_len_3";
-            this.Mui_ten_len_3.Size = new System.Drawing.Size(58, 60);
-            this.Mui_ten_len_3.TabIndex = 27;
->>>>>>> 4f2f2923e9c594d316d54d4e88d9d7b887df0ebd
-            this.Mui_ten_len_3.Text = "u3";
-            this.Mui_ten_len_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Mui_ten_len_3.Visible = false;
-            // 
-<<<<<<< HEAD
             // Mui_ten_xanh_xuong_2
             // 
             this.Mui_ten_xanh_xuong_2.BackColor = System.Drawing.Color.Transparent;
@@ -449,8 +416,7 @@
             this.Mui_ten_xanh_len_1.Text = "u1";
             this.Mui_ten_xanh_len_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Mui_ten_xanh_len_1.Visible = false;
-            this.Mui_ten_xanh_len_1.Click += new System.EventHandler(this.Mui_ten_xanh_len_1_Click);
-=======
+            // 
             // Mui_ten_xuong_2
             // 
             this.Mui_ten_xuong_2.BackColor = System.Drawing.Color.Transparent;
@@ -493,7 +459,6 @@
             this.Mui_ten_len_2.Text = "u2";
             this.Mui_ten_len_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Mui_ten_len_2.Visible = false;
-            this.Mui_ten_len_2.Click += new System.EventHandler(this.Mui_ten_len_2_Click);
             // 
             // Mui_ten_len_1
             // 
@@ -509,8 +474,6 @@
             this.Mui_ten_len_1.Text = "u1";
             this.Mui_ten_len_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Mui_ten_len_1.Visible = false;
-            this.Mui_ten_len_1.Click += new System.EventHandler(this.Mui_ten_xanh_len_1_Click);
->>>>>>> 4f2f2923e9c594d316d54d4e88d9d7b887df0ebd
             // 
             // groupBox2
             // 
@@ -543,7 +506,6 @@
             this.btnxoamang.TabIndex = 12;
             this.btnxoamang.Text = "Xóa mảng";
             this.btnxoamang.UseVisualStyleBackColor = true;
-            this.btnxoamang.Click += new System.EventHandler(this.btnxoamang_Click);
             // 
             // button5
             // 
@@ -581,7 +543,6 @@
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "hướng sắp xếp";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // rad_Giam
             // 
@@ -656,6 +617,7 @@
             this.btn_xuatgip.TabIndex = 1;
             this.btn_xuatgip.Text = "Xuất Giphy";
             this.btn_xuatgip.UseVisualStyleBackColor = true;
+            this.btn_xuatgip.Click += new System.EventHandler(this.btn_xuatgip_Click);
             // 
             // btnPause
             // 
@@ -690,7 +652,6 @@
             this.trb_Tocdo.Size = new System.Drawing.Size(160, 45);
             this.trb_Tocdo.TabIndex = 0;
             this.trb_Tocdo.Value = 5;
-            this.trb_Tocdo.Scroll += new System.EventHandler(this.trb_Tocdo_Scroll);
             // 
             // groupBox6
             // 
@@ -711,7 +672,6 @@
             this.lb_code.Name = "lb_code";
             this.lb_code.Size = new System.Drawing.Size(349, 199);
             this.lb_code.TabIndex = 0;
-            this.lb_code.SelectedIndexChanged += new System.EventHandler(this.lb_code_SelectedIndexChanged);
             // 
             // groupBox7
             // 
@@ -724,7 +684,6 @@
             this.groupBox7.TabIndex = 14;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Ý tưởng";
-            this.groupBox7.Enter += new System.EventHandler(this.groupBox7_Enter);
             // 
             // text_ytuong
             // 
@@ -735,7 +694,6 @@
             this.text_ytuong.Name = "text_ytuong";
             this.text_ytuong.Size = new System.Drawing.Size(392, 188);
             this.text_ytuong.TabIndex = 0;
-            this.text_ytuong.TextChanged += new System.EventHandler(this.text_ytuong_TextChanged);
             // 
             // timer1
             // 
@@ -745,6 +703,21 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // Mui_ten_len_3
+            // 
+            this.Mui_ten_len_3.BackColor = System.Drawing.Color.Transparent;
+            this.Mui_ten_len_3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mui_ten_len_3.ForeColor = System.Drawing.Color.Black;
+            this.Mui_ten_len_3.Image = ((System.Drawing.Image)(resources.GetObject("Mui_ten_len_3.Image")));
+            this.Mui_ten_len_3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Mui_ten_len_3.Location = new System.Drawing.Point(895, 84);
+            this.Mui_ten_len_3.Name = "Mui_ten_len_3";
+            this.Mui_ten_len_3.Size = new System.Drawing.Size(58, 60);
+            this.Mui_ten_len_3.TabIndex = 27;
+            this.Mui_ten_len_3.Text = "u1";
+            this.Mui_ten_len_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Mui_ten_len_3.Visible = false;
             // 
             // Form1
             // 
@@ -762,7 +735,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "mô phỏng giải thuật sắp xếp";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -829,21 +801,20 @@
 		private System.Windows.Forms.ListBox lb_code;
 		private System.Windows.Forms.TextBox text_ytuong;
         private System.Windows.Forms.Timer timer1;
-<<<<<<< HEAD
+
         private System.Windows.Forms.Label Mui_ten_xanh_len_2;
         private System.Windows.Forms.Label Mui_ten_xanh_len_1;
         private System.Windows.Forms.Label Mui_ten_xanh_xuong_2;
         private System.Windows.Forms.Label Mui_ten_xanh_xuong_1;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Label Mui_ten_len_3;
+     
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-=======
+
         private System.Windows.Forms.Label Mui_ten_len_2;
         private System.Windows.Forms.Label Mui_ten_len_1;
         private System.Windows.Forms.Label Mui_ten_xuong_2;
         private System.Windows.Forms.Label Mui_ten_xuong_1;
         private System.Windows.Forms.Label Mui_ten_len_3;
->>>>>>> 4f2f2923e9c594d316d54d4e88d9d7b887df0ebd
     }
 }
 
