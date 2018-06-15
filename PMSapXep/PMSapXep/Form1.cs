@@ -479,7 +479,7 @@ namespace PMSapXep
             if (rad_QuickSort.Checked == true)
                 Quicksort_Batdau(Bn);
             if (rad_MergeSort.Checked == true)
-                MergeSort(Bn);
+                MergeSort_Batdau(Bn);
 
             btnTaoMang.Enabled = true;
             btnhuy.Enabled = true;
@@ -1963,91 +1963,199 @@ namespace PMSapXep
             MessageBox.Show("Sap xep xong");
         }
         #endregion
-
-        #region Mearge
-        private void merge(int[] arr, int l, int m, int r)
+        #region merge
+        private void MergeSort_Batdau(Button[] M)
+        {
+            for (int i = 0; i < M.Length; i++)
+                pnNut.Controls.Remove(Chi_so[i]);
+            Tre(1000);
+            MergeSort(Array, 0, M.Length - 1);
+            for (int i = 0; i < M.Length; i++)
+            {
+                Bn[i].ForeColor = Color.White;
+                Bn[i].FlatStyle = FlatStyle.Flat;
+                Bn[i].BackgroundImage = Properties.Resources.daxep;
+                Bn[i].BackgroundImageLayout = ImageLayout.Stretch;
+                Bn[i].Refresh();
+            }
+            MessageBox.Show("Sap xep xong");
+        }
+        private void Merge(int[] array, int l, int m, int r)
         {
             int i, j, k;
             int n1 = m - l + 1;
             int n2 = r - m;
+            Bn1 = new Button[n1];
+            Bn2 = new Button[n2];
             int[] L = new int[n1];
             int[] R = new int[n2];
             for (i = 0; i < n1; i++)
-                L[i] = arr[l + i];
+            {
+                L[i] = array[l + i];
+                Button btn = new Button();
+                btn.Text = Bn[l + i].Text;
+                btn.Width = btn.Height = Size;
+                btn.Location = new Point(Bn[l + i].Location.X, 0);
+                pnNut.Controls.Add(btn);
+                Bn1[i] = btn;
+                Bn1[i].ForeColor = Color.White;
+                Bn1[i].FlatStyle = FlatStyle.Flat;
+                Bn1[i].BackgroundImage = Bn[0].BackgroundImage;
+                Bn1[i].BackgroundImageLayout = ImageLayout.Stretch;
+            }
+            Tre(1500);
             for (j = 0; j < n2; j++)
-                R[j] = arr[m + 1 + j];
+            {
+                R[j] = array[m + 1 + j];
+                Button btn = new Button();
+                btn.Text = Bn[m + 1 + j].Text;
+                btn.Width = btn.Height = Size;
+                btn.Location = new Point(Bn[m + 1 + j].Location.X, pnNut.Height - 90);
+                pnNut.Controls.Add(btn);
+                Bn2[j] = btn;
+                Bn2[j].ForeColor = Color.White;
+                Bn2[j].FlatStyle = FlatStyle.Flat;
+                Bn2[j].BackgroundImage = Bn[0].BackgroundImage;
+                Bn2[j].BackgroundImageLayout = ImageLayout.Stretch;
+            }
+            Tre(1500);
             i = 0;
             j = 0;
             k = l;
-            int x = 0;
-            int[] b = new int[n1 + n2];
+            int Y1 = Bn[0].Location.Y / 2;
+            int Y2 = (Bn2[0].Location.Y + Bn[0].Location.Y) / 2;
             while (i < n1 && j < n2)
             {
                 if (L[i] <= R[j])
                 {
-                    b[x] = k;
+                    array[k] = L[i];
+                    while (Bn1[i].Location.Y != Y1)
+                    {
+                        Bn1[i].Location = new Point(Bn1[i].Location.X, Bn1[i].Location.Y + 1);
+                        Tre((10 - trb_Tocdo.Value) / 3);
+                    }
+                    while (Bn1[i].Location.X != Bn[k].Location.X)
+                    {
+                        if (Bn1[i].Location.X < Bn[k].Location.X)
+                            Bn1[i].Location = new Point(Bn1[i].Location.X + 1, Bn1[i].Location.Y);
+                        else
+                            Bn1[i].Location = new Point(Bn1[i].Location.X - 1, Bn1[i].Location.Y);
+                        Tre((10 - trb_Tocdo.Value) / 3);
+                    }
+                    while (Bn1[i].Location.Y != Bn[k].Location.Y)
+                    {
+                        Bn1[i].Location = new Point(Bn1[i].Location.X, Bn1[i].Location.Y + 1);
+                        Tre((10 - trb_Tocdo.Value) / 3);
+                    }
+                    pnNut.Controls.Remove(Bn1[i]);
+                    pnNut.Refresh();
+                    Bn[k].Text = array[k].ToString();
                     i++;
-                    x++;
                 }
                 else
                 {
-                    b[x] = k;
+                    array[k] = R[j];
+                    while (Bn2[j].Location.Y != Y2)
+                    {
+                        Bn2[j].Location = new Point(Bn2[j].Location.X, Bn2[j].Location.Y - 1);
+                        Tre((10 - trb_Tocdo.Value) / 3);
+                    }
+                    while (Bn2[j].Location.X != Bn[k].Location.X)
+                    {
+                        if (Bn2[j].Location.X < Bn[k].Location.X)
+                            Bn2[j].Location = new Point(Bn2[j].Location.X + 1, Bn2[j].Location.Y);
+                        else
+                            Bn2[j].Location = new Point(Bn2[j].Location.X - 1, Bn2[j].Location.Y);
+                        Tre((10 - trb_Tocdo.Value) / 3);
+                    }
+                    while (Bn2[j].Location.Y != Bn[k].Location.Y)
+                    {
+                        Bn2[j].Location = new Point(Bn2[j].Location.X, Bn2[j].Location.Y - 1);
+                        Tre((10 - trb_Tocdo.Value) / 3);
+                    }
+                    pnNut.Controls.Remove(Bn2[j]);
+                    pnNut.Refresh();
+                    Bn[k].Text = array[k].ToString();
                     j++;
-                    x++;
                 }
                 k++;
             }
-
             while (i < n1)
             {
-                b[x] = k;
+                array[k] = L[i];
+                while (Bn1[i].Location.Y != Y1)
+                {
+                    Bn1[i].Location = new Point(Bn1[i].Location.X, Bn1[i].Location.Y + 1);
+                    Tre((10 - trb_Tocdo.Value) / 3);
+                }
+                while (Bn1[i].Location.X != Bn[k].Location.X)
+                {
+                    if (Bn1[i].Location.X < Bn[k].Location.X)
+                        Bn1[i].Location = new Point(Bn1[i].Location.X + 1, Bn1[i].Location.Y);
+                    else
+                        Bn1[i].Location = new Point(Bn1[i].Location.X - 1, Bn1[i].Location.Y);
+                    Tre((10 - trb_Tocdo.Value) / 3);
+                }
+                while (Bn1[i].Location.Y != Bn[k].Location.Y)
+                {
+                    Bn1[i].Location = new Point(Bn1[i].Location.X, Bn1[i].Location.Y + 1);
+                    Tre((10 - trb_Tocdo.Value) / 3);
+                }
+                pnNut.Controls.Remove(Bn1[i]);
+                pnNut.Refresh();
+                Bn[k].Text = array[k].ToString();
                 i++;
                 k++;
-                x++;
             }
-
             while (j < n2)
             {
-                b[x] = k;
+                array[k] = R[j];
+                while (Bn2[j].Location.Y != Y2)
+                {
+                    Bn2[j].Location = new Point(Bn2[j].Location.X, Bn2[j].Location.Y - 1);
+                    Tre((10 - trb_Tocdo.Value) / 3);
+                }
+                while (Bn2[j].Location.X != Bn[k].Location.X)
+                {
+                    if (Bn2[j].Location.X < Bn[k].Location.X)
+                        Bn2[j].Location = new Point(Bn2[j].Location.X + 1, Bn2[j].Location.Y);
+                    else
+                        Bn2[j].Location = new Point(Bn2[j].Location.X - 1, Bn2[j].Location.Y);
+                    Tre((10 - trb_Tocdo.Value) / 3);
+                }
+                while (Bn2[j].Location.Y != Bn[k].Location.Y)
+                {
+                    Bn2[j].Location = new Point(Bn2[j].Location.X, Bn2[j].Location.Y - 1);
+                    Tre((10 - trb_Tocdo.Value) / 3);
+                }
+                pnNut.Controls.Remove(Bn2[j]);
+                pnNut.Refresh();
+                Bn[k].Text = array[k].ToString();
                 j++;
                 k++;
-                x++;
             }
-            int e;
-            int temp;
-            for (int c = 0; c < x; c++)
-            {
-                e = c;
-                for (int d = c; d < x; d++)
-                    if (arr[b[e]] > arr[b[d]])
-                        e = d;
-                if (e != c)
-                {
-                    SwapInts(arr, b[c], b[e]);
-                    Hoan_vi(Bn, b[c], b[e]);
-                    Hoan_Tri_Node(b[c], b[e]);
-                }
-            }
+            for (i = 0; i < n1; i++)
+                pnNut.Controls.Remove(Bn1[i]);
+            for (j = 0; j < n2; j++)
+                pnNut.Controls.Remove(Bn2[j]);
+            pnNut.Refresh();
         }
-        private void MergeSort_BatDau(int[] array, int l, int r)
+        private void MergeSort(int[] array, int l, int r)
         {
             if (l < r)
             {
-
                 int m = l + (r - l) / 2;
-                MergeSort_BatDau(array, l, m);
-                MergeSort_BatDau(array, m + 1, r);
-                merge(array, l, m, r);
+                MergeSort(array, l, m);
+                MergeSort(array, m + 1, r);
+                Merge(array, l, m, r);
             }
         }
-        private void MergeSort(Button[] M)
-        {
-            MergeSort_BatDau(Array, 0, M.Length - 1);
-            MessageBox.Show("Sap xep xong");
-        }
-        #endregion
 
         #endregion
+
+
+
+#endregion
 
         private void trb_Tocdo_Scroll(object sender, EventArgs e)
         {
