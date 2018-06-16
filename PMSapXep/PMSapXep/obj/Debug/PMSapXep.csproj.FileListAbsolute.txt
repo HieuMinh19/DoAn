@@ -567,3 +567,20 @@ F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder
 F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.Api2.xml
 F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.Types.xml
 F:\ThuatToanSapXep\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.Utilities.xml
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.exe
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.pdb
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\DoAn\PMSapXep\PMSapXep\bin\Debug\PMSapXep.exe
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\DoAn\PMSapXep\PMSapXep\bin\Debug\PMSapXep.pdb
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.Api2.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.Types.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.Utilities.dll
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.xml
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.Api2.xml
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.Types.xml
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\DoAn\PMSapXep\PMSapXep\bin\Debug\Microsoft.Expression.Encoder.Utilities.xml
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.csprojResolveAssemblyReference.cache
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.Form1.resources
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.NhapPT.resources
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.Properties.Resources.resources
+D:\HỌC KÌ 4_KÌ 2 NĂM 2\DoAn\PMSapXep\PMSapXep\obj\Debug\PMSapXep.csproj.GenerateResource.Cache
