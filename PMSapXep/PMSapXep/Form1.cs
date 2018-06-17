@@ -301,7 +301,7 @@ namespace PMSapXep
             ////this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             MaximizeBox = false;
-            StartRecording();
+            //StartRecording();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -541,11 +541,11 @@ namespace PMSapXep
                 }
 
 
-                Mui_ten_xanh_xuong_1.Visible = true;
-                Mui_ten_xanh_xuong_1.Text = "i=" + i;
-                Mui_ten_xanh_xuong_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y - Size - 70);
-                pnNut.Controls.Add(Mui_ten_xanh_xuong_1);
-                Mui_ten_xanh_xuong_1.Refresh();
+                //Mui_ten_xanh_xuong_1.Visible = true;
+                //Mui_ten_xanh_xuong_1.Text = "i=" + i;
+                //Mui_ten_xanh_xuong_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y - Size - 70);
+                //pnNut.Controls.Add(Mui_ten_xanh_xuong_1);
+                //Mui_ten_xanh_xuong_1.Refresh();
 
                 Mui_ten_xuong_1.Visible = true;
                 Mui_ten_xuong_1.Text = "i=" + i;
@@ -566,11 +566,11 @@ namespace PMSapXep
                         break;
                     }
 
-                    Mui_ten_xanh_xuong_2.Visible = true;
-                    Mui_ten_xanh_xuong_2.Text = "j=" + j;
-                    Mui_ten_xanh_xuong_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * j) + (Size / 2) - 30, Bn[j].Location.Y - Size - 70);
-                    pnNut.Controls.Add(Mui_ten_xanh_xuong_2);
-                    Mui_ten_xanh_xuong_2.Refresh();
+                    //Mui_ten_xanh_xuong_2.Visible = true;
+                    //Mui_ten_xanh_xuong_2.Text = "j=" + j;
+                    //Mui_ten_xanh_xuong_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * j) + (Size / 2) - 30, Bn[j].Location.Y - Size - 70);
+                    //pnNut.Controls.Add(Mui_ten_xanh_xuong_2);
+                    //Mui_ten_xanh_xuong_2.Refresh();
 
                     Mui_ten_xuong_2.Visible = true;
                     Mui_ten_xuong_2.Text = "j=" + j;
@@ -844,17 +844,17 @@ namespace PMSapXep
                     break;
                 }
                 // Tre((10 - trb_Tocdo.Value) * 50);
-                Mui_ten_xanh_xuong_1.Visible = true;
-                Mui_ten_xanh_xuong_1.Text = "Left=" + Left;
-                Mui_ten_xanh_xuong_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * Left) + 5, Bn[Left].Location.Y - Size - 80);
-                pnNut.Controls.Add(Mui_ten_xanh_xuong_1);
-                Mui_ten_xanh_xuong_1.Refresh();
+                Mui_ten_xuong_1.Visible = true;
+                Mui_ten_xuong_1.Text = "Left=" + Left;
+                Mui_ten_xuong_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * Left) + 5, Bn[Left].Location.Y - Size - 80);
+                pnNut.Controls.Add(Mui_ten_xuong_1);
+                Mui_ten_xuong_1.Refresh();
 
-                Mui_ten_xanh_len_1.Visible = true;
-                Mui_ten_xanh_len_1.Text = "Right=" + Right;
-                Mui_ten_xanh_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * Right) + 5, Bn[Right].Location.Y + Size + 70);
-                pnNut.Controls.Add(Mui_ten_xanh_len_1);
-                Mui_ten_xanh_len_1.Refresh();
+                Mui_ten_len_1.Visible = true;
+                Mui_ten_len_1.Text = "Right=" + Right;
+                Mui_ten_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * Right) + 5, Bn[Right].Location.Y + Size + 70);
+                pnNut.Controls.Add(Mui_ten_len_1);
+                Mui_ten_len_1.Refresh();
 
 
 
@@ -865,16 +865,18 @@ namespace PMSapXep
                     {
                         lb_code.SelectedIndex = 12;
                         Tre((10 - trb_Tocdo.Value) * 50);
-                        Mui_ten_xanh_xuong_2.Visible = true;
-                        Mui_ten_xanh_xuong_2.Text = "i=" + i;
-                        Mui_ten_xanh_xuong_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + 5, Bn[i].Location.Y - Size - 80);
-                        pnNut.Controls.Add(Mui_ten_xanh_xuong_2);
-                        Mui_ten_xanh_xuong_2.Refresh();
-                        Mui_ten_xanh_len_2.Visible = true;
-                        Mui_ten_xanh_len_2.Text = "i+1=" + (i + 1);
-                        Mui_ten_xanh_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * (i + 1)) + 5, Bn[i + 1].Location.Y + Size + 70);
-                        pnNut.Controls.Add(Mui_ten_xanh_len_2);
-                        Mui_ten_xanh_len_2.Refresh();
+                        Mui_ten_xuong_2.Visible = true;
+                        Mui_ten_xuong_2.Text = "i=" + i;
+                        Mui_ten_xuong_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + 5, Bn[i].Location.Y - Size - 80);
+                        pnNut.Controls.Add(Mui_ten_xuong_2);
+                        Mui_ten_xuong_2.Refresh();
+
+
+                        Mui_ten_len_2.Visible = true;
+                        Mui_ten_len_2.Text = "i+1=" + (i + 1);
+                        Mui_ten_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * (i + 1)) + 5, Bn[i + 1].Location.Y + Size + 70);
+                        pnNut.Controls.Add(Mui_ten_len_2);
+                        Mui_ten_len_2.Refresh();
 
 
                         if (Array[i] > Array[i + 1])
@@ -895,17 +897,17 @@ namespace PMSapXep
                             break;
                         }
 
-                        Mui_ten_xanh_xuong_2.Visible = true;
-                        Mui_ten_xanh_xuong_2.Text = "i=" + i;
-                        Mui_ten_xanh_xuong_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + 5, Bn[i].Location.Y - Size - 80);
-                        pnNut.Controls.Add(Mui_ten_xanh_xuong_2);
-                        Mui_ten_xanh_xuong_2.Refresh();
+                        Mui_ten_xuong_2.Visible = true;
+                        Mui_ten_xuong_2.Text = "i=" + i;
+                        Mui_ten_xuong_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + 5, Bn[i].Location.Y - Size - 80);
+                        pnNut.Controls.Add(Mui_ten_xuong_2);
+                        Mui_ten_xuong_2.Refresh();
 
-                        Mui_ten_xanh_len_2.Visible = true;
-                        Mui_ten_xanh_len_2.Text = "i-1=" + (i - 1);
-                        Mui_ten_xanh_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * (i - 1)) + 5, Bn[i - 1].Location.Y + Size + 70);
-                        pnNut.Controls.Add(Mui_ten_xanh_len_2);
-                        Mui_ten_xanh_len_2.Refresh();
+                        Mui_ten_len_2.Visible = true;
+                        Mui_ten_len_2.Text = "i-1=" + (i - 1);
+                        Mui_ten_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * (i - 1)) + 5, Bn[i - 1].Location.Y + Size + 70);
+                        pnNut.Controls.Add(Mui_ten_len_2);
+                        Mui_ten_len_2.Refresh();
                         if (Array[i] < Array[i - 1])
                         {
                             SwapInts(Array, i, i - 1);
@@ -922,16 +924,17 @@ namespace PMSapXep
                     {
                         lb_code.SelectedIndex = 12;
                         Tre((10 - trb_Tocdo.Value) * 50);
-                        Mui_ten_xanh_xuong_2.Visible = true;
-                        Mui_ten_xanh_xuong_2.Text = "i=" + i;
-                        Mui_ten_xanh_xuong_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + 5, Bn[i].Location.Y - Size - 80);
-                        pnNut.Controls.Add(Mui_ten_xanh_xuong_2);
-                        Mui_ten_xanh_xuong_2.Refresh();
-                        Mui_ten_xanh_len_2.Visible = true;
-                        Mui_ten_xanh_len_2.Text = "i+1=" + (i + 1);
-                        Mui_ten_xanh_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * (i + 1)) + 5, Bn[i + 1].Location.Y + Size + 70);
-                        pnNut.Controls.Add(Mui_ten_xanh_len_2);
-                        Mui_ten_xanh_len_2.Refresh();
+                        Mui_ten_xuong_2.Visible = true;
+                        Mui_ten_xuong_2.Text = "i=" + i;
+                        Mui_ten_xuong_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + 5, Bn[i].Location.Y - Size - 80);
+                        pnNut.Controls.Add(Mui_ten_xuong_2);
+                        Mui_ten_xuong_2.Refresh();
+
+                        Mui_ten_len_2.Visible = true;
+                        Mui_ten_len_2.Text = "i+1=" + (i + 1);
+                        Mui_ten_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * (i + 1)) + 5, Bn[i + 1].Location.Y + Size + 70);
+                        pnNut.Controls.Add(Mui_ten_len_2);
+                        Mui_ten_len_2.Refresh();
                         if (Array[i] < Array[i + 1])
                         {
                             SwapInts(Array, i, i + 1);
@@ -943,17 +946,17 @@ namespace PMSapXep
                     Right = k;
                     for (int i = Right; i > Left; i--)
                     {
-                        Mui_ten_xanh_xuong_2.Visible = true;
-                        Mui_ten_xanh_xuong_2.Text = "i=" + i;
-                        Mui_ten_xanh_xuong_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + 5, Bn[i].Location.Y - Size - 80);
-                        pnNut.Controls.Add(Mui_ten_xanh_xuong_2);
-                        Mui_ten_xanh_xuong_2.Refresh();
+                        Mui_ten_xuong_2.Visible = true;
+                        Mui_ten_xuong_2.Text = "i=" + i;
+                        Mui_ten_xuong_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + 5, Bn[i].Location.Y - Size - 80);
+                        pnNut.Controls.Add(Mui_ten_xuong_2);
+                        Mui_ten_xuong_2.Refresh();
 
-                        Mui_ten_xanh_len_2.Visible = true;
-                        Mui_ten_xanh_len_2.Text = "i-1=" + (i - 1);
-                        Mui_ten_xanh_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * (i - 1)) + 5, Bn[i - 1].Location.Y + Size + 70);
-                        pnNut.Controls.Add(Mui_ten_xanh_len_2);
-                        Mui_ten_xanh_len_2.Refresh();
+                        Mui_ten_len_2.Visible = true;
+                        Mui_ten_len_2.Text = "i-1=" + (i - 1);
+                        Mui_ten_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * (i - 1)) + 5, Bn[i - 1].Location.Y + Size + 70);
+                        pnNut.Controls.Add(Mui_ten_len_2);
+                        Mui_ten_len_2.Refresh();
                         if (Array[i] > Array[i - 1])
                         {
                             SwapInts(Array, i, i - 1);
@@ -1010,7 +1013,7 @@ namespace PMSapXep
 
                 Mui_ten_xuong_1.Visible = true;
                 Mui_ten_xuong_1.Text = "i=" + i;
-                Mui_ten_xuong_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + 5, Bn[i].Location.Y - Size - 80);
+                Mui_ten_xuong_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * i), Bn[i].Location.Y - Size - 80);
                 pnNut.Controls.Add(Mui_ten_xuong_1);
                 Mui_ten_xuong_1.Refresh();
                 DemQuickSort = 0;
@@ -1040,7 +1043,7 @@ namespace PMSapXep
                             Tre((10 - trb_Tocdo.Value) * 100);
                             Mui_ten_len_1.Visible = true;
                             Mui_ten_len_1.Text = "j-1=" + y;
-                            Mui_ten_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * (j - 1)) + 5, Bn[j - 1].Location.Y + Size);
+                            Mui_ten_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * (j - 1)) , Bn[j - 1].Location.Y + Size + 10);
                             pnNut.Controls.Add(Mui_ten_len_1);
                             Mui_ten_len_1.Refresh();
 
@@ -1084,7 +1087,7 @@ namespace PMSapXep
                             Tre((10 - trb_Tocdo.Value) * 100);
                             Mui_ten_len_1.Visible = true;
                             Mui_ten_len_1.Text = "j-1=" + y;
-                            Mui_ten_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * (j - 1)) + 5, Bn[j - 1].Location.Y + Size);
+                            Mui_ten_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * (j - 1)) + 5, Bn[j - 1].Location.Y + Size+10);
                             pnNut.Controls.Add(Mui_ten_len_1);
                             Mui_ten_len_1.Refresh();
                             lb_code.SelectedIndex = 9;
@@ -1181,11 +1184,11 @@ namespace PMSapXep
                 lb_code.SelectedIndex = 8;
                 System.Threading.Thread.Sleep(a);
                 r = i;
-                Mui_ten_len_3.Visible = true;
-                Mui_ten_len_3.Text = "Right = " + r;
-                Mui_ten_len_3.Location = new Point((Canh_le + (Size + KhoangCachNut) * r) + (Size / 2) - 20, Bn[r].Location.Y + Size + 10);
-                pnNut.Controls.Add(Mui_ten_len_3);
-                Mui_ten_len_3.Refresh();
+                 Mui_ten_len_2 .Visible = true;
+                Mui_ten_len_2.Text = "Right = " + r;
+                Mui_ten_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * r) + (Size / 2) - 20, Bn[r].Location.Y + Size + 10);
+                pnNut.Controls.Add(Mui_ten_len_2);
+                Mui_ten_len_2.Refresh();
                 Tre((10 - trb_Tocdo.Value) * 100);
 
                 lb_code.SelectedIndex = 9;
@@ -1225,9 +1228,9 @@ namespace PMSapXep
                             System.Threading.Thread.Sleep(a);
                             if (r >= 0)
                             {
-                                Mui_ten_len_3.Text = "Right = " + r;
-                                Mui_ten_len_3.Location = new Point((Canh_le + (Size + KhoangCachNut) * r) + (Size / 2) - 20, Bn[r].Location.Y + Size + 10);
-                                Mui_ten_len_3.Refresh();
+                                Mui_ten_len_2.Text = "Right = " + r;
+                                Mui_ten_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * r) + (Size / 2) - 20, Bn[r].Location.Y + Size + 10);
+                                Mui_ten_len_2.Refresh();
                             }
                             Tre((10 - trb_Tocdo.Value) * 100);
                             DoiCho++;
@@ -1254,9 +1257,9 @@ namespace PMSapXep
 
                             if (r >= 0)
                             {
-                                Mui_ten_len_3.Text = "Right = " + r;
-                                Mui_ten_len_3.Location = new Point((Canh_le + (Size + KhoangCachNut) * r) + (Size / 2) - 20, Bn[r].Location.Y + Size + 17);
-                                Mui_ten_len_3.Refresh();
+                                Mui_ten_len_2.Text = "Right = " + r;
+                                Mui_ten_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * r) + (Size / 2) - 20, Bn[r].Location.Y + Size + 17);
+                                Mui_ten_len_2.Refresh();
                             }
 
                             Tre((10 - trb_Tocdo.Value) * 100);
@@ -1461,7 +1464,7 @@ namespace PMSapXep
             Quicksort(Array, 0, M.Length - 1);
             pnNut.Controls.Remove(Mui_ten_len_1);
             pnNut.Controls.Remove(Mui_ten_len_2);
-            pnNut.Controls.Remove(Mui_ten_len_3);
+            pnNut.Controls.Remove(Mui_ten_len_2);
             pnNut.Controls.Remove(Mui_ten_xuong_1);
             pnNut.Controls.Remove(Mui_ten_xuong_2);
             for (int r = 0; r < M.Length; r++)
@@ -1488,7 +1491,7 @@ namespace PMSapXep
             }
             pnNut.Controls.Remove(Mui_ten_len_1);
             pnNut.Controls.Remove(Mui_ten_len_2);
-            pnNut.Controls.Remove(Mui_ten_len_3);
+            pnNut.Controls.Remove(Mui_ten_len_2);
             lb_code.SelectedIndex = 0;
             Mui_ten_xuong_1.Visible = true;
             Mui_ten_xuong_1.Text = "Left=" + l;
@@ -1504,11 +1507,11 @@ namespace PMSapXep
             Tre((10 - trb_Tocdo.Value) * 100);
             int i = l;
             lb_code.SelectedIndex = 2;
-            Mui_ten_len_3.Visible = true;
-            Mui_ten_len_3.Text = "i=" + i;
-            Mui_ten_len_3.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
-            pnNut.Controls.Add(Mui_ten_len_3);
-            Mui_ten_len_3.Refresh();
+            Mui_ten_len_2.Visible = true;
+            Mui_ten_len_2.Text = "i=" + i;
+            Mui_ten_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
+            pnNut.Controls.Add(Mui_ten_len_2);
+            Mui_ten_len_2.Refresh();
             Tre((10 - trb_Tocdo.Value) * 100);
             int j = r;
             lb_code.SelectedIndex = 3;
@@ -1545,9 +1548,9 @@ namespace PMSapXep
                         }
                         lb_code.SelectedIndex = 8;
                         i++;
-                        Mui_ten_len_3.Text = "i=" + i;
-                        Mui_ten_len_3.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
-                        Mui_ten_len_3.Refresh();
+                        Mui_ten_len_2.Text = "i=" + i;
+                        Mui_ten_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
+                        Mui_ten_len_2.Refresh();
                         Tre((10 - trb_Tocdo.Value) * 100);
                     }
                     while (array[j] > x)
@@ -1576,9 +1579,9 @@ namespace PMSapXep
                         }
                         lb_code.SelectedIndex = 8;
                         i++;
-                        Mui_ten_len_3.Text = "i=" + i;
-                        Mui_ten_len_3.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
-                        Mui_ten_len_3.Refresh();
+                        Mui_ten_len_2.Text = "i=" + i;
+                        Mui_ten_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
+                        Mui_ten_len_2.Refresh();
                         Tre((10 - trb_Tocdo.Value) * 100);
                     }
                     while (array[j] < x)
@@ -1613,11 +1616,11 @@ namespace PMSapXep
                     {
                         lb_code.SelectedIndex = 14;
                         Mui_ten_len_1.Text = "j=" + j;
-                        Mui_ten_len_3.Text = "i=" + i;
+                        Mui_ten_len_2.Text = "i=" + i;
                         Mui_ten_len_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * j) + (Size / 2) - 30, Bn[j].Location.Y + 2 * Size + 5);
                         Mui_ten_len_1.Refresh();
-                        Mui_ten_len_3.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
-                        Mui_ten_len_3.Refresh();
+                        Mui_ten_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
+                        Mui_ten_len_2.Refresh();
                         Tre((10 - trb_Tocdo.Value) * 300);
                     }
                 }
@@ -1660,11 +1663,11 @@ namespace PMSapXep
             Mui_ten_xuong_2.Refresh();
             Tre((10 - trb_Tocdo.Value) * 100);
             j = 2 * i + 1;
-            Mui_ten_len_3.Visible = true;
-            Mui_ten_len_3.Text = "i=" + i;
-            Mui_ten_len_3.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
-            pnNut.Controls.Add(Mui_ten_len_3);
-            Mui_ten_len_3.Refresh();
+            Mui_ten_len_2.Visible = true;
+            Mui_ten_len_2.Text = "i=" + i;
+            Mui_ten_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
+            pnNut.Controls.Add(Mui_ten_len_2);
+            Mui_ten_len_2.Refresh();
             Tre((10 - trb_Tocdo.Value) * 100);
             Mui_ten_len_1.Visible = true;
             Mui_ten_len_1.Text = "j=" + j;
@@ -1712,11 +1715,11 @@ namespace PMSapXep
                         pnNut.Controls.Add(Mui_ten_len_1);
                         Mui_ten_len_1.Refresh();
                         Tre((10 - trb_Tocdo.Value) * 100);
-                        Mui_ten_len_3.Visible = true;
-                        Mui_ten_len_3.Text = "i=" + i;
-                        Mui_ten_len_3.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
-                        pnNut.Controls.Add(Mui_ten_len_3);
-                        Mui_ten_len_3.Refresh();
+                        Mui_ten_len_2.Visible = true;
+                        Mui_ten_len_2.Text = "i=" + i;
+                        Mui_ten_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
+                        pnNut.Controls.Add(Mui_ten_len_2);
+                        Mui_ten_len_2.Refresh();
                         Tre((10 - trb_Tocdo.Value) * 100);
                         SwapInts(array, i, j);
                         Hoan_vi(Bn, i, j);
@@ -1763,11 +1766,11 @@ namespace PMSapXep
                         pnNut.Controls.Add(Mui_ten_len_1);
                         Mui_ten_len_1.Refresh();
                         Tre((10 - trb_Tocdo.Value) * 100);
-                        Mui_ten_len_3.Visible = true;
-                        Mui_ten_len_3.Text = "i=" + i;
-                        Mui_ten_len_3.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
-                        pnNut.Controls.Add(Mui_ten_len_3);
-                        Mui_ten_len_3.Refresh();
+                        Mui_ten_len_2.Visible = true;
+                        Mui_ten_len_2.Text = "i=" + i;
+                        Mui_ten_len_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y + 2 * Size + 5);
+                        pnNut.Controls.Add(Mui_ten_len_2);
+                        Mui_ten_len_2.Refresh();
                         Tre((10 - trb_Tocdo.Value) * 100);
                         SwapInts(array, i, j);
                         Hoan_vi(Bn, i, j);
@@ -1838,7 +1841,7 @@ namespace PMSapXep
                     return;
                 }
                 Mui_ten_len_1.Visible = false;
-                Mui_ten_len_3.Visible = false;
+                Mui_ten_len_2.Visible = false;
                 Mui_ten_xuong_2.Visible = false;
                 Mui_ten_xuong_1.Visible = false;
                 pnNut.Refresh();
@@ -2232,6 +2235,11 @@ namespace PMSapXep
                 string path = @"C:\Output";
                 DeleteDirectory(path);
             }
+        }
+
+        private void Mui_ten_xanh_xuong_2_Click(object sender, EventArgs e)
+        {
+
         }
 
         void DeleteDirectory(string path)
