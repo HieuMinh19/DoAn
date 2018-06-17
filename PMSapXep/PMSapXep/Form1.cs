@@ -36,7 +36,7 @@ namespace PMSapXep
         {
             job = new ScreenCaptureJob();
             System.Drawing.Size WorkingArea = SystemInformation.WorkingArea.Size; //full screen
-            Rectangle captureRect = new Rectangle(0, 0, WorkingArea.Width, WorkingArea.Height);
+            Rectangle captureRect = new Rectangle(0, 0, WorkingArea.Width - (WorkingArea.Width % 4), WorkingArea.Height - (WorkingArea.Height % 4));
             // -(WorkingArea.Width%4 )   -(WorkingArea.Height%4)
             job.CaptureRectangle = captureRect;
             job.ShowFlashingBoundary = true;
@@ -2256,7 +2256,7 @@ namespace PMSapXep
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            Xoa_mang(Bn);
+             Xoa_mang(Bn);
             string LocationFile = null;     //biến lưu địa chỉ file  
             string input = null;
             int i = 0;
