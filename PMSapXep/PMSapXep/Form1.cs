@@ -23,7 +23,6 @@ namespace PMSapXep
 
         private ScreenCaptureJob job;
 
-
         public Form1()
         {
             InitializeComponent();
@@ -31,7 +30,6 @@ namespace PMSapXep
             //auto load thuật toán và ý tưởng của thuật toán InterchangeSort
             rad_InsertionSort.Checked = true;
             rad_InterchangeSort.Checked = true;
-
         }
 
         void StartRecording()
@@ -47,7 +45,6 @@ namespace PMSapXep
             job.OutputPath = @"C:\Output";
             job.Start();
         }
-
 
         #region Khai bao bien toan cuc
         bool gif = false;
@@ -70,11 +67,8 @@ namespace PMSapXep
 
         private void btnTaoMang_Click(object sender, EventArgs e)
         {
-            btn_Ngaunhien.Enabled = true;
-            //btnDocFile.Enabled = true;
+            btn_Ngaunhien.Enabled = true;           
             btnBangTay.Enabled = true;
-
-            //khoi tao kich thuoc mang
             SoPT = int.Parse(txtNhapPT.Text.Trim());
             //tính toán vị trí phần tử dựa trên số phần tử
             Tao_Mang(Properties.Resources.chuaxep);
@@ -301,7 +295,7 @@ namespace PMSapXep
             ////this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             MaximizeBox = false;
-            //StartRecording();
+            StartRecording();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -335,7 +329,6 @@ namespace PMSapXep
             lb_code.Refresh();
         }
 
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (!timer1.Enabled)
@@ -348,14 +341,12 @@ namespace PMSapXep
                 timer1.Stop();
                 btnPause.Text = "Tạm dừng ";
             }
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             Thread.Sleep(1000);
         }
-
 
         private void btnmofile_Click(object sender, EventArgs e)
         {
@@ -379,8 +370,6 @@ namespace PMSapXep
             btn_Batdau.Enabled = false;
             btn_xuatgip.Enabled = false;
             btnDocFile.Enabled = false;
-
-
             if (rad_InterchangeSort.Checked == true)
                 InterchangeSort(Bn);
             if (rad_SelectionSort.Checked == true)
@@ -400,8 +389,7 @@ namespace PMSapXep
             if (rad_QuickSort.Checked == true)
                 Quicksort_Batdau(Bn);
             if (rad_MergeSort.Checked == true)
-                MergeSort_Batdau(Bn);
-
+                MergeSort_Batdau(Bn);                     
             btnTaoMang.Enabled = true;
             btnDocFile.Enabled = true;
             grbThuatToan.Enabled = true;
@@ -522,7 +510,6 @@ namespace PMSapXep
             t.Refresh();
             t.BackgroundImage = image;
             t.BackgroundImageLayout = ImageLayout.Stretch;
-
         }
 
         #region thuat toan
@@ -539,14 +526,6 @@ namespace PMSapXep
                     pnNut.Controls.Clear();
                     break;
                 }
-
-
-                //Mui_ten_xanh_xuong_1.Visible = true;
-                //Mui_ten_xanh_xuong_1.Text = "i=" + i;
-                //Mui_ten_xanh_xuong_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y - Size - 70);
-                //pnNut.Controls.Add(Mui_ten_xanh_xuong_1);
-                //Mui_ten_xanh_xuong_1.Refresh();
-
                 Mui_ten_xuong_1.Visible = true;
                 Mui_ten_xuong_1.Text = "i=" + i;
                 Mui_ten_xuong_1.Location = new Point((Canh_le + (Size + KhoangCachNut) * i) + (Size / 2) - 30, Bn[i].Location.Y - Size - 70);
@@ -565,21 +544,12 @@ namespace PMSapXep
                         pnNut.Controls.Clear();
                         break;
                     }
-
-                    //Mui_ten_xanh_xuong_2.Visible = true;
-                    //Mui_ten_xanh_xuong_2.Text = "j=" + j;
-                    //Mui_ten_xanh_xuong_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * j) + (Size / 2) - 30, Bn[j].Location.Y - Size - 70);
-                    //pnNut.Controls.Add(Mui_ten_xanh_xuong_2);
-                    //Mui_ten_xanh_xuong_2.Refresh();
-
                     Mui_ten_xuong_2.Visible = true;
                     Mui_ten_xuong_2.Text = "j=" + j;
                     Mui_ten_xuong_2.Location = new Point((Canh_le + (Size + KhoangCachNut) * j) + (Size / 2) - 30, Bn[j].Location.Y - Size - 70);
                     pnNut.Controls.Add(Mui_ten_xuong_2);
                     Mui_ten_xuong_2.Refresh();
-
                     Tre((10 - trb_Tocdo.Value) * 100);
-
                     //select dong code trong list box
                     lb_code.SelectedIndex = 4;
                     Tre((10 - trb_Tocdo.Value) * 100);
@@ -604,13 +574,11 @@ namespace PMSapXep
                         SwapInts(Pos, i, j);
                     }
                 }
-
                 Bn[Pos[i]].ForeColor = Color.White;
                 Bn[Pos[i]].FlatStyle = FlatStyle.Flat;
                 Bn[Pos[i]].BackgroundImage = Properties.Resources.daxep;
                 Bn[Pos[i]].BackgroundImageLayout = ImageLayout.Stretch;
                 Bn[Pos[i]].Refresh();
-
                 //đổi màu button cuối cùng của mảng
                 if (i == M.Length - 2)
                 {
@@ -626,8 +594,6 @@ namespace PMSapXep
             else
                 MessageBox.Show("sắp xếp xong");
         }
-
-
         #endregion
 
         #region SelectionSort        
@@ -1932,7 +1898,15 @@ namespace PMSapXep
                 pnNut.Controls.Remove(Chi_so[i]);
             //Tre(1000);
             Tre((10 - trb_Tocdo.Value) * 100);
+            
             MergeSort(Array, 0, M.Length - 1);
+            if (CheckHuy)
+            {
+                pnNut.Controls.Clear();
+                pnNut.Refresh();
+                CheckHuy = false;
+                return;
+            }
             for (int i = 0; i < M.Length; i++)
             {
                 Bn[i].ForeColor = Color.White;
@@ -1954,6 +1928,13 @@ namespace PMSapXep
             int[] R = new int[n2];
             for (i = 0; i < n1; i++)
             {
+
+                if (CheckHuy)
+                {
+                    pnNut.Controls.Clear();
+                    pnNut.Refresh();
+                    return;
+                }
                 L[i] = array[l + i];
                 Button btn = new Button();
                 btn.Text = Bn[l + i].Text;
@@ -1970,6 +1951,13 @@ namespace PMSapXep
             Tre((10 - trb_Tocdo.Value) * 100);
             for (j = 0; j < n2; j++)
             {
+
+                if (CheckHuy)
+                {
+                    pnNut.Controls.Clear();
+                    pnNut.Refresh();
+                    return;
+                }
                 R[j] = array[m + 1 + j];
                 Button btn = new Button();
                 btn.Text = Bn[m + 1 + j].Text;
@@ -1991,6 +1979,13 @@ namespace PMSapXep
             int Y2 = (Bn2[0].Location.Y + Bn[0].Location.Y) / 2;
             while (i < n1 && j < n2)
             {
+
+                if (CheckHuy)
+                {
+                    pnNut.Controls.Clear();
+                    pnNut.Refresh();
+                    return;
+                }
                 if (rad_Tang.Checked == true)
                 {
                     if (L[i] <= R[j])
@@ -2021,9 +2016,17 @@ namespace PMSapXep
                     }
                     else
                     {
+
+                       
                         array[k] = R[j];
                         while (Bn2[j].Location.Y != Y2)
                         {
+                            if (CheckHuy)
+                            {
+                                pnNut.Controls.Clear();
+                                pnNut.Refresh();
+                                return;
+                            }
                             Bn2[j].Location = new Point(Bn2[j].Location.X, Bn2[j].Location.Y - 1);
                             Tre((10 - trb_Tocdo.Value) / 3);
                         }
@@ -2178,13 +2181,10 @@ namespace PMSapXep
 
         #endregion
 
-
-        private void groupBox3_Enter(object sender, EventArgs e)
+       private void groupBox3_Enter(object sender, EventArgs e)
         {
             rad_Tang.Checked = true;
         }
-
-
         public void Xoa_mang(Button[] Node)
         {
             btn_Ngaunhien.Enabled = false;
@@ -2196,7 +2196,6 @@ namespace PMSapXep
                 {
                     this.Controls.Remove(Node[i]);
                     this.Controls.Remove(Chi_so[i]);
-
                 }
                 kttaomang = false;
             }
@@ -2206,7 +2205,6 @@ namespace PMSapXep
                 {
                     this.Controls.Remove(Bn1[i]);
                     this.Controls.Remove(Chi_so[i]);
-
                 }
                 kttaomang1 = false;
             }
@@ -2235,11 +2233,6 @@ namespace PMSapXep
                 string path = @"C:\Output";
                 DeleteDirectory(path);
             }
-        }
-
-        private void Mui_ten_xanh_xuong_2_Click(object sender, EventArgs e)
-        {
-
         }
 
         void DeleteDirectory(string path)
